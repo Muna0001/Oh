@@ -1,0 +1,97 @@
+/* ==========================================================================
+   about.css — the graphite frame again, quieter. Nate + Oacoma.
+   ========================================================================== */
+
+.world-about .hero { padding-block: clamp(3rem, 10vh, 7rem) var(--space-4); }
+.world-about .hero h1 { max-width: 18ch; }
+.world-about .hero .prose > div > p { color: var(--muted); }
+.world-about .hero .prose > div > p:first-child { color: var(--paper); }
+
+.oacoma {
+  border-block-start: 1px solid var(--rule);
+  padding-block-start: var(--space-4);
+}
+.oacoma .media-slot { margin-block: var(--space-3); max-width: 44rem; }
+.oacoma h3 { margin-block-start: var(--space-3); }
+
+.listen-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+}
+.listen-links a {
+  display: inline-block;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 0.45em 1em;
+  text-decoration: none;
+  color: var(--paper);
+}
+.listen-links a:hover { border-color: var(--accent); color: var(--accent); }
+.listen-note { color: var(--muted); font-size: var(--step--1); margin-block-start: var(--space-2); }
+
+.album-grid {
+  list-style: none;
+  padding: 0;
+  margin-block-start: var(--space-3);
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+}
+.album-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.album-title { font-weight: 700; font-size: var(--step--1); margin-block-start: var(--space-1); }
+.album-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem;
+  font-size: var(--step--1);
+}
+.album-links a { color: var(--muted); }
+.album-links a:hover { color: var(--accent); }
+
+/* YouTube facade button (js/music.js) */
+.yt-facade {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: var(--surface);
+  color: var(--paper);
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.yt-facade:hover .yt-play { background: var(--accent); color: var(--accent-ink); }
+.yt-play {
+  display: inline-grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+}
+.yt-slot iframe { width: 100%; height: 100%; border: 0; }
+
+.contact .contact-link {
+  font-size: var(--step-2);
+  font-weight: 800;
+  font-family: var(--font-display);
+  font-stretch: var(--stretch-display);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.15em;
+}

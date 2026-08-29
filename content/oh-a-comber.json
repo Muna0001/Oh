@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "title": "Oh a Comber — sample organizer for macOS and Windows",
+    "description": "Scan your sample library in place. Search and filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW.",
+    "path": "oh-a-comber.html",
+    "ogImage": "assets/img/og-comber.png"
+  },
+  "hero": {
+    "h1": "Your sample library, finally searchable.",
+    "positioning": "Oh a Comber scans the folders you already have and turns them into a fast, filterable library. It never moves, renames, or rewrites a file.",
+    "cta": "Join the waitlist",
+    "ctaHref": "#waitlist"
+  },
+  "beforeAfter": {
+    "beforeMedia": "assets/img/comber-before.png",
+    "beforeAlt": "A Finder window: dozens of nested sample-pack folders with cryptic filenames",
+    "beforeCaption": "Slot: the before shot — raw pack folders in a file browser (assets/img/comber-before.png)",
+    "afterMedia": "assets/img/comber-after.png",
+    "afterAlt": "The Oh a Comber library: the same samples in a sortable list with type badges, BPM, and a waveform player",
+    "afterCaption": "Slot: the after shot — the same library scanned, filtered, one sample playing (assets/img/comber-after.png)"
+  },
+  "promise": {
+    "heading": "Why this exists",
+    "body": "Twenty packs deep, every producer owns the same folder: thousands of one-shots with names like SD_808_F#_140. The sound you want is in there — somewhere. Most sample managers fix this by importing everything into their own library format. Oh a Comber indexes your files where they sit, reads what the names and metadata already say, and gets you from memory to drag-and-drop in seconds."
+  },
+  "features": [
+    {
+      "label": "Scan Library",
+      "what": "Point it at your sample folders — several at once if you like. It indexes .wav, .aiff, .mp3, .flac, .ogg, .m4a, .wma, and .aac, reading duration, sample rate, channels, and BPM from each file's metadata and name.",
+      "why": "Indexing, not importing. Your folder structure stays exactly as it is, and exact duplicates are detected by content and hidden automatically — never deleted.",
+      "media": "assets/video/comber-organize.mp4",
+      "mediaPoster": "assets/img/poster-comber-organize.png",
+      "mediaAlt": "Screen capture: a folder of thousands of samples being scanned, then filtered down in the library",
+      "mediaCaption": "Slot: 30 s primary demo — a chaotic sample folder becoming searchable and sorted by type (assets/video/comber-organize.mp4/.webm)"
+    },
+    {
+      "label": "Type & Genre",
+      "what": "Every sample gets a Type — kick, snare, hihat, clap, cymbal, tom, percussion, bass, synth, keys, guitar, strings, brass, vocal, fx, or loop — read from its filename and folder path. Pack names map to genres the same way.",
+      "why": "It's transparent pattern-matching on the names your packs already carry, not a black box. You can predict what it will decide, and re-scanning a new pack takes seconds.",
+      "media": "assets/img/comber-ui-types.png",
+      "mediaAlt": "The sidebar Type filters with live counts, and type badges in the sample list",
+      "mediaCaption": "Slot: Type chips with counts, several active (screenshot, 1400×900)"
+    },
+    {
+      "label": "Search & filters",
+      "what": "Search matches filename, path, and pack. Stack it with Type chips, Genre, a BPM Range, and ★ FAVORITES — the counts update live.",
+      "why": "\"kick\", 80–100 BPM, one pack name: six thousand files become five candidates while the last one is still playing.",
+      "media": "assets/img/comber-ui-search.png",
+      "mediaAlt": "The library filtered by search text, type, and BPM range simultaneously",
+      "mediaCaption": "Slot: stacked filters narrowing the list (screenshot, 1400×900)"
+    },
+    {
+      "label": "Preview & audition",
+      "what": "Click play and the waveform draws in the player bar; click the waveform to seek. Arrow keys walk the list and audition each sample as you move.",
+      "why": "Auditioning is the whole job. You never leave the list, and you never stop listening.",
+      "media": "assets/img/comber-ui-player.png",
+      "mediaAlt": "The player bar with a green waveform, elapsed time, and a sample playing",
+      "mediaCaption": "Slot: the player bar mid-preview (screenshot, 1400×900)"
+    },
+    {
+      "label": "Drag out to your DAW",
+      "what": "Rows drag like files because they are files: dragging hands your DAW the original path on disk. Right-click reveals the file in Finder.",
+      "why": "No export step, no copies, no managed library between you and the sound. Search, preview, drop it on a track.",
+      "media": "assets/video/comber-drag-to-daw.mp4",
+      "mediaPoster": "assets/img/poster-comber-drag.png",
+      "mediaAlt": "Silent loop: searching, previewing, and dragging a sample onto a DAW track",
+      "mediaCaption": "Slot: 10 s silent loop — search → preview → drag onto a DAW track (assets/video/comber-drag-to-daw.mp4/.webm)"
+    },
+    {
+      "label": "INSTRUMENTS",
+      "what": "Load any sample onto the KEYBOARD and play it chromatically across 24 keys, or bank nine one-shots on the DRUM PAD — with the mouse, the computer keyboard, or a MIDI controller.",
+      "why": "Sketch the part before you commit the sample. C3 keeps the original pitch; the pads sit on MIDI notes 48–56.",
+      "media": "assets/img/comber-ui-instruments.png",
+      "mediaAlt": "The INSTRUMENTS panel open on the DRUM PAD tab, several pads assigned",
+      "mediaCaption": "Slot: DRUM PAD tab, pads loaded, one mid-flash (screenshot, 1400×900)"
+    }
+  ],
+  "demo": {
+    "heading": "Watch it comb a library",
+    "body": "Thirty seconds from \"which folder was that in\" to a filtered shortlist and a sample on a track.",
+    "video": "assets/video/comber-organize.mp4",
+    "videoWebm": "assets/video/comber-organize.webm",
+    "poster": "assets/img/poster-comber-organize.png",
+    "caption": "Slot: 30 s primary demo, captions burned in (assets/video/comber-organize.mp4/.webm)"
+  },
+  "waitlist": {
+    "heading": "Get first access",
+    "body": "Oh a Comber is a desktop app for macOS and Windows, currently in development on real libraries. The waitlist gets first access and pricing news — nothing else, no more than monthly.",
+    "formEmailLabel": "Email address",
+    "formSubmit": "Join the waitlist",
+    "formList": "comber-waitlist"
+  },
+  "specs": {
+    "heading": "Specifications",
+    "rows": [
+      {
+        "label": "Platforms",
+        "value": "macOS (Apple Silicon + Intel, dmg) · Windows x64 (installer)"
+      },
+      {
+        "label": "Formats indexed",
+        "value": ".wav · .aiff / .aif · .mp3 · .flac · .ogg · .m4a · .wma · .aac"
+      },
+      {
+        "label": "Read per sample",
+        "value": "Duration, sample rate, channels, format, size, BPM (metadata or filename), pack, type, genre"
+      },
+      {
+        "label": "Classification",
+        "value": "16 types + genre, from filename and folder-path patterns — no audio analysis, no cloud"
+      },
+      {
+        "label": "Library",
+        "value": "Local SQLite database; files indexed in place, never moved, renamed, or modified; views show up to 1,000 results"
+      },
+      {
+        "label": "Duplicates",
+        "value": "Content-hash detection; duplicates hidden automatically, never deleted"
+      },
+      {
+        "label": "Preview",
+        "value": "Waveform player with seek; looped playback; AIFF preview via macOS conversion (macOS only)"
+      },
+      {
+        "label": "Drag & drop",
+        "value": "Native OS drag carrying the original file path — works with any DAW or app that accepts audio files"
+      },
+      {
+        "label": "Instruments",
+        "value": "24-key chromatic keyboard sampler; 3×3 drum pads; playable by mouse, computer keys, or MIDI (hot-plug)"
+      },
+      {
+        "label": "Privacy",
+        "value": "No accounts, no sync, no telemetry. Your samples are never uploaded; the index is a local database file"
+      },
+      {
+        "label": "Price",
+        "value": "Not announced — waitlist gets pricing news first"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Questions",
+    "items": [
+      {
+        "q": "Does it reorganize my folders?",
+        "a": "Never. Scanning builds a local database that points at your files where they already live. Nothing is moved, renamed, copied, or rewritten — delete the app and your library is exactly as it was."
+      },
+      {
+        "q": "What happens with duplicates?",
+        "a": "Files with identical content are detected by hash. One copy stays visible in the library; the rest are hidden from lists and counts. The files themselves are never touched."
+      },
+      {
+        "q": "Will drag-and-drop work with my DAW?",
+        "a": "Dragging out of Oh a Comber is a native OS file drag carrying the sample's real path, so it works with anything that accepts an audio file drop — Live, Logic, FL Studio, Reaper, or a plain Finder window."
+      },
+      {
+        "q": "Do I have to re-scan when I add new packs?",
+        "a": "Yes — click Scan Library again. Existing entries update in place and your favorites survive the re-scan."
+      },
+      {
+        "q": "Is there a trial? What will it cost?",
+        "a": "Pricing isn't decided yet, and there's no public build to try today. The waitlist gets first access and the pricing announcement before anyone else."
+      },
+      {
+        "q": "Does any of my library leave my machine?",
+        "a": "No. There are no accounts, no sync, and no telemetry. Your samples and the index database stay on your machine."
+      }
+    ]
+  },
+  "ctaRepeat": {
+    "heading": "First access goes to the waitlist.",
+    "body": "One email when it ships, one when pricing is set. That's it.",
+    "cta": "Join the waitlist",
+    "ctaHref": "#waitlist"
+  }
+}

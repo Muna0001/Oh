@@ -1,0 +1,425 @@
+/* ==========================================================================
+   synth.css — the Oh a Synth world: charcoal panel, cream silkscreen,
+   walnut cheeks, section-accent colors. Every value from the app
+   (css/ohasynth.css + PluginEditor.cpp) — see NOTES-source-analysis.md §1.2.
+   ========================================================================== */
+
+body.world-synth {
+  --bg: #141416;            /* page behind the instrument */
+  --surface: #232327;       /* --panel-2 */
+  --surface-2: #2b2b30;     /* --panel */
+  --rule: #38383e;
+  --paper: #ece5d5;         /* --cream */
+  --muted: #b9b2a2;         /* --cream-dim */
+  --accent: #ff5a3c;        /* --led */
+  --accent-ink: #141416;
+
+  /* the app's section accents */
+  --sec-red: #c8413b;
+  --sec-orange: #e0a33b;
+  --sec-yellow: #e6d06b;
+  --sec-blue: #4f9ed9;
+  --sec-green: #9bba5e;
+
+  /* plugin wood cheeks (PluginEditor.cpp:881-882) */
+  --walnut-hi: #5e3d27;
+  --walnut-lo: #372315;
+}
+
+/* The brand line of the hardware: italic 800, like .oha-brand */
+.world-synth .hero h1 {
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.world-synth .hero .kicker::after {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-inline-start: 0.75em;
+  width: 26px; height: 12px;
+  background: linear-gradient(to right,
+    var(--sec-red) 0 5px, transparent 5px 7px,
+    var(--sec-orange) 7px 12px, transparent 12px 14px,
+    var(--sec-yellow) 14px 19px, transparent 19px 21px,
+    var(--sec-blue) 21px 26px);
+}
+
+/* ---- the stage: a cabinet before the WebGL arrives -------------------------- */
+.synth-stage .container { position: relative; }
+.synth-stage [data-synth-mount] {
+  position: relative;
+  background: linear-gradient(#2e2e33, #2b2b30);  /* panel gradient, as built */
+  border: 1px solid #1a1a1d;
+  border-radius: 8px;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  padding-inline: clamp(1.5rem, 4vw, 3rem);
+}
+@media (min-width: 40rem) {
+  /* walnut end cheeks, quoting the plugin editor's drawWoodCheek */
+  .synth-stage [data-synth-mount]::before,
+  .synth-stage [data-synth-mount]::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    width: clamp(1rem, 2.5vw, 2.125rem);
+    background:
+      repeating-linear-gradient(94deg,
+        rgba(0, 0, 0, 0.12) 0 2px, transparent 2px 7px),
+      linear-gradient(160deg, var(--walnut-hi), var(--walnut-lo));
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+  .synth-stage [data-synth-mount]::before { left: 0; border-radius: 8px 0 0 8px; }
+  .synth-stage [data-synth-mount]::after { right: 0; border-radius: 0 8px 8px 0; }
+}
+.synth-stage .media-slot .frame {
+  background: #232327;
+  border-color: #1a1a1d;
+}
+.synth-stage figcaption {
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ---- features: each section wears its app accent ----------------------------- */
+.world-synth .feature h3 { letter-spacing: 0.22em; }
+.world-synth .feature:nth-of-type(1) h3 { border-color: var(--sec-orange); } /* DCO */
+.world-synth .feature:nth-of-type(2) h3 { border-color: var(--sec-red); }    /* VCF */
+.world-synth .feature:nth-of-type(3) h3 { border-color: var(--sec-green); }  /* CHORUS */
+.world-synth .feature:nth-of-type(4) h3 { border-color: var(--sec-blue); }   /* ARPEGGIO */
+.world-synth .feature:nth-of-type(5) h3 { border-color: var(--sec-yellow); } /* PATCHES */
+.world-synth .feature:nth-of-type(6) h3 { border-color: var(--sec-blue); }   /* MIDI */
+
+.world-synth .feature .media-slot .frame {
+  background: var(--surface);
+  border-color: #1a1a1d;
+}
+
+/* ---- offer cards -------------------------------------------------------------- */
+.offer-grid {
+  display: grid;
+  gap: var(--space-3);
+  margin-block-start: var(--space-3);
+}
+@media (min-width: 52rem) {
+  .offer-grid { grid-template-columns: 1fr 1fr; }
+}
+.offer-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: var(--space-3);
+}
+.offer-card h3 {
+  font-size: var(--step--1);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--muted);
+  display: inline-block;
+  padding-block-end: var(--space-1);
+}
+.offer-card > p { margin-block: var(--space-2); }
+
+/* ---- spec sheet: hardware-manual back page -------------------------------------- */
+.world-synth .spec-table th[scope="row"] { color: var(--muted); }
+.world-synth .spec-table tr { border-color: #38383e; }
+
+/* keep long spec values readable */
+.world-synth .spec-table td { max-width: 60ch; }
+
+/* ==========================================================================
+   The playable synth (js/synth/ui.js). Control chrome quotes the app's own
+   stylesheet: recessed fills #1d1d20, inset borders #0f0f11, fader caps with
+   a cream indicator line, LED buttons with #ff5a3c glow. (ohasynth.css)
+   ========================================================================== */
+.sy-ui {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 20rem;
+}
+
+.sy-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 4px 2px 0;
+}
+.sy-brand { display: flex; align-items: baseline; gap: 12px; }
+.sy-brand em {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+}
+.sy-stripes { display: inline-flex; gap: 2px; align-self: center; }
+.sy-stripes i { width: 5px; height: 15px; display: block; }
+.sy-stripes i:nth-child(1) { background: var(--sec-red); }
+.sy-stripes i:nth-child(2) { background: var(--sec-orange); }
+.sy-stripes i:nth-child(3) { background: var(--sec-yellow); }
+.sy-stripes i:nth-child(4) { background: var(--sec-blue); }
+.sy-sub { font-size: 0.66rem; letter-spacing: 0.25em; color: var(--muted); }
+.sy-midi { font-size: 0.72rem; color: var(--muted); }
+.sy-midi.ok { color: #9bba5e; }
+
+.sy-panel {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sy-section {
+  display: flex;
+  flex-direction: column;
+  background: #232327;
+  border: 1px solid #38383e;
+  border-radius: 6px;
+  flex: 0 1 auto;
+}
+.sy-sec-head {
+  --accent: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-align: center;
+  padding: 5px 10px 4px;
+  border-bottom: 2px solid var(--accent);
+}
+.sy-sec-body {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 12px 10px 8px;
+  flex: 1;
+}
+
+/* vertical sliders */
+.sy-sl { display: flex; flex-direction: column; align-items: center; width: 34px; }
+.sy-sl-track {
+  position: relative;
+  width: 24px;
+  height: 96px;
+  border-radius: 3px;
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 12px, #3c3c42 12px 13px),
+    linear-gradient(#1d1d20, #232327);
+  border: 1px solid #0f0f11;
+  cursor: ns-resize;
+  touch-action: none;
+}
+.sy-sl-fill {
+  position: absolute;
+  left: 50%; bottom: 4px;
+  width: 4px;
+  transform: translateX(-50%);
+  background: #585860;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.sy-sl-thumb {
+  position: absolute;
+  left: 50%; bottom: 0;
+  width: 24px; height: 14px;
+  transform: translateX(-50%);
+  background: linear-gradient(#4a4a52, #2e2e34 45%, #222226 55%, #3a3a41);
+  border: 1px solid #101012;
+  border-radius: 2px;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.sy-sl-thumb::after {
+  content: "";
+  position: absolute;
+  left: 2px; right: 2px; top: 50%;
+  height: 2px;
+  margin-top: -1px;
+  background: var(--paper);
+}
+.sy-sl-label {
+  margin-top: 6px;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* buttons */
+.sy-btn {
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--paper);
+  background: linear-gradient(#3a3a41, #26262b);
+  border: 1px solid #101012;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.sy-btn:hover { background: linear-gradient(#42424a, #2c2c32); }
+.sy-btn.on { background: linear-gradient(#4a4a53, #32323a); box-shadow: inset 0 0 0 1px #55555e; }
+/* the patch stepper reads as one row: ‹ NAME ›  DEMO */
+.sy-sec-patch { align-items: center; gap: 6px; }
+.sy-patch-name {
+  min-width: 10ch;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+.sy-sec-patch .sy-demo { margin-inline-start: 10px; }
+.sy-demo { letter-spacing: 0.12em; }
+
+.sy-ch-btn {
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--paper);
+  background: linear-gradient(#3a3a41, #26262b);
+  border: 1px solid #101012;
+  border-radius: 4px;
+  width: 44px; height: 44px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.sy-led {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #4a1410;
+  box-shadow: inset 0 0 2px #000;
+}
+.sy-ch-btn.on .sy-led,
+.sy-power-led {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+/* level meter — six LEDs driven by the real analyser */
+.sy-meter-wrap { display: flex; flex-direction: column; align-items: center; }
+.sy-meter {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3px;
+  padding: 6px 8px;
+  background: #1d1d20;
+  border: 1px solid #0f0f11;
+  border-radius: 3px;
+}
+.sy-meter i {
+  width: 14px; height: 6px;
+  border-radius: 1px;
+  background: #35251a;
+}
+.sy-meter i.on { background: var(--sec-orange); box-shadow: 0 0 5px var(--sec-orange); }
+.sy-meter i:nth-child(6).on { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+
+/* keyboard */
+.sy-kbd-help {
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  /* The app prints this hint in #6f6f76, which is 2.82:1 on the panel.
+     At this size AA needs 4.5:1, so the site lightens it — legibility
+     wins over exact fidelity (noted in NOTES-source-analysis.md §3). */
+  color: #9a9aa1;
+  text-align: right;
+}
+.sy-kbd {
+  position: relative;
+  height: 8.5rem;
+  background: #0d0d0f;
+  border-radius: 4px;
+  overflow: hidden;
+  touch-action: none;
+}
+.sy-key {
+  position: absolute;
+  top: 0;
+  border-radius: 0 0 3px 3px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.58rem;
+  /* app prints key names in #8a8270 (3.09:1 on the key face) — darkened
+     here to clear AA at this size on both the resting and held key
+     faces, same warm-grey family */
+  color: #544e41;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+.sy-key-w {
+  height: 100%;
+  background: linear-gradient(#f4efe2, #e7e0cd);
+  border: 1px solid #b6ae99;
+  z-index: 1;
+}
+.sy-key-w.held { background: linear-gradient(#d8d2bf, #c9c2ac); }
+.sy-key-b {
+  height: 62%;
+  width: 2.7%;
+  background: linear-gradient(#3a3a3e, #141416);
+  border: 1px solid #000;
+  z-index: 2;
+}
+.sy-key-b.held { background: linear-gradient(#5a5a60, #2c2c30); }
+.sy-key:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; z-index: 3; }
+
+/* power overlay — the gesture gate */
+.sy-power {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(20, 20, 22, 0.72);
+  border: 1px dashed #46464c;
+  border-radius: 6px;
+  color: var(--paper);
+  font: inherit;
+  font-size: var(--step-1);
+  font-weight: 700;
+  cursor: pointer;
+}
+.sy-power:hover { background: rgba(20, 20, 22, 0.6); }
+.sy-power-led { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+@media (max-width: 40rem) {
+  .sy-panel { justify-content: center; }
+  .sy-kbd { height: 7rem; }
+  /* the brand lockup would wrap into its own subtitle at this width */
+  .sy-brand { flex-wrap: wrap; gap: 8px; }
+  .sy-brand em { font-size: 1.05rem; }
+  .sy-sub { display: none; }
+  .sy-kbd-help { text-align: left; }
+}
+
+/* ---- WebGL cabinet (gl/cabinet.js): shader replaces the CSS surfaces ------ */
+.sy-cabinet-gl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: 0;
+}
+.synth-stage .gl-on {
+  background: none;               /* the shader paints the panel */
+}
+.synth-stage .gl-on::before,
+.synth-stage .gl-on::after {
+  content: none;                  /* the shader paints the cheeks */
+}
+.synth-stage .gl-on > *:not(.sy-cabinet-gl) {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-page="home" data-extra-content="music">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oh! — a synth and a sample organizer</title>
+  <meta name="description" content="Oh! makes music software: Oh a Synth, a browser-playable polysynth inspired by the 80s, and Oh a Comber, a sample library organizer.">
+  <link rel="canonical" href="https://muna0001.github.io/Oh/index.html" data-canonical>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oh!">
+  <meta property="og:title" content="Oh! — a synth and a sample organizer">
+  <meta property="og:description" content="Oh! makes music software: Oh a Synth, a browser-playable polysynth inspired by the 80s, and Oh a Comber, a sample library organizer.">
+  <meta property="og:url" content="https://muna0001.github.io/Oh/index.html">
+  <meta property="og:image" content="https://muna0001.github.io/Oh/assets/img/og-home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Oh! — a synth and a sample organizer">
+  <meta name="twitter:description" content="Oh! makes music software: Oh a Synth, a browser-playable polysynth inspired by the 80s, and Oh a Comber, a sample library organizer.">
+  <meta name="twitter:image" content="https://muna0001.github.io/Oh/assets/img/og-home.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/Archivo-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <script type="module" src="js/render.js"></script>
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/forms.js"></script>
+  <script type="module" src="js/media.js"></script>
+  <script type="module" src="js/analytics.js"></script>
+  <script type="module" src="js/gl/wordmark.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Oh<span class="bang">!</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+      <nav id="site-nav" aria-label="Site" data-nav>
+        <ul>
+          <li><a href="index.html" data-page="home" aria-current="page">Oh!</a></li>
+          <li><a href="oh-a-synth.html" data-page="oh-a-synth">Oh a Synth</a></li>
+          <li><a href="oh-a-chord.html" data-page="oh-a-chord">Oh a Chord</a></li>
+          <li><a href="oh-a-comber.html" data-page="oh-a-comber">Oh a Comber</a></li>
+          <li><a href="about.html" data-page="about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1 · Hero — the wordmark IS the hero; the "!" becomes WebGL later -->
+    <section class="home-hero">
+      <div class="container">
+        <h1 class="wordmark" aria-label="Oh!">
+          <span aria-hidden="true">Oh<span class="bang bang-mount" id="bang-mount">!</span></span>
+        </h1>
+        <p class="hero-line" data-slot="hero.line">Two music tools from one person who makes records with them: a polysynth inspired by the classic sounds of the 80s that runs in your browser, and a sample organizer for the library you already have.</p>
+      </div>
+    </section>
+
+    <!-- 2 · Oh a Synth -->
+    <section class="product-block block-synth" aria-labelledby="home-synth">
+      <div class="container">
+        <div class="product-copy">
+          <p class="kicker" data-slot="synth.kicker">Oh a Synth</p>
+          <h2 id="home-synth" data-slot="synth.headline">Six voices, inspired by the 80s.</h2>
+          <p data-slot="synth.body">Exact DCO tuning, a self-oscillating ladder filter, one honest ADSR, and the chorus that made the original famous. The whole signal path runs per-sample in your browser — no download, no signup.</p>
+          <a class="btn" href="oh-a-synth.html#play" data-slot="synth.cta" data-slot-attr="href:synth.ctaHref">Play it in your browser</a>
+        </div>
+        <figure class="media-slot">
+          <div class="frame ar-16x10">
+            <img src="assets/img/synth-hero.png" alt="The Oh a Synth panel: charcoal sections with cream legends, colored section accents, and a six-octave keyboard" width="1280" height="800">
+          </div>
+          <figcaption data-slot="synth.mediaCaption">Slot: the Oh a Synth panel — STRINGS 1 loaded, CHORUS I lit (native app screenshot, assets/img/synth-hero.png)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3 · Oh a Comber -->
+    <section class="product-block block-comber" aria-labelledby="home-comber">
+      <div class="container">
+        <div class="product-copy">
+          <p class="kicker" data-slot="comber.kicker">Oh a Comber</p>
+          <h2 id="home-comber" data-slot="comber.headline">Every sample you own, findable.</h2>
+          <p data-slot="comber.body">Oh a Comber scans your sample folders where they sit and turns them into a searchable, filterable library. Preview with waveforms, then drag the real file straight onto a track. It never moves or renames anything.</p>
+          <a class="btn" href="oh-a-comber.html#waitlist" data-slot="comber.cta" data-slot-attr="href:comber.ctaHref">Join the waitlist</a>
+        </div>
+        <figure class="media-slot">
+          <div class="frame ar-16x10">
+            <img src="assets/img/comber-after.png" alt="The Oh a Comber library: phosphor-green sample list with type badges, filters, and a waveform player on near-black" width="1400" height="900">
+          </div>
+          <figcaption data-slot="comber.mediaCaption">Slot: the Oh a Comber library after a scan (app screenshot, assets/img/comber-after.png)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 4 · Who makes this — deliberately small -->
+    <section class="maker" aria-labelledby="home-maker">
+      <div class="container">
+        <h2 id="home-maker" class="visually-hidden" data-slot="maker.heading">Who makes this</h2>
+        <p data-slot="maker.body">Oh! is Nate Mueller — designer, developer, and the first user of everything here. Records music as Oacoma.</p>
+        <p><a href="about.html" data-slot="maker.link" data-slot-attr="href:maker.linkHref">More about Nate</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 5 · Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p data-slot="site.footer.line">Oh! is designed and built by Nate Mueller.</p>
+      <ul>
+        <li><a href="mailto:muna0001@gmail.com" data-slot="site.footer.contactLabel" data-slot-attr="href:site.contact.emailHref">Email Nate</a></li>
+        <li hidden data-slot-showif="music.links.spotify"><a href="#" data-slot-attr="href:music.links.spotify" rel="me noopener">Oacoma on Spotify</a></li>
+        <li hidden data-slot-showif="music.links.appleMusic"><a href="#" data-slot-attr="href:music.links.appleMusic" rel="me noopener">Oacoma on Apple Music</a></li>
+        <li hidden data-slot-showif="music.links.amazonMusic"><a href="#" data-slot-attr="href:music.links.amazonMusic" rel="me noopener">Oacoma on Amazon Music</a></li>
+        <li hidden data-slot-showif="music.links.youtube"><a href="#" data-slot-attr="href:music.links.youtube" rel="me noopener">Oacoma on YouTube</a></li>
+        <li hidden data-slot-showif="music.links.bandcamp"><a href="#" data-slot-attr="href:music.links.bandcamp" rel="me noopener">Oacoma on Bandcamp</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

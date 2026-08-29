@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- The Oh! mark: cream exclamation on charcoal, LED-red dot.
+       Colors from the apps: #232327 / #ece5d5 / #ff5a3c (see NOTES). -->
+  <rect width="64" height="64" rx="14" fill="#232327"/>
+  <rect x="26" y="10" width="12" height="30" rx="6" fill="#ece5d5"/>
+  <circle cx="32" cy="50" r="7" fill="#ff5a3c"/>
+</svg>

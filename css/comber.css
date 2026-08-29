@@ -1,0 +1,261 @@
+/* ==========================================================================
+   comber.css — the Oh a Comber world: phosphor green terminal on near-black.
+   Greens/text/borders are the app's own tokens (src/App.css:1-13); the amber
+   CTA is the one permitted outsider — P3 phosphor, the era's other monitor.
+   See NOTES-source-analysis.md §2.2 and §4.
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('../assets/fonts/DepartureMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../assets/fonts/IBMPlexMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../assets/fonts/IBMPlexMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body.world-comber {
+  --bg: #0a0f0d;            /* app --bg */
+  --surface: #111916;       /* app --bg-surface */
+  --surface-2: #1a2721;     /* app --bg-hover */
+  --rule: #1e2e27;          /* app --border */
+  --paper: #e2e8e5;         /* app --text */
+  --muted: #7a8a82;         /* app --text-muted */
+  --accent: #ffb000;        /* P3 phosphor amber — alerts/CTAs only */
+  --accent-ink: #0a0f0d;
+
+  --green: #4ade80;         /* app --green */
+  --green-dim: #86efac;     /* app --green-dim */
+  --green-dark: #166534;    /* app --green-dark */
+  --green-glow: rgba(74, 222, 128, 0.15);
+
+  --font-display: 'Departure Mono', monospace;
+  --font-body: 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+  --stretch-display: 100%;
+  --stretch-body: 100%;
+
+  /* pixel faces need looser sizes, tighter widths */
+  --measure: 58ch;
+  line-height: 1.7;
+}
+
+/* Headings glow green; the pixel face carries the display sizes only */
+.world-comber h1, .world-comber h2 {
+  font-weight: 400;               /* Departure Mono has one weight */
+  letter-spacing: 0.01em;
+  color: var(--green);
+  text-shadow: 0 0 18px var(--green-glow);
+}
+.world-comber h1 { font-size: clamp(1.9rem, 1.4rem + 3.2vw, 3.4rem); }
+.world-comber h2 { font-size: clamp(1.3rem, 1.1rem + 1.4vw, 2rem); }
+.world-comber .kicker { color: var(--green-dim); letter-spacing: 0.18em; }
+.world-comber a:hover { color: var(--green); }
+.world-comber ::selection { background: var(--green); color: var(--bg); }
+
+/* Terminal prompt marker on the two big statements */
+.world-comber .hero h1::before,
+.world-comber .cta-repeat h2::before {
+  content: "> ";
+  color: var(--green-dark);
+}
+
+/* ---- chrome: hairline panels, ghost buttons that invert (as in the app) ------ */
+.world-comber .site-header { background: var(--surface); border-color: var(--rule); }
+.world-comber .site-header nav a[aria-current="page"] {
+  color: var(--green);
+  box-shadow: 0 2px 0 0 var(--green);
+}
+.world-comber .site-header nav a:hover { color: var(--green); }
+.world-comber .brand .bang { color: var(--green); }
+
+.world-comber .btn {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-radius: 8px;              /* the app's --radius */
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.world-comber .btn-ghost {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green-dark);
+}
+.world-comber .btn-ghost:hover { background: var(--green); color: var(--bg); }
+
+/* ---- media frames: square bezels, hairline borders ---------------------------- */
+.world-comber .media-slot .frame {
+  border-radius: 0;
+  background: var(--surface);
+  border-color: var(--rule);
+}
+.world-comber figcaption { color: var(--muted); }
+
+/* ---- before / after ------------------------------------------------------------ */
+.before-after .container {
+  display: grid;
+  gap: var(--space-3);
+}
+@media (min-width: 52rem) {
+  .before-after .container { grid-template-columns: 1fr 1fr; }
+}
+.before-after { padding-block-end: var(--space-4); }
+
+/* ---- features ------------------------------------------------------------------- */
+.world-comber .feature h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--green);
+  border-bottom-color: var(--green-dark);
+  letter-spacing: 0.14em;
+}
+.world-comber .feature h3::before { content: "["; color: var(--green-dark); }
+.world-comber .feature h3::after { content: "]"; color: var(--green-dark); }
+.world-comber .feature .why { color: var(--muted); }
+
+/* ---- waitlist ------------------------------------------------------------------- */
+.world-comber .waitlist {
+  background: var(--surface);
+  border-block: 1px solid var(--rule);
+  padding-block: var(--space-4);
+}
+.world-comber .capture input[type="email"] {
+  background: var(--bg);
+  border-color: var(--muted);
+  border-radius: 8px;
+  font-family: var(--font-body);
+}
+/* the app's focus ring, kept as decoration — the base :focus-visible
+   outline still applies for keyboard users */
+.world-comber .capture input[type="email"]:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px var(--green-glow);
+}
+.world-comber .form-status[data-state="invalid"],
+.world-comber .form-status[data-state="error"] { color: var(--accent); }
+.world-comber .form-status[data-state="success"] { color: var(--green); }
+.world-comber .form-fallback a { color: var(--green); }
+
+/* ---- spec sheet ------------------------------------------------------------------ */
+.world-comber .spec-table { font-family: var(--font-body); }
+.world-comber .spec-table th[scope="row"] {
+  color: var(--green-dim);
+  font-weight: 400;
+  font-family: var(--font-display);
+  letter-spacing: 0.1em;
+}
+.world-comber .spec-table tr { border-color: var(--rule); }
+
+/* ---- FAQ ------------------------------------------------------------------------- */
+.world-comber .faq summary {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--step-1);
+  color: var(--paper);
+}
+.world-comber .faq summary:hover { color: var(--green); }
+.world-comber .faq details { border-color: var(--rule); }
+.world-comber .faq details[open] summary { color: var(--green); }
+
+/* ---- scrollbars, quoting the app ------------------------------------------------- */
+.world-comber ::-webkit-scrollbar { width: 8px; height: 8px; }
+.world-comber ::-webkit-scrollbar-track { background: var(--bg); }
+.world-comber ::-webkit-scrollbar-thumb { background: var(--green-dark); border-radius: 3px; }
+.world-comber ::-webkit-scrollbar-thumb:hover { background: var(--green); }
+
+/* ---- footer ----------------------------------------------------------------------- */
+.world-comber .site-footer { border-color: var(--rule); }
+.world-comber .site-footer a:hover { color: var(--green); }
+
+/* ==========================================================================
+   The CRT (js/gl/crt.js). The shader is an OVERLAY on framed regions, not
+   a post-process of the document — DOM text stays crisp and selectable.
+   See the note at the top of crt.js for what that cost us.
+   ========================================================================== */
+[data-crt] {
+  position: relative;
+  isolation: isolate;
+}
+.crt-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  mix-blend-mode: screen;
+}
+
+/* the screen bezel: square corners, inner shadow standing in for the
+   tube curve the shader deliberately does not apply to text */
+.crt-screen {
+  position: relative;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  padding: clamp(1.25rem, 4vw, 2.75rem);
+  box-shadow:
+    inset 0 0 60px rgba(0, 0, 0, 0.55),
+    inset 0 0 140px rgba(10, 15, 13, 0.5);
+}
+.crt-screen::before {
+  /* screen-edge glow, always present so JS-off still reads as a monitor */
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(74, 222, 128, 0.14);
+}
+
+/* ---- boot sequence (js/boot.js) ---------------------------------------------------- */
+.boot {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.25rem, 4vw, 2.75rem);
+  font-family: var(--font-body);
+  color: var(--green);
+  transition: opacity 0.25s ease-out;
+}
+.boot pre {
+  margin: 0;
+  font: inherit;
+  font-size: clamp(0.75rem, 0.5rem + 1.2vw, 1rem);
+  line-height: 1.9;
+  white-space: pre-wrap;
+  text-shadow: 0 0 14px var(--green-glow);
+}
+.boot pre::after {
+  content: "█";
+  animation: boot-caret 1.05s steps(1) infinite;
+}
+.boot-skip {
+  margin-block-start: var(--space-2);
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+.boot-out { opacity: 0; }
+@keyframes boot-caret { 50% { opacity: 0.2; } }
+
+/* while booting, the real hero underneath is simply masked — never removed */
+html.booting .crt-screen > *:not(.boot):not(.crt-overlay) { visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .boot { display: none; }
+}

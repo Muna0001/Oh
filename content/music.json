@@ -1,0 +1,36 @@
+{
+  "artist": "Oacoma",
+  "youtube": {
+    "videoId": "",
+    "title": "Oacoma on YouTube"
+  },
+  "albums": [],
+  "_albums_example": [
+    {
+      "title": "Album title",
+      "year": "2026",
+      "art": "assets/img/oacoma-album-title.png",
+      "links": {
+        "spotify": "",
+        "appleMusic": "",
+        "amazonMusic": "",
+        "youtube": "",
+        "bandcamp": ""
+      }
+    }
+  ],
+  "links": {
+    "spotify": "",
+    "appleMusic": "",
+    "amazonMusic": "",
+    "youtube": "",
+    "bandcamp": ""
+  },
+  "linkLabels": {
+    "spotify": "Spotify",
+    "appleMusic": "Apple Music",
+    "amazonMusic": "Amazon Music",
+    "youtube": "YouTube",
+    "bandcamp": "Bandcamp"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Privacy Policy — Oh a Chord",
+    "description": "Oh a Chord collects nothing. No accounts, no analytics, no network requests of any kind — saved presets never leave your device.",
+    "path": "oh-a-chord-privacy.html",
+    "ogImage": "assets/img/og-chord.png"
+  },
+  "intro": {
+    "h1": "Privacy Policy",
+    "body": "**Oh a Chord collects nothing.** This isn't a summary of a longer policy — it's the whole thing. There is no account to create, no data to hand over, and nothing to opt out of, because nothing is ever collected in the first place.\n\nLast updated August 2026."
+  },
+  "sections": [
+    {
+      "heading": "What the app collects",
+      "body": "Nothing. Oh a Chord has no accounts, no sign-in, and no analytics or telemetry of any kind. It makes no network requests — there is no server it talks to, and no third-party SDK bundled inside it to talk to one on its behalf."
+    },
+    {
+      "heading": "What stays on your device",
+      "body": "If you save a sound you've tweaked in the advanced settings drawer, it's written to a plain file inside the app's own storage on your iPad — the same place any app keeps its own documents. That file is never uploaded, synced, or shared anywhere. Deleting the app deletes it."
+    },
+    {
+      "heading": "Microphone and other permissions",
+      "body": "Oh a Chord never asks for microphone access — it only plays sound, it never records it. It requests no other device permissions."
+    },
+    {
+      "heading": "Children",
+      "body": "Because the app collects no data from anyone, it collects no data from children either. There is nothing here for a parent to review or request the deletion of."
+    },
+    {
+      "heading": "Changes to this policy",
+      "body": "If that ever changes — if a future version adds an account, sync, or any form of data collection — this page will say so before it happens, in plain language, not by shifting from silence to a sudden footnote."
+    },
+    {
+      "heading": "Contact",
+      "body": "Questions about this policy or the app go straight to the person who builds it: [muna0001@gmail.com](mailto:muna0001@gmail.com)."
+    }
+  ]
+}

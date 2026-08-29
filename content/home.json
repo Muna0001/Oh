@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Oh! — a synth and a sample organizer",
+    "description": "Oh! makes music software: Oh a Synth, a browser-playable polysynth inspired by the 80s, and Oh a Comber, a sample library organizer.",
+    "path": "index.html",
+    "ogImage": "assets/img/og-home.png"
+  },
+  "hero": {
+    "wordmark": "Oh!",
+    "line": "Two music tools from one person who makes records with them: a polysynth inspired by the classic sounds of the 80s that runs in your browser, and a sample organizer for the library you already have."
+  },
+  "synth": {
+    "kicker": "Oh a Synth",
+    "headline": "Six voices, inspired by the 80s.",
+    "body": "Exact DCO tuning, a self-oscillating ladder filter, one honest ADSR, and the chorus that made the original famous. The whole signal path runs per-sample in your browser — no download, no signup.",
+    "cta": "Play it in your browser",
+    "ctaHref": "oh-a-synth.html#play",
+    "mediaCaption": "Slot: the Oh a Synth panel — STRINGS 1 loaded, CHORUS I lit (native app screenshot, assets/img/synth-hero.png)"
+  },
+  "comber": {
+    "kicker": "Oh a Comber",
+    "headline": "Every sample you own, findable.",
+    "body": "Oh a Comber scans your sample folders where they sit and turns them into a searchable, filterable library. Preview with waveforms, then drag the real file straight onto a track. It never moves or renames anything.",
+    "cta": "Join the waitlist",
+    "ctaHref": "oh-a-comber.html#waitlist",
+    "mediaCaption": "Slot: the Oh a Comber library after a scan (app screenshot, assets/img/comber-after.png)"
+  },
+  "maker": {
+    "heading": "Who makes this",
+    "body": "Oh! is Nate Mueller — designer, developer, and the first user of everything here. Records music as Oacoma.",
+    "link": "More about Nate",
+    "linkHref": "about.html"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "About Nate Mueller — Oh! and Oacoma",
+    "description": "Nate Mueller designs and builds Oh a Synth and Oh a Comber solo, and records music as Oacoma.",
+    "path": "about.html",
+    "ogImage": "assets/img/og-about.png"
+  },
+  "intro": {
+    "h1": "I make the tools I want for my own music.",
+    "body": "I'm Nate Mueller — a designer and developer, and a music lover first. Oh! exists because I kept needing things that didn't exist the way I wanted them: a vintage polysynth that lives in a browser tab, a sample organizer that doesn't take my library hostage. I design them, build them, and use them on my own records before anyone else hears about them.\n\nBoth apps are built solo. If something about them feels opinionated, that's why."
+  },
+  "oacoma": {
+    "heading": "Oacoma",
+    "body": "I record music as **Oacoma**. It's where every Oh! tool gets tested — the synth lines and the sample flips both start there.",
+    "embedCaption": "Slot: Oacoma on YouTube — set music.json → youtube.videoId to activate the embed",
+    "listenHeading": "Listen"
+  },
+  "contact": {
+    "heading": "Contact",
+    "body": "One person builds all of this, and the same person reads the email.",
+    "linkLabel": "muna0001@gmail.com"
+  }
+}

@@ -1,0 +1,3 @@
+Archivo (variable, normal+italic): SIL OFL 1.1 — https://fonts.google.com/specimen/Archivo
+IBM Plex Mono (400/700): SIL OFL 1.1 — https://fonts.google.com/specimen/IBM+Plex+Mono
+Departure Mono 1.500: SIL OFL 1.1, Copyright 2022-2024 Helena Zhang — see DepartureMono-LICENSE.txt

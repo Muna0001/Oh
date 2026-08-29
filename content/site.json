@@ -1,0 +1,29 @@
+{
+  "siteUrl": "https://muna0001.github.io/Oh",
+  "siteName": "Oh!",
+  "nav": [
+    { "label": "Oh!", "href": "index.html", "page": "home" },
+    { "label": "Oh a Synth", "href": "oh-a-synth.html", "page": "oh-a-synth" },
+    { "label": "Oh a Chord", "href": "oh-a-chord.html", "page": "oh-a-chord" },
+    { "label": "Oh a Comber", "href": "oh-a-comber.html", "page": "oh-a-comber" },
+    { "label": "About", "href": "about.html", "page": "about" }
+  ],
+  "contact": {
+    "email": "muna0001@gmail.com",
+    "emailHref": "mailto:muna0001@gmail.com"
+  },
+  "forms": {
+    "provider": "",
+    "endpoint": "",
+    "fallbackMailto": "muna0001@gmail.com"
+  },
+  "analytics": {
+    "provider": "goatcounter",
+    "siteId": ""
+  },
+  "footer": {
+    "line": "Oh! is designed and built by Nate Mueller.",
+    "contactLabel": "Email Nate",
+    "oacomaLabel": "Oacoma on:"
+  }
+}

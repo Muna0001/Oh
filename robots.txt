@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muna0001.github.io/Oh/sitemap.xml
