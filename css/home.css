@@ -104,42 +104,97 @@
 .product-block h2 { font-size: var(--step-3); margin-block: var(--space-1) var(--space-2); }
 .product-block p { margin-block-end: var(--space-3); }
 
-/* Synth block — a hint of the panel world: the header gradient + the stripes */
-.block-synth {
-  background: linear-gradient(#2e2e33, #2b2b30); /* ohasynth panel gradient */
-  border-block: 1px solid #1a1a1d;               /* --panel-edge */
+/* Chord block — the launch product. A hint of the Oh a Chord world: the
+   app's graphite panel, cream legends, its orange accentLit, and the walnut
+   the app derives its grain from (see css/chord.css). */
+.block-chord {
+  background: linear-gradient(#2e2e33, #2b2b30);   /* app panel gradient */
+  border-block: 1px solid #1a1a1d;
+  position: relative;
 }
-.block-synth .kicker { color: #b9b2a2; }
-.block-synth .kicker::after {
-  /* the four Oh-a-synth logo stripes, as built (ohasynth.css:56-61) */
+/* walnut edge, quoting the app's wood.base treatment */
+.block-chord::before {
   content: "";
-  display: inline-block;
-  vertical-align: baseline;
-  margin-inline-start: 0.75em;
-  width: 26px; height: 12px;
-  background: linear-gradient(to right,
-    #c8413b 0 5px, transparent 5px 7px,
-    #e0a33b 7px 12px, transparent 12px 14px,
-    #e6d06b 14px 19px, transparent 19px 21px,
-    #4f9ed9 21px 26px);
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 4px;
+  background: linear-gradient(#8a5a37, #4a2e19);
 }
-.block-synth .btn { background: #ff5a3c; color: #141416; }
+.block-chord .kicker { color: #b9b2a2; }
+.block-chord h2 { color: #ece5d5; }
+.block-chord p { color: #b9b2a2; }
+.block-chord .btn-ghost { background: transparent; color: #ece5d5; border-color: #85858e; }
+.block-chord .btn-ghost:hover { border-color: #ece5d5; }
+.block-chord .media-slot .frame {
+  background: #232327;
+  border-color: #1a1a1d;
+}
 
-/* Comber block — a hint of the CRT world */
-.block-comber {
-  background: #0a0f0d;                            /* Comber --bg */
-  border-block-end: 1px solid #1e2e27;            /* Comber --border */
+/* the "coming soon" / "in the App Store soon" flag above a heading */
+.status-flag {
+  display: inline-block;
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.25em 0.85em;
 }
-.block-comber .kicker { color: #86efac; }
-.block-comber h2 { color: #4ade80; }
-.block-comber p { color: #e2e8e5; }
-.block-comber .btn { background: #4ade80; color: #0a0f0d; }
-.block-comber .media-slot .frame {
-  background: #111916;
-  border-color: #1e2e27;
-  border-radius: 0;                                /* CRT bezels are square */
+.product-block .status-flag,
+.soon-card .status-flag {
+  margin-block: var(--space-1) 0;
 }
-.block-comber figcaption { color: #7a8a82; }
+.block-chord .status-flag { color: #e0a33b; }
+
+/* ---- coming soon: two quiet placeholders, deliberately smaller than the
+   launch product above them ---------------------------------------------- */
+.coming-soon {
+  border-block-start: 1px solid var(--rule);
+  padding-block: var(--space-5);
+}
+.coming-soon h2 { font-size: var(--step-2); }
+.soon-intro {
+  color: var(--muted);
+  margin-block: var(--space-2) var(--space-4);
+  max-width: 56ch;
+}
+.soon-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+@media (min-width: 46rem) {
+  .soon-grid { grid-template-columns: 1fr 1fr; }
+}
+.soon-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+/* each card keeps its product's accent, at kicker scale only */
+.card-synth .kicker,
+.card-synth .status-flag { color: #ff5a3c; }
+.card-comber .kicker,
+.card-comber .status-flag { color: #4ade80; }
+.soon-card .kicker {
+  font-size: var(--step-0);
+  letter-spacing: 0.12em;
+}
+.soon-blurb {
+  color: var(--paper);
+  margin-block: var(--space-1) var(--space-2);
+}
+.soon-card .form-fallback { margin-block-start: auto; }
+.soon-card form { max-width: none; }
+.soon-card .btn { background: var(--paper); color: var(--bg); }
+.card-synth .btn { background: #ff5a3c; color: #141416; }
+.card-comber .btn { background: #4ade80; color: #0a0f0d; }
 
 /* ---- maker — deliberately small -------------------------------------------- */
 .maker {

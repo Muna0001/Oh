@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Oh! — a synth and a sample organizer</title>
-  <meta name="description" content="Oh! makes music software: Oh a Synth, a browser-playable polysynth inspired by the 80s, and Oh a Comber, a sample library organizer.">
+  <title>Oh! — music tools, starting with Oh a Chord</title>
+  <meta name="description" content="Oh! makes music software: Oh a Chord, an iPad instrument where one key press plays a full chord, out now on the App Store. Two more on the way.">
   <link rel="canonical" href="https://muna0001.github.io/Oh/index.html" data-canonical>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Oh!">
-  <meta property="og:title" content="Oh! — a synth and a sample organizer">
-  <meta property="og:description" content="Oh! makes music software: Oh a Synth, a browser-playable polysynth inspired by the 80s, and Oh a Comber, a sample library organizer.">
+  <meta property="og:title" content="Oh! — music tools, starting with Oh a Chord">
+  <meta property="og:description" content="Oh! makes music software: Oh a Chord, an iPad instrument where one key press plays a full chord, out now on the App Store. Two more on the way.">
   <meta property="og:url" content="https://muna0001.github.io/Oh/index.html">
   <meta property="og:image" content="https://muna0001.github.io/Oh/assets/img/og-home.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Oh! — a synth and a sample organizer">
-  <meta name="twitter:description" content="Oh! makes music software: Oh a Synth, a browser-playable polysynth inspired by the 80s, and Oh a Comber, a sample library organizer.">
+  <meta name="twitter:title" content="Oh! — music tools, starting with Oh a Chord">
+  <meta name="twitter:description" content="Oh! makes music software: Oh a Chord, an iPad instrument where one key press plays a full chord, out now on the App Store. Two more on the way.">
   <meta name="twitter:image" content="https://muna0001.github.io/Oh/assets/img/og-home.png">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -55,49 +55,95 @@
   </header>
 
   <main id="main">
-    <!-- 1 · Hero — the wordmark IS the hero; the "!" becomes WebGL later -->
+    <!-- 1 · Hero — the wordmark IS the hero; the "!" is the WebGL object -->
     <section class="home-hero">
       <div class="container">
         <h1 class="wordmark" aria-label="Oh!">
           <span aria-hidden="true">Oh<span class="bang bang-mount" id="bang-mount">!</span></span>
         </h1>
-        <p class="hero-line" data-slot="hero.line">Two music tools from one person who makes records with them: a polysynth inspired by the classic sounds of the 80s that runs in your browser, and a sample organizer for the library you already have.</p>
+        <p class="hero-line" data-slot="hero.line">Music tools from one person who makes records with them. First out: Oh a Chord — press one key, get a full chord — now on the App Store.</p>
+        <p class="hero-actions">
+          <a class="appstore-badge" href="https://apps.apple.com/us/app/oh-a-chord/id6804457158" rel="noopener"
+             data-slot-attr="href:site.appStore.chord.url">
+            <img src="assets/img/app-store-badge.svg" alt="Download Oh a Chord on the App Store"
+                   width="120" height="40" data-slot-attr="alt:site.appStore.chord.label">
+          </a>
+        </p>
       </div>
     </section>
 
-    <!-- 2 · Oh a Synth -->
-    <section class="product-block block-synth" aria-labelledby="home-synth">
+    <!-- 2 · Oh a Chord — the launch product, the whole focus of this page -->
+    <section class="product-block block-chord" aria-labelledby="home-chord">
       <div class="container">
         <div class="product-copy">
-          <p class="kicker" data-slot="synth.kicker">Oh a Synth</p>
-          <h2 id="home-synth" data-slot="synth.headline">Six voices, inspired by the 80s.</h2>
-          <p data-slot="synth.body">Exact DCO tuning, a self-oscillating ladder filter, one honest ADSR, and the chorus that made the original famous. The whole signal path runs per-sample in your browser — no download, no signup.</p>
-          <a class="btn" href="oh-a-synth.html#play" data-slot="synth.cta" data-slot-attr="href:synth.ctaHref">Play it in your browser</a>
+          <p class="kicker" data-slot="chord.kicker">Oh a Chord</p>
+          <p class="status-flag" data-slot="chord.status">Out now on the App Store</p>
+          <h2 id="home-chord" data-slot="chord.headline">Press one key. Get a full chord.</h2>
+          <p data-slot="chord.body">A one-octave iPad keyboard where a single key press plays a whole chord. Chord Type and Modifier buttons set its colour, Key Mode keeps every press inside the key you pick, and a held chord becomes a strum, a harp sweep, or an arpeggio. No music theory required.</p>
+          <p class="cta-pair">
+            <a class="appstore-badge" href="https://apps.apple.com/us/app/oh-a-chord/id6804457158" rel="noopener"
+               data-slot-attr="href:site.appStore.chord.url">
+              <img src="assets/img/app-store-badge.svg" alt="Download Oh a Chord on the App Store"
+                   width="120" height="40" data-slot-attr="alt:site.appStore.chord.label">
+            </a>
+            <a class="btn btn-ghost" href="oh-a-chord.html"
+               data-slot="chord.secondaryCta" data-slot-attr="href:chord.secondaryHref">See how it works</a>
+          </p>
         </div>
         <figure class="media-slot">
-          <div class="frame ar-16x10">
-            <img src="assets/img/synth-hero.png" alt="The Oh a Synth panel: charcoal sections with cream legends, colored section accents, and a six-octave keyboard" width="1280" height="800">
+          <div class="frame ar-chord">
+            <img src="assets/img/chord-hero.png" alt="Oh a Chord running on an iPad: Chord Type and Modifier buttons on the left, a one-octave keyboard on the right, walnut cheeks at each edge" width="1600" height="1156">
           </div>
-          <figcaption data-slot="synth.mediaCaption">Slot: the Oh a Synth panel — STRINGS 1 loaded, CHORUS I lit (native app screenshot, assets/img/synth-hero.png)</figcaption>
+          <figcaption data-slot="chord.mediaCaption">Oh a Chord on iPad — chord controls under your left hand, keyboard under your right.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- 3 · Oh a Comber -->
-    <section class="product-block block-comber" aria-labelledby="home-comber">
+    <!-- 3 · The other two: coming-soon placeholders with notify-me capture -->
+    <section class="section coming-soon" aria-labelledby="home-soon">
       <div class="container">
-        <div class="product-copy">
-          <p class="kicker" data-slot="comber.kicker">Oh a Comber</p>
-          <h2 id="home-comber" data-slot="comber.headline">Every sample you own, findable.</h2>
-          <p data-slot="comber.body">Oh a Comber scans your sample folders where they sit and turns them into a searchable, filterable library. Preview with waveforms, then drag the real file straight onto a track. It never moves or renames anything.</p>
-          <a class="btn" href="oh-a-comber.html#waitlist" data-slot="comber.cta" data-slot-attr="href:comber.ctaHref">Join the waitlist</a>
+        <h2 id="home-soon" data-slot="comingSoon.heading">Also on the way</h2>
+        <p class="soon-intro" data-slot="comingSoon.body">Two more tools are in progress. Leave your email against either one and you'll hear when it ships — one message per launch, nothing else.</p>
+
+        <div class="soon-grid">
+
+          <article class="soon-card card-synth capture" data-capture="synth-notify" data-subject="Oh a Synth — tell me when it ships">
+            <p class="kicker" data-slot="synth.kicker">Oh a Synth</p>
+            <p class="status-flag" data-slot="synth.status">Coming soon</p>
+            <p class="soon-blurb" data-slot="synth.blurb">A 6-voice polysynth inspired by the classic sounds of the 80s.</p>
+            <p class="form-fallback" data-form-fallback>
+              <a data-mailto href="mailto:muna0001@gmail.com?subject=Oh%20a%20Synth%20%E2%80%94%20tell%20me%20when%20it%20ships" data-slot="synth.mailtoLabel">Tell me when Oh a Synth ships</a>
+            </p>
+            <form hidden novalidate>
+              <label for="home-synth-email" data-slot="synth.formEmailLabel">Email address</label>
+              <div class="form-row">
+                <input id="home-synth-email" name="email" type="email" autocomplete="email" placeholder="you@studio.com" required aria-describedby="home-synth-status">
+                <input type="hidden" name="list" value="synth-notify">
+                <button class="btn" type="submit" data-slot="synth.formSubmit">Notify me</button>
+              </div>
+              <span class="form-status" id="home-synth-status" role="status" aria-live="polite"></span>
+            </form>
+          </article>
+
+          <article class="soon-card card-comber capture" data-capture="comber-waitlist" data-subject="Oh a Comber — tell me when it ships">
+            <p class="kicker" data-slot="comber.kicker">Oh a Comber</p>
+            <p class="status-flag" data-slot="comber.status">Coming soon</p>
+            <p class="soon-blurb" data-slot="comber.blurb">A sample organizer that makes every sample you already own findable — without moving a file.</p>
+            <p class="form-fallback" data-form-fallback>
+              <a data-mailto href="mailto:muna0001@gmail.com?subject=Oh%20a%20Comber%20%E2%80%94%20tell%20me%20when%20it%20ships" data-slot="comber.mailtoLabel">Tell me when Oh a Comber ships</a>
+            </p>
+            <form hidden novalidate>
+              <label for="home-comber-email" data-slot="comber.formEmailLabel">Email address</label>
+              <div class="form-row">
+                <input id="home-comber-email" name="email" type="email" autocomplete="email" placeholder="you@studio.com" required aria-describedby="home-comber-status">
+                <input type="hidden" name="list" value="comber-waitlist">
+                <button class="btn" type="submit" data-slot="comber.formSubmit">Notify me</button>
+              </div>
+              <span class="form-status" id="home-comber-status" role="status" aria-live="polite"></span>
+            </form>
+          </article>
+
         </div>
-        <figure class="media-slot">
-          <div class="frame ar-16x10">
-            <img src="assets/img/comber-after.png" alt="The Oh a Comber library: phosphor-green sample list with type badges, filters, and a waveform player on near-black" width="1400" height="900">
-          </div>
-          <figcaption data-slot="comber.mediaCaption">Slot: the Oh a Comber library after a scan (app screenshot, assets/img/comber-after.png)</figcaption>
-        </figure>
       </div>
     </section>
 

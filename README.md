@@ -231,6 +231,18 @@ Mono (OFL), Departure Mono (OFL, © Helena Zhang). See
 `assets/fonts/FONTS-LICENSES.txt`. `js/vendor/marked.esm.js` is marked
 v12 (MIT); `vendor/three/three.module.js` is Three.js r170 (MIT).
 
+The App Store badge (`assets/img/app-store-badge.svg`) is Apple's official
+artwork, downloaded from Apple's App Store Marketing Tools and self-hosted.
+It is used unmodified per Apple's marketing guidelines — only its display
+size changes, proportionally, at 48px tall (Apple's floor is 40px) with
+clear space around it. See `assets/img/APP-STORE-BADGE-README.txt` for the
+source URL and how to swap the white variant or another locale in. Apple,
+the Apple logo and the App Store badge are trademarks of Apple Inc.
+
+The store link itself lives in `content/site.json` under `appStore.chord`
+(`url` plus `label`, which is the badge's alt text) — one edit point for
+every badge on the site.
+
 Nothing is fetched from a third-party origin at runtime except, when you
 configure them, the analytics tracker and the YouTube embed — and the
 YouTube player only loads after the visitor clicks the play facade.

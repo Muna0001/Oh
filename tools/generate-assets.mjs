@@ -59,8 +59,8 @@ ${extra}
 const ogHome = page(1200, 630, `
   <div class="card">
     <div class="mark">Oh<span>!</span></div>
-    <div class="line">A synth and a sample organizer,<br>built by one person for real records.</div>
-    <div class="foot"><span class="sw s1"></span><span class="sw s2"></span>muna0001.github.io/Oh</div>
+    <div class="line">Music tools for people who make records.<br>Oh a Chord is out now on the App Store.</div>
+    <div class="foot"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span>muna0001.github.io/Oh</div>
   </div>`, `
   .card { width: 100%; height: 100%; background: #141416; color: #ece5d5;
     padding: 70px 90px; display: flex; flex-direction: column; justify-content: space-between; }
@@ -69,7 +69,7 @@ const ogHome = page(1200, 630, `
   .line { font-size: 44px; font-weight: 500; color: #b9b2a2; line-height: 1.3; }
   .foot { display: flex; align-items: center; gap: 16px; font-size: 26px; color: #6f6f76; }
   .sw { width: 26px; height: 26px; border-radius: 6px; display: inline-block; }
-  .s1 { background: #c8413b; } .s2 { background: #4ade80; }`);
+  .s1 { background: #e0a33b; } .s2 { background: #ff5a3c; } .s3 { background: #4ade80; }`);
 
 const ogSynth = page(1200, 630, `
   <div class="card">
@@ -96,7 +96,7 @@ const ogChord = page(1200, 630, `
     <div class="inner">
       <div class="brand"><em>Oh a Chord</em><span class="stripes"><i></i><i></i><i></i><i></i></span></div>
       <div class="sub">IPAD CHORD INSTRUMENT</div>
-      <div class="line">Press one key. Get a full chord.<br>Coming to the App Store.</div>
+      <div class="line">Press one key. Get a full chord.<br>Out now on the App Store.</div>
     </div>
   </div>`, `
   .card { width: 100%; height: 100%; background: linear-gradient(#2e2e33, #2b2b30);
@@ -130,7 +130,7 @@ const ogAbout = page(1200, 630, `
   <div class="card">
     <div class="mark">Oh<span>!</span></div>
     <div class="who">Nate Mueller</div>
-    <div class="line">Designer, developer, music lover.<br>Builds Oh a Synth and Oh a Comber. Records as Oacoma.</div>
+    <div class="line">Designer, developer, music lover.<br>Builds the Oh! music tools. Records as Oacoma.</div>
   </div>`, `
   .card { width: 100%; height: 100%; background: #141416; color: #ece5d5;
     padding: 80px 90px; display: flex; flex-direction: column; }
@@ -208,12 +208,10 @@ const ASSETS = [
   { out: 'assets/img/poster-synth-daw.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: plugin in a DAW', '15 s silent loop — arp synced, a knob turning.', 'assets/video/synth-daw.mp4 / .webm') },
   { out: 'assets/img/poster-synth-track.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: 30 s demo track', 'A musical bed using only Oh a Synth, captions burned in.', 'assets/video/synth-in-a-track.mp4 / .webm') },
 
-  { out: 'assets/img/chord-hero.png', w: 1280, h: 800, html: placeholder(1280, 800, 'chord', 'Oh a Chord — full panel', 'Chord Type + Modifiers on the left, single-octave keyboard on the right, wood cheeks at each edge.', 'assets/img/chord-hero.png') },
-  { out: 'assets/img/chord-ui-types.png', w: 1280, h: 800, html: placeholder(1280, 800, 'chord', 'Chord Type + Modifiers', 'MAJ lit, a Modifier held down.', 'assets/img/chord-ui-types.png') },
-  { out: 'assets/img/chord-ui-key.png', w: 1280, h: 800, html: placeholder(1280, 800, 'chord', 'Key Mode engaged', 'KEY button reading "key: e", diatonic dots lit on the keyboard.', 'assets/img/chord-ui-key.png') },
-  { out: 'assets/img/chord-ui-perform.png', w: 1280, h: 800, html: placeholder(1280, 800, 'chord', 'Performance row', 'Strum, Harp, Arp toggles — Arp lit reading "arp up/dn".', 'assets/img/chord-ui-perform.png') },
-  { out: 'assets/img/chord-ui-editor.png', w: 1280, h: 800, html: placeholder(1280, 800, 'chord', 'Settings drawer open', 'MAIN, LFO, DCO, HPF, VCF sections, sliding down over the keyboard.', 'assets/img/chord-ui-editor.png') },
-  { out: 'assets/img/chord-ui-presets.png', w: 1280, h: 800, html: placeholder(1280, 800, 'chord', 'Save-preset prompt', 'Name field over the drawer, lit save icon beside the close button.', 'assets/img/chord-ui-presets.png') },
+  /* The other Oh a Chord images are REAL App Store screenshots living in
+     assets/img/ — they are deliberately not generated here, so running this
+     script can never overwrite them. Only this one is still a placeholder. */
+  { out: 'assets/img/chord-ui-presets.png', w: 1600, h: 1156, html: placeholder(1600, 1156, 'chord', 'Save-preset prompt', 'Name field over the drawer, lit save icon beside the close button.', 'assets/img/chord-ui-presets.png') },
 
   { out: 'assets/img/comber-before.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'BEFORE: raw pack folders', 'A file browser deep in nested sample-pack folders.', 'assets/img/comber-before.png') },
   { out: 'assets/img/comber-after.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'AFTER: the library', 'Same samples scanned — type badges, filters, waveform player.', 'assets/img/comber-after.png') },

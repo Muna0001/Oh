@@ -269,7 +269,9 @@ p { max-width: var(--measure); }
 .btn-ghost {
   background: transparent;
   color: var(--paper);
-  border-color: var(--rule);
+  /* --rule is a hairline divider tone (1.58:1) — too faint to be a control
+     boundary. --muted clears the 3:1 non-text-contrast floor in every world. */
+  border-color: var(--muted);
 }
 .btn-ghost:hover { border-color: var(--paper); filter: none; }
 
@@ -335,6 +337,9 @@ figure.media-slot {
 }
 .media-slot .frame.ar-16x9 { aspect-ratio: 16 / 9; }
 .media-slot .frame.ar-16x10 { aspect-ratio: 16 / 10; }
+/* iPad captures with the iOS status bar cropped off: 2752x1988. Using the
+   real ratio means nothing is cut off inside the frame. */
+.media-slot .frame.ar-chord { aspect-ratio: 2752 / 1988; }
 .media-slot figcaption {
   font-size: var(--step--1);
   color: var(--muted);
@@ -490,3 +495,34 @@ html.cursor-hidden * { cursor: none !important; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---- App Store call to action ------------------------------------------------ */
+/* Apple's official "Download on the App Store" badge (assets/img/app-store-badge.svg,
+   fetched from Apple's App Store Marketing Tools and self-hosted — nothing loads
+   from Apple at runtime). Per Apple's marketing guidelines the artwork is used
+   unmodified: no recolouring, no filters, no rotation, no rounded corners of our
+   own. Only its size changes, and it scales proportionally.
+
+   Sizing: 48px tall, comfortably above Apple's 40px minimum. Clear space is kept
+   at >= 1/4 the badge height on every side, which the flex gap and margin below
+   satisfy. */
+.appstore-badge {
+  display: inline-block;
+  line-height: 0;            /* no descender gap under the image */
+  border-radius: 8px;        /* matches the artwork, so focus ring hugs it */
+}
+.appstore-badge img {
+  height: 48px;
+  width: auto;
+}
+.appstore-badge:focus-visible { outline-offset: 4px; }
+.cta-pair,
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  max-width: none;
+}
+.hero-actions { margin-block-start: var(--space-3); }
+.product-block .cta-pair { margin-block-end: 0; }

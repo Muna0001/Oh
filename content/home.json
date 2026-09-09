@@ -1,29 +1,42 @@
 {
   "meta": {
-    "title": "Oh! — a synth and a sample organizer",
-    "description": "Oh! makes music software: Oh a Synth, a browser-playable polysynth inspired by the 80s, and Oh a Comber, a sample library organizer.",
+    "title": "Oh! — music tools, starting with Oh a Chord",
+    "description": "Oh! makes music software: Oh a Chord, an iPad instrument where one key press plays a full chord, out now on the App Store. Two more on the way.",
     "path": "index.html",
     "ogImage": "assets/img/og-home.png"
   },
   "hero": {
     "wordmark": "Oh!",
-    "line": "Two music tools from one person who makes records with them: a polysynth inspired by the classic sounds of the 80s that runs in your browser, and a sample organizer for the library you already have."
+    "line": "Music tools from one person who makes records with them. First out: Oh a Chord — press one key, get a full chord — now on the App Store."
+  },
+  "chord": {
+    "kicker": "Oh a Chord",
+    "status": "Out now on the App Store",
+    "headline": "Press one key. Get a full chord.",
+    "body": "A one-octave iPad keyboard where a single key press plays a whole chord. Chord Type and Modifier buttons set its colour, Key Mode keeps every press inside the key you pick, and a held chord becomes a strum, a harp sweep, or an arpeggio. No music theory required.",
+    "mediaCaption": "Oh a Chord on iPad — chord controls under your left hand, keyboard under your right.",
+    "secondaryCta": "See how it works",
+    "secondaryHref": "oh-a-chord.html"
+  },
+  "comingSoon": {
+    "heading": "Also on the way",
+    "body": "Two more tools are in progress. Leave your email against either one and you'll hear when it ships — one message per launch, nothing else."
   },
   "synth": {
     "kicker": "Oh a Synth",
-    "headline": "Six voices, inspired by the 80s.",
-    "body": "Exact DCO tuning, a self-oscillating ladder filter, one honest ADSR, and the chorus that made the original famous. The whole signal path runs per-sample in your browser — no download, no signup.",
-    "cta": "Play it in your browser",
-    "ctaHref": "oh-a-synth.html#play",
-    "mediaCaption": "Slot: the Oh a Synth panel — STRINGS 1 loaded, CHORUS I lit (native app screenshot, assets/img/synth-hero.png)"
+    "status": "Coming soon",
+    "blurb": "A 6-voice polysynth inspired by the classic sounds of the 80s.",
+    "formEmailLabel": "Email address",
+    "formSubmit": "Notify me",
+    "mailtoLabel": "Tell me when Oh a Synth ships"
   },
   "comber": {
     "kicker": "Oh a Comber",
-    "headline": "Every sample you own, findable.",
-    "body": "Oh a Comber scans your sample folders where they sit and turns them into a searchable, filterable library. Preview with waveforms, then drag the real file straight onto a track. It never moves or renames anything.",
-    "cta": "Join the waitlist",
-    "ctaHref": "oh-a-comber.html#waitlist",
-    "mediaCaption": "Slot: the Oh a Comber library after a scan (app screenshot, assets/img/comber-after.png)"
+    "status": "Coming soon",
+    "blurb": "A sample organizer that makes every sample you already own findable — without moving a file.",
+    "formEmailLabel": "Email address",
+    "formSubmit": "Notify me",
+    "mailtoLabel": "Tell me when Oh a Comber ships"
   },
   "maker": {
     "heading": "Who makes this",

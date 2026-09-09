@@ -1,15 +1,15 @@
 {
   "meta": {
     "title": "Oh a Chord — press one key, get a full chord",
-    "description": "An iPad instrument where one key press plays a full chord. Chord Type and Modifier buttons set its color, Key Mode keeps you in key, and Strum, Harp and Arp turn a held chord into a part — no music theory required.",
+    "description": "An iPad instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.",
     "path": "oh-a-chord.html",
     "ogImage": "assets/img/og-chord.png"
   },
   "hero": {
     "h1": "Press one key. Get a full chord.",
     "positioning": "Oh a Chord is a one-octave iPad keyboard where a single key press plays a full chord. Chord Type and Modifier buttons choose its quality, Key Mode keeps every note inside the key you pick, and a held chord turns into a strum, a harp sweep, or an arpeggio without ever retriggering.",
-    "cta": "See how it works",
-    "ctaHref": "#features"
+    "secondaryCta": "See how it works",
+    "secondaryHref": "#features"
   },
   "promise": {
     "heading": "Why this exists",
@@ -21,32 +21,32 @@
       "what": "A single octave sets the root. Chord Type buttons choose Dim, Min, Maj, Aug, Sus2 or Sus4, and Modifiers — 6, ♭7, maj7, 9, 11, 13 — stack colour on top for as long as a finger holds them down.",
       "why": "No chord charts, no fingerings to memorize. Every Chord Type and Modifier combination resolves to a real, playable chord — there's no dead button mid-performance.",
       "media": "assets/img/chord-ui-types.png",
-      "mediaAlt": "The Oh a Chord panel: Chord Type grid (Dim, Min, Maj, Aug, Sus2, Sus4) and the Modifiers grid beneath it",
-      "mediaCaption": "Slot: Chord Type + Modifiers panel, MAJ lit, a modifier held (screenshot, 1280×800)"
+      "mediaAlt": "The full Oh a Chord panel with MAJ selected in the Chord Type grid, the Modifiers grid below it, and the notes of the chord lit across the keyboard",
+      "mediaCaption": "MAJ selected — the notes of the chord light up across the keyboard."
     },
     {
       "label": "Key Mode",
       "what": "Arm Key Mode and the next key you press becomes the root. Every press after that stays inside that key — reach outside it and Oh a Chord borrows a sus or diminished chord that still belongs, instead of going silent.",
       "why": "It's music theory you can feel rather than study — a way to build a good-sounding progression without knowing why it works yet.",
       "media": "assets/img/chord-ui-key.png",
-      "mediaAlt": "The KEY button reading “key: e” with diatonic dots lit across the keyboard",
-      "mediaCaption": "Slot: Key Mode engaged on E, diatonic dots visible on the keyboard (screenshot, 1280×800)"
+      "mediaAlt": "The bottom row with KEY: E lit, and dots marking the in-key notes on every key of the keyboard",
+      "mediaCaption": "Key Mode armed on E. The dots mark what's in key."
     },
     {
       "label": "Strum, Harp, Arp",
       "what": "Three independent toggles turn a held chord into a part: Strum staggers the notes like a pick across strings, Harp sweeps one or two octaves, Arp cycles up or up-and-down at the tempo you set. Latch holds the chord hands-free.",
       "why": "A held chord doesn't have to just sit there. These are the same moves a hardware arpeggiator gives you, without ever retriggering the notes underneath.",
       "media": "assets/img/chord-ui-perform.png",
-      "mediaAlt": "The performance row: Strum, Harp and Arp toggles, Latch, and the tempo readout",
-      "mediaCaption": "Slot: performance row with Arp lit reading “arp up/dn” (screenshot, 1280×800)"
+      "mediaAlt": "The bottom row with ARP UP and LATCH lit while the arpeggiator steps through a held chord",
+      "mediaCaption": "ARP UP with LATCH on — the chord keeps cycling, hands-free."
     },
     {
       "label": "A full synth underneath",
       "what": "Behind the gear icon is the same 6-voice DSP core that powers Oh a Synth — oscillator, filter, envelopes, chorus — every parameter live and touchable, without ever leaving the keyboard behind.",
       "why": "The one-key chord is the front door, not the whole house. Anyone who wants to shape the sound itself can go as deep as Oh a Synth goes.",
       "media": "assets/img/chord-ui-editor.png",
-      "mediaAlt": "The advanced settings drawer, slid down over the top of the screen: MAIN, LFO, DCO, HPF, VCF sections",
-      "mediaCaption": "Slot: settings drawer open over the keyboard, several faders mid-drag (screenshot, 1280×800)"
+      "mediaAlt": "The Advanced drawer open over the keyboard, showing the MAIN, LFO, DCO, HPF and VCF sections",
+      "mediaCaption": "The Advanced drawer: MAIN, LFO, DCO, HPF and VCF, every fader live."
     },
     {
       "label": "Save your own sounds",
@@ -54,24 +54,67 @@
       "why": "A good sound found by accident shouldn't be lost the next time you touch a slider.",
       "media": "assets/img/chord-ui-presets.png",
       "mediaAlt": "The preset name prompt over the settings drawer, with a lit save icon beside the close button",
-      "mediaCaption": "Slot: the save-preset name prompt, drawer visible behind it (screenshot, 1280×800)"
+      "mediaCaption": "Placeholder — needs a screenshot of the save-preset prompt."
     }
   ],
+  "download": {
+    "heading": "Get it",
+    "body": "Oh a Chord is on the App Store now. It's an iPad instrument — landscape, iPadOS 16 or later.",
+    "privacyNote": "Read the",
+    "privacyLinkLabel": "privacy policy",
+    "privacyHref": "oh-a-chord-privacy.html"
+  },
   "specs": {
     "heading": "Specifications",
     "rows": [
-      { "label": "Keyboard", "value": "Single octave; one key press plays the whole chord" },
-      { "label": "Chord Type", "value": "Dim, Min, Maj, Aug, Sus2, Sus4" },
-      { "label": "Modifiers", "value": "6, ♭7, maj7, 9, 11, 13 — momentary, held while a finger is down; combine by holding several" },
-      { "label": "Key Mode", "value": "Locks every press to a chosen key; off-scale keys resolve to a borrowed sus or diminished chord rather than going silent" },
-      { "label": "Performance", "value": "Strum, Harp (1 or 2 octave sweep) and Arp (up, up/down) — each an independent toggle; Latch holds a chord hands-free" },
-      { "label": "Tempo", "value": "40–240 BPM, drives Arp's rate" },
-      { "label": "Voicing", "value": "Two sliders move a held chord through the register live, with no retriggering" },
-      { "label": "Synth engine", "value": "The same 6-voice DSP core as Oh a Synth — DCO, 24 dB/oct filter, one ADSR, BBD-style chorus — with a full parameter editor behind the settings gear" },
-      { "label": "Presets", "value": "9 factory sounds plus unlimited saved presets of your own, stored on the device" },
-      { "label": "Platform", "value": "iPad, landscape only, iPadOS 16 or later" },
-      { "label": "Privacy", "value": "No accounts, no analytics, no network requests of any kind. Saved presets never leave the device" },
-      { "label": "Price", "value": "Free" }
+      {
+        "label": "Keyboard",
+        "value": "Single octave; one key press plays the whole chord"
+      },
+      {
+        "label": "Chord Type",
+        "value": "Dim, Min, Maj, Aug, Sus2, Sus4"
+      },
+      {
+        "label": "Modifiers",
+        "value": "6, ♭7, maj7, 9, 11, 13 — momentary, held while a finger is down; combine by holding several"
+      },
+      {
+        "label": "Key Mode",
+        "value": "Locks every press to a chosen key; off-scale keys resolve to a borrowed sus or diminished chord rather than going silent"
+      },
+      {
+        "label": "Performance",
+        "value": "Strum, Harp (1 or 2 octave sweep) and Arp (up, up/down) — each an independent toggle; Latch holds a chord hands-free"
+      },
+      {
+        "label": "Tempo",
+        "value": "40–240 BPM, drives Arp's rate"
+      },
+      {
+        "label": "Voicing",
+        "value": "Two sliders move a held chord through the register live, with no retriggering"
+      },
+      {
+        "label": "Synth engine",
+        "value": "The same 6-voice DSP core as Oh a Synth — DCO, 24 dB/oct filter, one ADSR, BBD-style chorus — with a full parameter editor behind the settings gear"
+      },
+      {
+        "label": "Presets",
+        "value": "9 factory sounds plus unlimited saved presets of your own, stored on the device"
+      },
+      {
+        "label": "Platform",
+        "value": "iPad, landscape only, iPadOS 16 or later"
+      },
+      {
+        "label": "Privacy",
+        "value": "No accounts, no analytics, no network requests of any kind. Saved presets never leave the device"
+      },
+      {
+        "label": "Price",
+        "value": "Free"
+      }
     ]
   },
   "faq": {
@@ -99,18 +142,9 @@
       }
     ]
   },
-  "waitlist": {
-    "heading": "Get it",
-    "body": "Oh a Chord is heading to the App Store. Leave your email and you'll hear the moment it's live — one message, no spam.",
-    "formEmailLabel": "Email address",
-    "formSubmit": "Notify me",
-    "privacyNote": "Read the",
-    "privacyLinkLabel": "privacy policy",
-    "privacyHref": "oh-a-chord-privacy.html"
-  },
   "ctaRepeat": {
     "heading": "One key. A full chord.",
-    "body": "Coming to the App Store — leave your email above and you'll be the first to know.",
+    "body": "On the App Store now — one key, and the chord is already playing.",
     "cta": "Back to the top",
     "ctaHref": "#top"
   }

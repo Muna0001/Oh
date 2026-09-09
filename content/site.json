@@ -2,11 +2,31 @@
   "siteUrl": "https://muna0001.github.io/Oh",
   "siteName": "Oh!",
   "nav": [
-    { "label": "Oh!", "href": "index.html", "page": "home" },
-    { "label": "Oh a Synth", "href": "oh-a-synth.html", "page": "oh-a-synth" },
-    { "label": "Oh a Chord", "href": "oh-a-chord.html", "page": "oh-a-chord" },
-    { "label": "Oh a Comber", "href": "oh-a-comber.html", "page": "oh-a-comber" },
-    { "label": "About", "href": "about.html", "page": "about" }
+    {
+      "label": "Oh!",
+      "href": "index.html",
+      "page": "home"
+    },
+    {
+      "label": "Oh a Synth",
+      "href": "oh-a-synth.html",
+      "page": "oh-a-synth"
+    },
+    {
+      "label": "Oh a Chord",
+      "href": "oh-a-chord.html",
+      "page": "oh-a-chord"
+    },
+    {
+      "label": "Oh a Comber",
+      "href": "oh-a-comber.html",
+      "page": "oh-a-comber"
+    },
+    {
+      "label": "About",
+      "href": "about.html",
+      "page": "about"
+    }
   ],
   "contact": {
     "email": "muna0001@gmail.com",
@@ -25,5 +45,12 @@
     "line": "Oh! is designed and built by Nate Mueller.",
     "contactLabel": "Email Nate",
     "oacomaLabel": "Oacoma on:"
+  },
+  "appStore": {
+    "chord": {
+      "url": "https://apps.apple.com/us/app/oh-a-chord/id6804457158",
+      "label": "Download Oh a Chord on the App Store",
+      "_note": "label is the badge's alt text. The badge artwork is Apple's, used unmodified per Apple's App Store marketing guidelines: assets/img/app-store-badge.svg"
+    }
   }
 }

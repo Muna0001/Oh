@@ -37,12 +37,12 @@ function wire(container, config) {
 
   if (!config.endpoint) {
     // Pre-fill the mailto with a useful subject so the fallback is one click.
+    // The subject comes from the markup (data-subject) so a new product needs
+    // no change here — and so one product can never inherit another's subject.
     const a = fallback && fallback.querySelector('a[data-mailto]');
     if (a && config.fallbackMailto) {
       const subject = encodeURIComponent(
-        container.dataset.capture === 'comber-waitlist'
-          ? 'Oh a Comber waitlist'
-          : 'Oh a Synth — tell me when the full version ships'
+        container.dataset.subject || `Oh! — ${container.dataset.capture}`
       );
       a.href = `mailto:${config.fallbackMailto}?subject=${subject}`;
     }

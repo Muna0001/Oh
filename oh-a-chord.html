@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oh a Chord — press one key, get a full chord</title>
-  <meta name="description" content="An iPad instrument where one key press plays a full chord. Chord Type and Modifier buttons set its color, Key Mode keeps you in key, and Strum, Harp and Arp turn a held chord into a part — no music theory required.">
+  <meta name="description" content="An iPad instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.">
   <link rel="canonical" href="https://muna0001.github.io/Oh/oh-a-chord.html" data-canonical>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Oh!">
   <meta property="og:title" content="Oh a Chord — press one key, get a full chord">
-  <meta property="og:description" content="An iPad instrument where one key press plays a full chord. Chord Type and Modifier buttons set its color, Key Mode keeps you in key, and Strum, Harp and Arp turn a held chord into a part — no music theory required.">
+  <meta property="og:description" content="An iPad instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.">
   <meta property="og:url" content="https://muna0001.github.io/Oh/oh-a-chord.html">
   <meta property="og:image" content="https://muna0001.github.io/Oh/assets/img/og-chord.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Oh a Chord — press one key, get a full chord">
-  <meta name="twitter:description" content="An iPad instrument where one key press plays a full chord. Chord Type and Modifier buttons set its color, Key Mode keeps you in key, and Strum, Harp and Arp turn a held chord into a part — no music theory required.">
+  <meta name="twitter:description" content="An iPad instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.">
   <meta name="twitter:image" content="https://muna0001.github.io/Oh/assets/img/og-chord.png">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -49,8 +49,8 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      "availability": "https://schema.org/PreOrder",
-      "description": "Free. Pending App Store review."
+      "availability": "https://schema.org/InStock",
+      "url": "https://apps.apple.com/us/app/oh-a-chord/id6804457158"
     },
     "author": { "@type": "Person", "name": "Nate Mueller" }
   }
@@ -82,15 +82,23 @@
         <p class="kicker">iPad chord instrument · one key, one chord</p>
         <h1 id="chord-h1" data-slot="hero.h1">Press one key. Get a full chord.</h1>
         <p class="positioning" data-slot="hero.positioning">Oh a Chord is a one-octave iPad keyboard where a single key press plays a full chord. Chord Type and Modifier buttons choose its quality, Key Mode keeps every note inside the key you pick, and a held chord turns into a strum, a harp sweep, or an arpeggio without ever retriggering.</p>
-        <a class="btn" href="#features" data-slot="hero.cta" data-slot-attr="href:hero.ctaHref">See how it works</a>
+        <p class="cta-pair">
+          <a class="appstore-badge" href="https://apps.apple.com/us/app/oh-a-chord/id6804457158" rel="noopener"
+             data-slot-attr="href:site.appStore.chord.url">
+            <img src="assets/img/app-store-badge.svg" alt="Download Oh a Chord on the App Store"
+                   width="120" height="40" data-slot-attr="alt:site.appStore.chord.label">
+          </a>
+          <a class="btn btn-ghost" href="#features"
+             data-slot="hero.secondaryCta" data-slot-attr="href:hero.secondaryHref">See how it works</a>
+        </p>
       </div>
     </section>
 
     <section class="chord-stage" aria-label="Oh a Chord, on an iPad">
       <div class="container">
         <figure class="media-slot">
-          <div class="frame ar-16x10">
-            <img src="assets/img/chord-hero.png" width="1280" height="800" alt="The Oh a Chord panel: Chord Type and Modifiers on the left, a single-octave keyboard on the right, wood cheeks at each edge">
+          <div class="frame ar-chord">
+            <img src="assets/img/chord-hero.png" width="1600" height="1156" alt="Oh a Chord running on an iPad: Chord Type and Modifier buttons on the left, a one-octave keyboard on the right, walnut cheeks at each edge">
           </div>
         </figure>
       </div>
@@ -115,10 +123,10 @@
             <p class="why" data-slot="features.0.why">No chord charts, no fingerings to memorize. Every Chord Type and Modifier combination resolves to a real, playable chord — there's no dead button mid-performance.</p>
           </div>
           <figure class="media-slot">
-            <div class="frame ar-16x10">
-              <img src="assets/img/chord-ui-types.png" loading="lazy" width="1280" height="800" alt="The Oh a Chord panel: Chord Type grid (Dim, Min, Maj, Aug, Sus2, Sus4) and the Modifiers grid beneath it" data-slot-attr="alt:features.0.mediaAlt">
+            <div class="frame ar-chord">
+              <img src="assets/img/chord-ui-types.png" loading="lazy" width="1600" height="1156" alt="The full Oh a Chord panel with MAJ selected in the Chord Type grid, the Modifiers grid below it, and the notes of the chord lit across the keyboard" data-slot-attr="alt:features.0.mediaAlt">
             </div>
-            <figcaption data-slot="features.0.mediaCaption">Slot: Chord Type + Modifiers panel, MAJ lit, a modifier held (screenshot, 1280×800)</figcaption>
+            <figcaption data-slot="features.0.mediaCaption">MAJ selected — the notes of the chord light up across the keyboard.</figcaption>
           </figure>
         </article>
 
@@ -129,10 +137,10 @@
             <p class="why" data-slot="features.1.why">It's music theory you can feel rather than study — a way to build a good-sounding progression without knowing why it works yet.</p>
           </div>
           <figure class="media-slot">
-            <div class="frame ar-16x10">
-              <img src="assets/img/chord-ui-key.png" loading="lazy" width="1280" height="800" alt="The KEY button reading “key: e” with diatonic dots lit across the keyboard" data-slot-attr="alt:features.1.mediaAlt">
+            <div class="frame ar-chord">
+              <img src="assets/img/chord-ui-key.png" loading="lazy" width="1600" height="1156" alt="The bottom row with KEY: E lit, and dots marking the in-key notes on every key of the keyboard" data-slot-attr="alt:features.1.mediaAlt">
             </div>
-            <figcaption data-slot="features.1.mediaCaption">Slot: Key Mode engaged on E, diatonic dots visible on the keyboard (screenshot, 1280×800)</figcaption>
+            <figcaption data-slot="features.1.mediaCaption">Key Mode armed on E. The dots mark what's in key.</figcaption>
           </figure>
         </article>
 
@@ -143,10 +151,10 @@
             <p class="why" data-slot="features.2.why">A held chord doesn't have to just sit there. These are the same moves a hardware arpeggiator gives you, without ever retriggering the notes underneath.</p>
           </div>
           <figure class="media-slot">
-            <div class="frame ar-16x10">
-              <img src="assets/img/chord-ui-perform.png" loading="lazy" width="1280" height="800" alt="The performance row: Strum, Harp and Arp toggles, Latch, and the tempo readout" data-slot-attr="alt:features.2.mediaAlt">
+            <div class="frame ar-chord">
+              <img src="assets/img/chord-ui-perform.png" loading="lazy" width="1600" height="1156" alt="The bottom row with ARP UP and LATCH lit while the arpeggiator steps through a held chord" data-slot-attr="alt:features.2.mediaAlt">
             </div>
-            <figcaption data-slot="features.2.mediaCaption">Slot: performance row with Arp lit reading “arp up/dn” (screenshot, 1280×800)</figcaption>
+            <figcaption data-slot="features.2.mediaCaption">ARP UP with LATCH on — the chord keeps cycling, hands-free.</figcaption>
           </figure>
         </article>
 
@@ -157,10 +165,10 @@
             <p class="why" data-slot="features.3.why">The one-key chord is the front door, not the whole house. Anyone who wants to shape the sound itself can go as deep as Oh a Synth goes.</p>
           </div>
           <figure class="media-slot">
-            <div class="frame ar-16x10">
-              <img src="assets/img/chord-ui-editor.png" loading="lazy" width="1280" height="800" alt="The advanced settings drawer, slid down over the top of the screen: MAIN, LFO, DCO, HPF, VCF sections" data-slot-attr="alt:features.3.mediaAlt">
+            <div class="frame ar-chord">
+              <img src="assets/img/chord-ui-editor.png" loading="lazy" width="1600" height="1156" alt="The Advanced drawer open over the keyboard, showing the MAIN, LFO, DCO, HPF and VCF sections" data-slot-attr="alt:features.3.mediaAlt">
             </div>
-            <figcaption data-slot="features.3.mediaCaption">Slot: settings drawer open over the keyboard, several faders mid-drag (screenshot, 1280×800)</figcaption>
+            <figcaption data-slot="features.3.mediaCaption">The Advanced drawer: MAIN, LFO, DCO, HPF and VCF, every fader live.</figcaption>
           </figure>
         </article>
 
@@ -171,35 +179,27 @@
             <p class="why" data-slot="features.4.why">A good sound found by accident shouldn't be lost the next time you touch a slider.</p>
           </div>
           <figure class="media-slot">
-            <div class="frame ar-16x10">
-              <img src="assets/img/chord-ui-presets.png" loading="lazy" width="1280" height="800" alt="The preset name prompt over the settings drawer, with a lit save icon beside the close button" data-slot-attr="alt:features.4.mediaAlt">
+            <div class="frame ar-chord">
+              <img src="assets/img/chord-ui-presets.png" loading="lazy" width="1600" height="1156" alt="The preset name prompt over the settings drawer, with a lit save icon beside the close button" data-slot-attr="alt:features.4.mediaAlt">
             </div>
-            <figcaption data-slot="features.4.mediaCaption">Slot: the save-preset name prompt, drawer visible behind it (screenshot, 1280×800)</figcaption>
+            <figcaption data-slot="features.4.mediaCaption">Placeholder — needs a screenshot of the save-preset prompt.</figcaption>
           </figure>
         </article>
 
       </div>
     </section>
 
-    <!-- 4 · Get it (notify list — matches the Comber waitlist pattern; no live product yet) -->
-    <section class="section waitlist capture" id="waitlist" aria-labelledby="chord-waitlist" data-capture="chord-notify">
+    <!-- 4 · Get it — live on the App Store -->
+    <section class="section download" id="get" aria-labelledby="chord-download">
       <div class="container">
-        <h2 id="chord-waitlist" data-slot="waitlist.heading">Get it</h2>
-        <p data-slot="waitlist.body">Oh a Chord is heading to the App Store. Leave your email and you'll hear the moment it's live — one message, no spam.</p>
-        <p class="form-fallback" data-form-fallback>
-          <a data-mailto href="mailto:muna0001@gmail.com?subject=Oh%20a%20Chord%20%E2%80%94%20tell%20me%20when%20it%20ships">Tell me when it ships</a>
-          — one email to Nate, one reply when it's live.
-        </p>
-        <form hidden novalidate>
-          <label for="chord-email" data-slot="waitlist.formEmailLabel">Email address</label>
-          <div class="form-row">
-            <input id="chord-email" name="email" type="email" autocomplete="email" placeholder="you@studio.com" required aria-describedby="chord-email-status">
-            <input type="hidden" name="list" value="chord-notify">
-            <button class="btn" type="submit" data-slot="waitlist.formSubmit">Notify me</button>
-          </div>
-          <span class="form-status" id="chord-email-status" role="status" aria-live="polite"></span>
-        </form>
-        <p class="privacy-note"><span data-slot="waitlist.privacyNote">Read the</span> <a href="oh-a-chord-privacy.html" data-slot="waitlist.privacyLinkLabel" data-slot-attr="href:waitlist.privacyHref">privacy policy</a>.</p>
+        <h2 id="chord-download" data-slot="download.heading">Get it</h2>
+        <p data-slot="download.body">Oh a Chord is on the App Store now. It's an iPad instrument — landscape, iPadOS 16 or later.</p>
+        <p><a class="appstore-badge" href="https://apps.apple.com/us/app/oh-a-chord/id6804457158" rel="noopener"
+              data-slot-attr="href:site.appStore.chord.url">
+          <img src="assets/img/app-store-badge.svg" alt="Download Oh a Chord on the App Store"
+               width="120" height="40" data-slot-attr="alt:site.appStore.chord.label">
+        </a></p>
+        <p class="privacy-note"><span data-slot="download.privacyNote">Read the</span> <a href="oh-a-chord-privacy.html" data-slot="download.privacyLinkLabel" data-slot-attr="href:download.privacyHref">privacy policy</a>.</p>
       </div>
     </section>
 
@@ -259,7 +259,7 @@
     <section class="section cta-repeat" aria-labelledby="chord-cta2">
       <div class="container">
         <h2 id="chord-cta2" data-slot="ctaRepeat.heading">One key. A full chord.</h2>
-        <p data-slot="ctaRepeat.body">Coming to the App Store — leave your email above and you'll be the first to know.</p>
+        <p data-slot="ctaRepeat.body">On the App Store now — one key, and the chord is already playing.</p>
         <a class="btn" href="#top" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref">Back to the top</a>
       </div>
     </section>
