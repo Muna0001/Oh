@@ -1,20 +1,20 @@
 {
   "meta": {
-    "title": "Oh a Synth — a polysynth inspired by the 80s",
-    "description": "A 6-voice polysynth inspired by the classic sounds of the 80s. Play it free in your browser — no download. AU/VST3 plugin and Mac app on the way.",
+    "title": "Oh a Synth: a polysynth inspired by the 80s",
+    "description": "A 6-voice polysynth inspired by the classic sounds of the 80s. Play it free in your browser, no download. AU/VST3 plugin and Mac app on the way.",
     "path": "oh-a-synth.html",
     "ogImage": "assets/img/og-synth.png"
   },
   "hero": {
     "h1": "A polysynth inspired by the 80s, playable right now.",
-    "positioning": "Oh a Synth is a 6-voice polysynth inspired by the classic sounds of the 80s, and its real engine runs in this page — pick a patch, sweep the filter, punch the chorus in. Power it on and play.",
+    "positioning": "Oh a Synth is a 6-voice polysynth inspired by the classic sounds of the 80s. Its real engine runs in this page. Pick a patch, sweep the filter, punch the chorus in. Power it on and play.",
     "cta": "Play it in your browser",
     "ctaHref": "#play",
-    "powerHint": "Click to power on — silent until you do."
+    "powerHint": "Click to power on. Silent until you do."
   },
   "promise": {
     "heading": "Why this exists",
-    "body": "The polysynths of the 80s stay on records because they do a few things perfectly: rock-solid digital oscillators against a warm analog filter, and a chorus that turns one voice into a wall. Software versions usually get the panel right and the feel wrong. Oh a Synth chases the feel — down to the small component tolerances that make six voices sound like six voices."
+    "body": "Oh a Synth chases the feel, down to the small component tolerances that make six voices sound like six voices. The polysynths of the 80s stay on records because they do a few things perfectly: rock-solid digital oscillators against a warm analog filter, and a chorus that turns one voice into a wall. Software versions usually get the panel right and the feel wrong."
   },
   "features": [
     {
@@ -27,15 +27,15 @@
     },
     {
       "label": "VCF + HPF",
-      "what": "A 24 dB/oct zero-delay-feedback ladder filter that self-oscillates near the top of the RES range and tracks the keyboard via KYBD. In front of it sits the 4-position HPF — position 0 is the famous low-shelf bass boost.",
+      "what": "A 24 dB/oct zero-delay-feedback ladder filter that self-oscillates near the top of the RES range and tracks the keyboard via KYBD. In front of it sits the 4-position HPF. Position 0 is the famous low-shelf bass boost.",
       "why": "Sweep FREQ on a held chord and there is no zipper, no stair-stepping: slider moves are smoothed per-sample inside the audio thread.",
       "media": "assets/img/synth-ui-vcf.png",
       "mediaAlt": "The HPF and VCF sections of the panel: FREQ switch, and FREQ, RES, ENV POL, ENV, LFO, KYBD sliders",
-      "mediaCaption": "Slot: the VCF mid-sweep with RES high — filter self-oscillation demo state (screenshot, 1280×800)"
+      "mediaCaption": "Slot: the VCF mid-sweep with RES high, showing filter self-oscillation (screenshot, 1280×800)"
     },
     {
       "label": "CHORUS",
-      "what": "Two latching buttons, I and II; press both for I+II. A BBD-style stereo chorus modeled on the MN3009 bucket brigades — one delay line, two taps modulated in antiphase, wet path band-limited to 9 kHz.",
+      "what": "Two latching buttons, I and II; press both for I+II. A BBD-style stereo chorus modeled on the MN3009 bucket brigades: one delay line, two taps modulated in antiphase, wet path band-limited to 9 kHz.",
       "why": "This is the effect the era is remembered for. I is slow and lush, II runs faster, and I+II is the quick shallow warble the LESLIE ORGAN patch is built on.",
       "media": "assets/img/synth-ui-chorus.png",
       "mediaAlt": "The CHORUS section: buttons I and II with LEDs lit",
@@ -48,7 +48,7 @@
       "media": "assets/video/synth-daw.mp4",
       "mediaPoster": "assets/img/poster-synth-daw.png",
       "mediaAlt": "Silent loop of the plugin in a DAW with the arpeggiator synced to the session tempo",
-      "mediaCaption": "Slot: 15 s silent loop — plugin in a DAW, arp synced, a knob turning (assets/video/synth-daw.mp4/.webm)"
+      "mediaCaption": "Slot: 15 s silent loop of the plugin in a DAW, arp synced, a knob turning (assets/video/synth-daw.mp4/.webm)"
     },
     {
       "label": "PATCHES",
@@ -56,11 +56,11 @@
       "why": "The same file loads in the browser, the Mac app, and the plugin. A patch sketched on a laptop opens in Logic unchanged.",
       "media": "assets/img/synth-ui-patches.png",
       "mediaAlt": "The patch selector open, showing FAVOURITES, FACTORY and USER sections",
-      "mediaCaption": "Slot: native patch menu open — FAVOURITES / FACTORY / USER sections visible (screenshot, 1280×800)"
+      "mediaCaption": "Slot: native patch menu open. FAVOURITES / FACTORY / USER sections visible (screenshot, 1280×800)"
     },
     {
       "label": "MIDI",
-      "what": "Notes with velocity, pitch bend with separate DCO and VCF depths, mod-wheel vibrato, sustain pedal, and 24-ppqn beat clock for the arp. The status readout names what's connected — and what isn't.",
+      "what": "Notes with velocity, pitch bend with separate DCO and VCF depths, mod-wheel vibrato, sustain pedal, and 24-ppqn beat clock for the arp. The status readout names what's connected and what isn't.",
       "why": "Those machines ignored velocity entirely. The VEL slider maps it gently to level; set it to zero for that behavior.",
       "media": "assets/img/synth-ui-bender.png",
       "mediaAlt": "The BENDER lever with LFO TRIG button and DCO/VCF bend-depth sliders",
@@ -78,10 +78,10 @@
   "offer": {
     "heading": "Get it",
     "webLabel": "In your browser",
-    "webBody": "Free and immediate — the synth at the top of this page runs the real engine, not a demo loop. Patches, filter and chorus are live here; the whole panel is in the app.",
+    "webBody": "Free and immediate. The synth at the top of this page runs the real engine, not a demo loop. Patches, filter and chorus are live here. The whole panel is in the app.",
     "webCta": "Play it now",
     "desktopLabel": "In your DAW",
-    "desktopBody": "The same instrument as an AU/VST3 plugin and standalone app for macOS — every parameter automatable, patches shared with the browser version. Builds are done; distribution is waiting on Apple Developer ID signing and notarization.",
+    "desktopBody": "The same instrument as an AU/VST3 plugin and standalone app for macOS. Every parameter is automatable. Patches are shared with the browser version. Builds are done. Distribution is waiting on Apple Developer ID signing and notarization.",
     "desktopCta": "Tell me when the full version ships",
     "formEmailLabel": "Email address",
     "formSubmit": "Notify me",
@@ -124,11 +124,11 @@
       },
       {
         "label": "Browser version",
-        "value": "Free. AudioWorklet DSP, ~3–12 ms latency. Chrome, Edge, Firefox, Safari — Web MIDI unavailable in Safari"
+        "value": "Free. AudioWorklet DSP, ~3–12 ms latency. Chrome, Edge, Firefox, Safari. Web MIDI is unavailable in Safari"
       },
       {
         "label": "Plugin & app",
-        "value": "AU, VST3, and standalone — macOS 11+, universal binary (Apple Silicon + Intel). All parameters host-automatable, state saved with the project"
+        "value": "AU, VST3, and standalone. macOS 11+, universal binary (Apple Silicon + Intel). All parameters host-automatable, state saved with the project"
       },
       {
         "label": "MIDI",
@@ -149,7 +149,7 @@
     "items": [
       {
         "q": "Does the browser version sound like the plugin?",
-        "a": "Yes. The JavaScript and C++ engines are kept line-for-line equivalent — same oscillators, same filter, same chorus constants, same factory patches. What differs is plumbing: the browser adds a few milliseconds of latency and runs at your audio device's rate."
+        "a": "Yes. The JavaScript and C++ engines are kept line-for-line equivalent: same oscillators, same filter, same chorus constants, same factory patches. Only the plumbing differs. The browser adds a few milliseconds of latency and runs at your audio device's rate."
       },
       {
         "q": "Will it work in my DAW?",
@@ -169,13 +169,13 @@
       },
       {
         "q": "Do patches transfer between the browser and the plugin?",
-        "a": "Yes — a patch is a flat .ohasynth.json file, identical in both directions. Anything a patch doesn't name falls back to its default, so older patches keep loading as parameters are added."
+        "a": "Yes. A patch is a flat .ohasynth.json file, identical in both directions. Anything a patch doesn't name falls back to its default, so older patches keep loading as parameters are added."
       }
     ]
   },
   "ctaRepeat": {
     "heading": "The synth is at the top of this page.",
-    "body": "No download, no signup — power it on and play it now.",
+    "body": "No download, no signup. Power it on and play it now.",
     "cta": "Play it in your browser",
     "ctaHref": "#play"
   }

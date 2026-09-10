@@ -42,7 +42,7 @@ function wire(container, config) {
     const a = fallback && fallback.querySelector('a[data-mailto]');
     if (a && config.fallbackMailto) {
       const subject = encodeURIComponent(
-        container.dataset.subject || `Oh! — ${container.dataset.capture}`
+        container.dataset.subject || `Oh! ${container.dataset.capture}`
       );
       a.href = `mailto:${config.fallbackMailto}?subject=${subject}`;
     }
@@ -69,7 +69,7 @@ function wire(container, config) {
     if (!EMAIL_RE.test(value)) {
       input.setAttribute('aria-invalid', 'true');
       setStatus(form, 'invalid',
-        'That doesn’t look like an email address — check for typos.');
+        'That doesn’t look like an email address. Check for typos.');
       input.focus();
       return;
     }
@@ -91,7 +91,7 @@ function wire(container, config) {
       if (input) input.disabled = true;
       if (button) button.hidden = true;
       setStatus(form, 'success',
-        'You’re on the list. One email when there’s news — that’s all.');
+        'You’re on the list. One email when there’s news. That’s all.');
     } catch {
       form.classList.remove('is-submitting');
       if (button) { button.disabled = false; button.textContent = buttonLabel; }
@@ -99,7 +99,7 @@ function wire(container, config) {
         ? ` Or email ${config.fallbackMailto} and it gets handled by hand.`
         : '';
       setStatus(form, 'error',
-        `That didn’t send — the signup service didn’t answer. ` +
+        `That didn’t send. The signup service didn’t answer. ` +
         `Check your connection and try again.${mail}`);
     }
   });

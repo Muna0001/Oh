@@ -1,18 +1,18 @@
 {
   "meta": {
-    "title": "About Nate Mueller — Oh! and Oacoma",
+    "title": "About Nate Mueller: Oh! and Oacoma",
     "description": "Nate Mueller designs and builds Oh a Chord, Oh a Synth and Oh a Comber solo, and records music as Oacoma.",
     "path": "about.html",
     "ogImage": "assets/img/og-about.png"
   },
   "intro": {
     "h1": "I make the tools I want for my own music.",
-    "body": "I'm Nate Mueller — a designer and developer, and a music lover first. Oh! exists because I kept needing things that didn't exist the way I wanted them: a chord instrument that doesn't ask you to know theory first, a vintage polysynth that lives in a browser tab, a sample organizer that doesn't take my library hostage. I design them, build them, and use them on my own records before anyone else hears about them.\n\nThey're all built solo. If something about them feels opinionated, that's why."
+    "body": "I'm Nate Mueller. I'm a designer and developer, and a music lover first. I kept needing tools that didn't exist the way I wanted them: a chord instrument that doesn't ask you to know theory first, a polysynth that lives in a browser tab, a sample organizer that doesn't take my library hostage. So I built them. I use them on my own records before anyone else hears about them.\n\nThey're all built solo. If something about them feels opinionated, that's why."
   },
   "oacoma": {
     "heading": "Oacoma",
-    "body": "I record music as **Oacoma**. It's where every Oh! tool gets tested — the synth lines and the sample flips both start there.",
-    "embedCaption": "Slot: Oacoma on YouTube — set music.json → youtube.videoId to activate the embed",
+    "body": "I record music as **Oacoma**. It's where every Oh! tool gets tested. The synth lines and the sample flips both start there.",
+    "embedCaption": "Slot: Oacoma on YouTube. Set music.json → youtube.videoId to activate the embed",
     "listenHeading": "Listen"
   },
   "contact": {

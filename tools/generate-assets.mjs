@@ -112,7 +112,7 @@ const ogChord = page(1200, 630, `
 const ogComber = page(1200, 630, `
   <div class="card">
     <div class="brand">OH A COMBER</div>
-    <div class="sub">— sample organizer</div>
+    <div class="sub">sample organizer</div>
     <div class="line">&gt; Your sample library, finally searchable._</div>
   </div>`, `
   .card { width: 100%; height: 100%; background: #0a0f0d; color: #e2e8e5;
@@ -163,7 +163,7 @@ function placeholder(w, h, world, title, detail, file) {
   };
   return page(w, h, `
     <div class="ph">
-      <div class="tag">PLACEHOLDER — DROP REAL MEDIA AT THIS PATH</div>
+      <div class="tag">PLACEHOLDER. DROP REAL MEDIA AT THIS PATH</div>
       <div class="mid">
         <div class="rule"></div>
         <div class="title">${title}</div>
@@ -199,13 +199,13 @@ const ASSETS = [
   { out: 'assets/img/favicon-32.png', w: 32, h: 32, html: favicon(32) },
   { out: 'assets/img/apple-touch-icon.png', w: 180, h: 180, html: favicon(180) },
 
-  { out: 'assets/img/synth-hero.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'Oh a Synth — full panel', 'Native app at boot: STRINGS 1 loaded, CHORUS I lit, wood cheeks in frame.', 'assets/img/synth-hero.png') },
+  { out: 'assets/img/synth-hero.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'Oh a Synth: full panel', 'Native app at boot: STRINGS 1 loaded, CHORUS I lit, wood cheeks in frame.', 'assets/img/synth-hero.png') },
   { out: 'assets/img/synth-ui-dco.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'DCO section, close crop', 'PWM SRC set to LFO, SUB raised.', 'assets/img/synth-ui-dco.png') },
-  { out: 'assets/img/synth-ui-vcf.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'HPF + VCF sections', 'RES high — self-oscillation state.', 'assets/img/synth-ui-vcf.png') },
+  { out: 'assets/img/synth-ui-vcf.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'HPF + VCF sections', 'RES high. Filter self-oscillating.', 'assets/img/synth-ui-vcf.png') },
   { out: 'assets/img/synth-ui-chorus.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'CHORUS buttons', 'Button I engaged, LED lit.', 'assets/img/synth-ui-chorus.png') },
   { out: 'assets/img/synth-ui-patches.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'Patch menu open', 'FAVOURITES / FACTORY / USER sections visible.', 'assets/img/synth-ui-patches.png') },
   { out: 'assets/img/synth-ui-bender.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'BENDER mid-throw', 'Keys held, LFO TRIG + DCO/VCF minis beside the lever.', 'assets/img/synth-ui-bender.png') },
-  { out: 'assets/img/poster-synth-daw.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: plugin in a DAW', '15 s silent loop — arp synced, a knob turning.', 'assets/video/synth-daw.mp4 / .webm') },
+  { out: 'assets/img/poster-synth-daw.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: plugin in a DAW', '15 s silent loop. Arp synced, a knob turning.', 'assets/video/synth-daw.mp4 / .webm') },
   { out: 'assets/img/poster-synth-track.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: 30 s demo track', 'A musical bed using only Oh a Synth, captions burned in.', 'assets/video/synth-in-a-track.mp4 / .webm') },
 
   /* The other Oh a Chord images are REAL App Store screenshots living in
@@ -214,13 +214,13 @@ const ASSETS = [
   { out: 'assets/img/chord-ui-presets.png', w: 1600, h: 1156, html: placeholder(1600, 1156, 'chord', 'Save-preset prompt', 'Name field over the drawer, lit save icon beside the close button.', 'assets/img/chord-ui-presets.png') },
 
   { out: 'assets/img/comber-before.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'BEFORE: raw pack folders', 'A file browser deep in nested sample-pack folders.', 'assets/img/comber-before.png') },
-  { out: 'assets/img/comber-after.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'AFTER: the library', 'Same samples scanned — type badges, filters, waveform player.', 'assets/img/comber-after.png') },
+  { out: 'assets/img/comber-after.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'AFTER: the library', 'Same samples scanned. Type badges, filters, waveform player.', 'assets/img/comber-after.png') },
   { out: 'assets/img/comber-ui-types.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'Type chips + badges', 'Sidebar Type filters with live counts, several active.', 'assets/img/comber-ui-types.png') },
   { out: 'assets/img/comber-ui-search.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'Stacked filters', 'Search + Type + BPM Range narrowing the list.', 'assets/img/comber-ui-search.png') },
   { out: 'assets/img/comber-ui-player.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'Player bar mid-preview', 'Green waveform, elapsed time, sample playing.', 'assets/img/comber-ui-player.png') },
   { out: 'assets/img/comber-ui-instruments.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'DRUM PAD tab', 'Pads loaded, one mid-flash.', 'assets/img/comber-ui-instruments.png') },
   { out: 'assets/img/poster-comber-organize.png', w: 1280, h: 720, html: placeholder(1280, 720, 'comber', 'Poster: 30 s primary demo', 'A chaotic sample folder becoming searchable and sorted by type.', 'assets/video/comber-organize.mp4 / .webm') },
-  { out: 'assets/img/poster-comber-drag.png', w: 1280, h: 720, html: placeholder(1280, 720, 'comber', 'Poster: drag to DAW', '10 s silent loop — search, preview, drag onto a track.', 'assets/video/comber-drag-to-daw.mp4 / .webm') },
+  { out: 'assets/img/poster-comber-drag.png', w: 1280, h: 720, html: placeholder(1280, 720, 'comber', 'Poster: drag to DAW', '10 s silent loop. Search, preview, drag onto a track.', 'assets/video/comber-drag-to-daw.mp4 / .webm') },
 ];
 
 await mkdir(work, { recursive: true });

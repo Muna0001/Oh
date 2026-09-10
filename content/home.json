@@ -1,26 +1,26 @@
 {
   "meta": {
-    "title": "Oh! — music tools, starting with Oh a Chord",
-    "description": "Oh! makes music software: Oh a Chord, an iPad instrument where one key press plays a full chord, out now on the App Store. Two more on the way.",
+    "title": "Oh! Music tools, starting with Oh a Chord",
+    "description": "Oh! makes music software. Oh a Chord plays a full chord from one key press. Out now on the App Store. Two more tools on the way.",
     "path": "index.html",
     "ogImage": "assets/img/og-home.png"
   },
   "hero": {
     "wordmark": "Oh!",
-    "line": "Music tools from one person who makes records with them. First out: Oh a Chord — press one key, get a full chord — now on the App Store."
+    "line": "Music tools from one person who makes records with them. Oh a Chord is out now on the App Store. Press one key. Get a full chord."
   },
   "chord": {
     "kicker": "Oh a Chord",
     "status": "Out now on the App Store",
     "headline": "Press one key. Get a full chord.",
-    "body": "A one-octave iPad keyboard where a single key press plays a whole chord. Chord Type and Modifier buttons set its colour, Key Mode keeps every press inside the key you pick, and a held chord becomes a strum, a harp sweep, or an arpeggio. No music theory required.",
-    "mediaCaption": "Oh a Chord on iPad — chord controls under your left hand, keyboard under your right.",
+    "body": "A one-octave iPad keyboard. Press one key and the whole chord plays. Chord Type and Modifier buttons set its colour. Key Mode keeps every press inside the key you pick. A held chord becomes a strum, a harp sweep, or an arpeggio. No music theory required.",
+    "mediaCaption": "Oh a Chord on iPad. Chord controls under your left hand, keyboard under your right.",
     "secondaryCta": "See how it works",
     "secondaryHref": "oh-a-chord.html"
   },
   "comingSoon": {
     "heading": "Also on the way",
-    "body": "Two more tools are in progress. Leave your email against either one and you'll hear when it ships — one message per launch, nothing else."
+    "body": "Two more tools are in progress. Leave your email against either one and you'll hear when it ships. One message per launch. Nothing else."
   },
   "synth": {
     "kicker": "Oh a Synth",
@@ -33,14 +33,14 @@
   "comber": {
     "kicker": "Oh a Comber",
     "status": "Coming soon",
-    "blurb": "A sample organizer that makes every sample you already own findable — without moving a file.",
+    "blurb": "A sample organizer that makes every sample you already own findable, without moving a file.",
     "formEmailLabel": "Email address",
     "formSubmit": "Notify me",
     "mailtoLabel": "Tell me when Oh a Comber ships"
   },
   "maker": {
     "heading": "Who makes this",
-    "body": "Oh! is Nate Mueller — designer, developer, and the first user of everything here. Records music as Oacoma.",
+    "body": "Oh! is Nate Mueller. Designer, developer, and the first user of everything here. Records music as Oacoma.",
     "link": "More about Nate",
     "linkHref": "about.html"
   }

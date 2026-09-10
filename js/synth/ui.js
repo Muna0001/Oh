@@ -204,7 +204,7 @@ function mount() {
   el('span', 'sy-power-led', power);
   const powerText = el('span', null, power,
     (powerLabel && powerLabel.textContent.trim()) ||
-    'Click to power on — silent until you do.');
+    'Click to power on. Silent until you do.');
 
   /* Returns the in-flight start when one is already running, so callers
      that await this really do act after audio is ready. */
@@ -226,7 +226,7 @@ function mount() {
         keyboard.initMIDI(midiStatus);
       } catch {
         power.disabled = false;
-        powerText.textContent = 'Audio failed to start — click to try again.';
+        powerText.textContent = 'Audio failed to start. Click to try again.';
       } finally {
         poweringPromise = null;
       }
