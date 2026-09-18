@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Oh a Comber: sample organizer for macOS and Windows</title>
-  <meta name="description" content="Scan your sample library in place. Search and filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW.">
+  <title>Oh a Comber: sample organizer for Mac</title>
+  <meta name="description" content="Scan your sample library in place. Filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW. Out now for Mac, free.">
   <link rel="canonical" href="https://muna0001.github.io/Oh/oh-a-comber.html" data-canonical>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Oh!">
-  <meta property="og:title" content="Oh a Comber: sample organizer for macOS and Windows">
-  <meta property="og:description" content="Scan your sample library in place. Search and filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW.">
+  <meta property="og:title" content="Oh a Comber: sample organizer for Mac">
+  <meta property="og:description" content="Scan your sample library in place. Filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW. Out now for Mac, free.">
   <meta property="og:url" content="https://muna0001.github.io/Oh/oh-a-comber.html">
   <meta property="og:image" content="https://muna0001.github.io/Oh/assets/img/og-comber.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Oh a Comber: sample organizer for macOS and Windows">
-  <meta name="twitter:description" content="Scan your sample library in place. Search and filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW.">
+  <meta name="twitter:title" content="Oh a Comber: sample organizer for Mac">
+  <meta name="twitter:description" content="Scan your sample library in place. Filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW. Out now for Mac, free.">
   <meta name="twitter:image" content="https://muna0001.github.io/Oh/assets/img/og-comber.png">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -44,14 +44,18 @@
     "@type": "SoftwareApplication",
     "name": "Oh a Comber",
     "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "macOS, Windows",
+    "operatingSystem": "macOS 11+",
+    "softwareVersion": "1.0.0",
+    "downloadUrl": "https://github.com/Muna0001/SampleOrganizer/releases/tag/v1.0.0",
     "description": "A sample library organizer. Scans sample folders in place, classifies by type and genre from file and folder names, reads BPM and format details from metadata, filters by BPM and favorites, previews with waveforms, and drags original files straight into a DAW. Files are never moved or modified.",
     "url": "https://muna0001.github.io/Oh/oh-a-comber.html",
     "image": "https://muna0001.github.io/Oh/assets/img/og-comber.png",
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/PreOrder",
-      "description": "In development. Waitlist gets first access; pricing not announced."
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://github.com/Muna0001/SampleOrganizer/releases/tag/v1.0.0"
     },
     "author": { "@type": "Person", "name": "Nate Mueller" }
   }
@@ -84,7 +88,7 @@
           <p class="kicker">Sample library organizer · desktop app</p>
           <h1 id="comber-h1" data-slot="hero.h1">Your sample library, finally searchable.</h1>
           <p class="positioning" data-slot="hero.positioning">Oh a Comber scans the folders you already have and turns them into a fast, filterable library. It never moves, renames, or rewrites a file.</p>
-          <a class="btn" href="#waitlist" data-slot="hero.cta" data-slot-attr="href:hero.ctaHref">Join the waitlist</a>
+          <a class="btn" href="#download" data-slot="hero.cta" data-slot-attr="href:hero.ctaHref">Download for Mac</a>
         </div>
       </div>
     </section>
@@ -229,23 +233,47 @@
       </div>
     </section>
 
-    <!-- Waitlist -->
-    <section class="section waitlist capture" id="waitlist" aria-labelledby="comber-waitlist" data-capture="comber-waitlist" data-subject="Oh a Comber waitlist">
+    <!-- 4b · Get it: out now for Mac, direct from the GitHub release -->
+    <section class="section download" id="download" aria-labelledby="comber-download">
       <div class="container">
-        <h2 id="comber-waitlist" data-slot="waitlist.heading">Get first access</h2>
-        <p data-slot="waitlist.body">Oh a Comber is a desktop app for macOS and Windows, currently in development on real libraries. The waitlist gets first access and pricing news. Nothing else, no more than monthly.</p>
-        <p class="form-fallback" data-form-fallback>
-          <a data-mailto href="mailto:muna0001@gmail.com?subject=Oh%20a%20Comber%20waitlist">Join the waitlist by email</a>. One message, and you're on it.
-        </p>
-        <form hidden novalidate>
-          <label for="comber-email" data-slot="waitlist.formEmailLabel">Email address</label>
-          <div class="form-row">
-            <input id="comber-email" name="email" type="email" autocomplete="email" placeholder="you@studio.com" required aria-describedby="comber-email-status">
-            <input type="hidden" name="list" value="comber-waitlist">
-            <button class="btn" type="submit" data-slot="waitlist.formSubmit">Join the waitlist</button>
-          </div>
-          <span class="form-status" id="comber-email-status" role="status" aria-live="polite"></span>
-        </form>
+        <h2 id="comber-download" data-slot="download.heading">Get it</h2>
+        <p data-slot="download.body">Oh a Comber 1.0 is out now for Mac. It's free. Pick the build for your machine.</p>
+
+        <ul class="download-options" role="list">
+          <li>
+            <a class="btn" href="https://github.com/Muna0001/SampleOrganizer/releases/download/v1.0.0/OhAComber-1.0.0-arm64.dmg" rel="noopener"
+               data-slot="site.downloads.comber.arm64.label" data-slot-attr="href:site.downloads.comber.arm64.url">Download for Apple Silicon</a>
+            <span class="download-meta" data-slot="site.downloads.comber.arm64.meta">DMG, 102 MB. M1 or later.</span>
+          </li>
+          <li>
+            <a class="btn" href="https://github.com/Muna0001/SampleOrganizer/releases/download/v1.0.0/OhAComber-1.0.0-x64.dmg" rel="noopener"
+               data-slot="site.downloads.comber.x64.label" data-slot-attr="href:site.downloads.comber.x64.url">Download for Intel</a>
+            <span class="download-meta" data-slot="site.downloads.comber.x64.meta">DMG, 109 MB.</span>
+          </li>
+        </ul>
+
+        <p class="download-hint" data-slot="download.hint">Not sure which you have? Open the Apple menu and choose About This Mac. "Chip: Apple M…" means Apple Silicon. "Processor: Intel…" means Intel.</p>
+        <p class="download-hint" data-slot="download.install">Open the DMG and drag Oh a Comber to your Applications folder. Both builds are signed with an Apple Developer ID and notarized by Apple, so they open without a security warning. Needs macOS 11 or later.</p>
+        <p class="download-hint"><a href="https://github.com/Muna0001/SampleOrganizer/releases/tag/v1.0.0" rel="noopener"
+              data-slot="site.downloads.comber.releaseLinkLabel" data-slot-attr="href:site.downloads.comber.releaseUrl">Release notes on GitHub</a></p>
+
+        <!-- Windows: configured in the build, not shipped. Same capture plumbing as the old waitlist. -->
+        <div class="download-windows capture" data-capture="comber-windows" data-subject="Oh a Comber: tell me when the Windows build ships">
+          <h3 data-slot="download.windowsHeading">Windows</h3>
+          <p data-slot="download.windowsBody">The Windows build isn't out yet. Leave your email and you'll hear when it ships.</p>
+          <p class="form-fallback" data-form-fallback>
+            <a data-mailto href="mailto:muna0001@gmail.com?subject=Oh%20a%20Comber%3A%20tell%20me%20when%20the%20Windows%20build%20ships" data-slot="download.mailtoLabel">Tell me when the Windows build ships</a>. One message, and you're on it.
+          </p>
+          <form hidden novalidate>
+            <label for="comber-email" data-slot="download.formEmailLabel">Email address</label>
+            <div class="form-row">
+              <input id="comber-email" name="email" type="email" autocomplete="email" placeholder="you@studio.com" required aria-describedby="comber-email-status">
+              <input type="hidden" name="list" value="comber-windows">
+              <button class="btn" type="submit" data-slot="download.formSubmit">Notify me</button>
+            </div>
+            <span class="form-status" id="comber-email-status" role="status" aria-live="polite"></span>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -256,7 +284,7 @@
         <div class="spec-wrap">
           <table class="spec-table">
             <tbody>
-              <tr><th scope="row" data-slot="specs.rows.0.label">Platforms</th><td data-slot="specs.rows.0.value">macOS (Apple Silicon + Intel, dmg) · Windows x64 (installer)</td></tr>
+              <tr><th scope="row" data-slot="specs.rows.0.label">Platforms</th><td data-slot="specs.rows.0.value">macOS 11 or later, Apple Silicon and Intel (DMG). Windows: not yet</td></tr>
               <tr><th scope="row" data-slot="specs.rows.1.label">Formats indexed</th><td data-slot="specs.rows.1.value">.wav · .aiff / .aif · .mp3 · .flac · .ogg · .m4a · .wma · .aac</td></tr>
               <tr><th scope="row" data-slot="specs.rows.2.label">Read per sample</th><td data-slot="specs.rows.2.value">Duration, sample rate, channels, format, size, BPM (metadata or filename), pack, type, genre</td></tr>
               <tr><th scope="row" data-slot="specs.rows.3.label">Classification</th><td data-slot="specs.rows.3.value">16 types + genre, from filename and folder-path patterns. No audio analysis, no cloud</td></tr>
@@ -266,7 +294,7 @@
               <tr><th scope="row" data-slot="specs.rows.7.label">Drag &amp; drop</th><td data-slot="specs.rows.7.value">Native OS drag carrying the original file path. Works with any DAW or app that accepts audio files</td></tr>
               <tr><th scope="row" data-slot="specs.rows.8.label">Instruments</th><td data-slot="specs.rows.8.value">24-key chromatic keyboard sampler; 3×3 drum pads; playable by mouse, computer keys, or MIDI (hot-plug)</td></tr>
               <tr><th scope="row" data-slot="specs.rows.9.label">Privacy</th><td data-slot="specs.rows.9.value">No accounts, no sync, no telemetry. Your samples are never uploaded; the index is a local database file</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.10.label">Price</th><td data-slot="specs.rows.10.value">Not announced. The waitlist gets pricing news first</td></tr>
+              <tr><th scope="row" data-slot="specs.rows.10.label">Price</th><td data-slot="specs.rows.10.value">Free</td></tr>
             </tbody>
           </table>
         </div>
@@ -294,12 +322,12 @@
           <p data-slot="faq.items.3.a">Yes. Click Scan Library again. Existing entries update in place and your favorites survive the re-scan.</p>
         </details>
         <details>
-          <summary data-slot="faq.items.4.q">Is there a trial? What will it cost?</summary>
-          <p data-slot="faq.items.4.a">Pricing isn't decided yet, and there's no public build to try today. The waitlist gets first access and the pricing announcement before anyone else.</p>
+          <summary data-slot="faq.items.4.q">Which download do I pick?</summary>
+          <p data-slot="faq.items.4.a">Apple Silicon for any Mac with an M-series chip, which is every Mac sold since late 2020. Intel for older Macs. Open the Apple menu and choose About This Mac if you're not sure.</p>
         </details>
         <details>
-          <summary data-slot="faq.items.5.q">Does any of my library leave my machine?</summary>
-          <p data-slot="faq.items.5.a">No. There are no accounts, no sync, and no telemetry. Your samples and the index database stay on your machine.</p>
+          <summary data-slot="faq.items.5.q">Will my Mac let it open?</summary>
+          <p data-slot="faq.items.5.a">Yes. Both builds are signed with an Apple Developer ID and notarized by Apple. No security warning, no right-click workaround.</p>
         </details>
       </div>
     </section>
@@ -307,9 +335,9 @@
     <!-- 7 · CTA repeat -->
     <section class="section cta-repeat" aria-labelledby="comber-cta2">
       <div class="container">
-        <h2 id="comber-cta2" data-slot="ctaRepeat.heading">First access goes to the waitlist.</h2>
-        <p data-slot="ctaRepeat.body">One email when it ships, one when pricing is set. That's it.</p>
-        <a class="btn" href="#waitlist" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref">Join the waitlist</a>
+        <h2 id="comber-cta2" data-slot="ctaRepeat.heading">Out now for Mac.</h2>
+        <p data-slot="ctaRepeat.body">Free. Apple Silicon or Intel, signed and notarized.</p>
+        <a class="btn" href="#download" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref">Download for Mac</a>
       </div>
     </section>
   </main>

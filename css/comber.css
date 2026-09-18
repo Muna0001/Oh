@@ -89,6 +89,10 @@ body.world-comber {
   font-weight: 400;
   letter-spacing: 0.02em;
 }
+/* .world-comber a:hover above outscores base.css's .btn:hover and would paint
+   the button text green on amber (1.05:1). No light color passes on #ffb000
+   (white is 1.83:1), so hover keeps the ink at 10.5:1 and brightens instead. */
+.world-comber .btn:hover { color: var(--accent-ink); }
 .world-comber .btn-ghost {
   background: transparent;
   color: var(--green);
@@ -126,11 +130,52 @@ body.world-comber {
 .world-comber .feature h3::after { content: "]"; color: var(--green-dark); }
 .world-comber .feature .why { color: var(--muted); }
 
-/* ---- waitlist ------------------------------------------------------------------- */
-.world-comber .waitlist {
+/* ---- download: the two DMGs, then the Windows capture underneath -------------- */
+.world-comber .download {
   background: var(--surface);
   border-block: 1px solid var(--rule);
   padding-block: var(--space-4);
+}
+.download-options {
+  list-style: none;
+  padding: 0;
+  margin-block: var(--space-3);
+  display: grid;
+  gap: var(--space-2);
+}
+@media (min-width: 46rem) {
+  .download-options { grid-template-columns: repeat(2, max-content); gap: var(--space-3); }
+}
+.download-options li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.download-options .btn { text-align: center; }
+.download-meta {
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+}
+.download-hint {
+  color: var(--muted);
+  max-width: 60ch;
+  margin-block: var(--space-1);
+}
+.download-hint a { color: var(--green); }
+.download-windows {
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-3);
+  border-block-start: 1px solid var(--rule);
+}
+.download-windows h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-dim);
+  font-size: var(--step-0);
+  margin-block: 0 var(--space-1);
 }
 .world-comber .capture input[type="email"] {
   background: var(--bg);

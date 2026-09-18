@@ -99,11 +99,11 @@
       </div>
     </section>
 
-    <!-- 3 · The other two: coming-soon placeholders with notify-me capture -->
+    <!-- 3 · The other two: Comber shipped (download CTA), Synth still a notify-me card -->
     <section class="section coming-soon" aria-labelledby="home-soon">
       <div class="container">
-        <h2 id="home-soon" data-slot="comingSoon.heading">Also on the way</h2>
-        <p class="soon-intro" data-slot="comingSoon.body">Two more tools are in progress. Leave your email against either one and you'll hear when it ships. One message per launch. Nothing else.</p>
+        <h2 id="home-soon" data-slot="comingSoon.heading">More from Oh!</h2>
+        <p class="soon-intro" data-slot="comingSoon.body">Oh a Comber is out now for Mac. Oh a Synth is still in progress. Leave your email and you'll hear when it ships. One message. Nothing else.</p>
 
         <div class="soon-grid">
 
@@ -125,22 +125,16 @@
             </form>
           </article>
 
-          <article class="soon-card card-comber capture" data-capture="comber-waitlist" data-subject="Oh a Comber: tell me when it ships">
+          <article class="soon-card card-comber">
             <p class="kicker" data-slot="comber.kicker">Oh a Comber</p>
-            <p class="status-flag" data-slot="comber.status">Coming soon</p>
-            <p class="soon-blurb" data-slot="comber.blurb">A sample organizer that makes every sample you already own findable, without moving a file.</p>
-            <p class="form-fallback" data-form-fallback>
-              <a data-mailto href="mailto:muna0001@gmail.com?subject=Oh%20a%20Comber%3A%20tell%20me%20when%20it%20ships" data-slot="comber.mailtoLabel">Tell me when Oh a Comber ships</a>
+            <p class="status-flag" data-slot="comber.status">Out now for Mac</p>
+            <p class="soon-blurb" data-slot="comber.blurb">A sample organizer that makes every sample you already own findable, without moving a file. Free.</p>
+            <p class="cta-pair">
+              <a class="btn" href="oh-a-comber.html#download"
+                 data-slot="comber.cta" data-slot-attr="href:comber.ctaHref">Download for Mac</a>
+              <a class="btn btn-ghost" href="oh-a-comber.html"
+                 data-slot="comber.secondaryCta" data-slot-attr="href:comber.secondaryHref">See how it works</a>
             </p>
-            <form hidden novalidate>
-              <label for="home-comber-email" data-slot="comber.formEmailLabel">Email address</label>
-              <div class="form-row">
-                <input id="home-comber-email" name="email" type="email" autocomplete="email" placeholder="you@studio.com" required aria-describedby="home-comber-status">
-                <input type="hidden" name="list" value="comber-waitlist">
-                <button class="btn" type="submit" data-slot="comber.formSubmit">Notify me</button>
-              </div>
-              <span class="form-status" id="home-comber-status" role="status" aria-live="polite"></span>
-            </form>
           </article>
 
         </div>

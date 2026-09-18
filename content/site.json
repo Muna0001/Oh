@@ -52,5 +52,23 @@
       "label": "Download Oh a Chord on the App Store",
       "_note": "label is the badge's alt text. The badge artwork is Apple's, used unmodified per Apple's App Store marketing guidelines: assets/img/app-store-badge.svg"
     }
+  },
+  "downloads": {
+    "comber": {
+      "version": "1.0.0",
+      "releaseUrl": "https://github.com/Muna0001/SampleOrganizer/releases/tag/v1.0.0",
+      "releaseLinkLabel": "Release notes on GitHub",
+      "arm64": {
+        "url": "https://github.com/Muna0001/SampleOrganizer/releases/download/v1.0.0/OhAComber-1.0.0-arm64.dmg",
+        "label": "Download for Apple Silicon",
+        "meta": "DMG, 102 MB. M1 or later."
+      },
+      "x64": {
+        "url": "https://github.com/Muna0001/SampleOrganizer/releases/download/v1.0.0/OhAComber-1.0.0-x64.dmg",
+        "label": "Download for Intel",
+        "meta": "DMG, 109 MB."
+      },
+      "_note": "Direct links to the GitHub release assets. Bump version, both urls and both sizes together when a new release ships. Sizes are decimal MB, as Finder reports them."
+    }
   }
 }

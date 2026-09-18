@@ -19,8 +19,8 @@
     "secondaryHref": "oh-a-chord.html"
   },
   "comingSoon": {
-    "heading": "Also on the way",
-    "body": "Two more tools are in progress. Leave your email against either one and you'll hear when it ships. One message per launch. Nothing else."
+    "heading": "More from Oh!",
+    "body": "Oh a Comber is out now for Mac. Oh a Synth is still in progress. Leave your email and you'll hear when it ships. One message. Nothing else."
   },
   "synth": {
     "kicker": "Oh a Synth",
@@ -32,11 +32,12 @@
   },
   "comber": {
     "kicker": "Oh a Comber",
-    "status": "Coming soon",
-    "blurb": "A sample organizer that makes every sample you already own findable, without moving a file.",
-    "formEmailLabel": "Email address",
-    "formSubmit": "Notify me",
-    "mailtoLabel": "Tell me when Oh a Comber ships"
+    "status": "Out now for Mac",
+    "blurb": "A sample organizer that makes every sample you already own findable, without moving a file. Free.",
+    "cta": "Download for Mac",
+    "ctaHref": "oh-a-comber.html#download",
+    "secondaryCta": "See how it works",
+    "secondaryHref": "oh-a-comber.html"
   },
   "maker": {
     "heading": "Who makes this",

@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title": "Oh a Comber: sample organizer for macOS and Windows",
-    "description": "Scan your sample library in place. Search and filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW.",
+    "title": "Oh a Comber: sample organizer for Mac",
+    "description": "Scan your sample library in place. Filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW. Out now for Mac, free.",
     "path": "oh-a-comber.html",
     "ogImage": "assets/img/og-comber.png"
   },
   "hero": {
     "h1": "Your sample library, finally searchable.",
     "positioning": "Oh a Comber scans the folders you already have and turns them into a fast, filterable library. It never moves, renames, or rewrites a file.",
-    "cta": "Join the waitlist",
-    "ctaHref": "#waitlist"
+    "cta": "Download for Mac",
+    "ctaHref": "#download"
   },
   "beforeAfter": {
     "beforeMedia": "assets/img/comber-before.png",
@@ -83,19 +83,24 @@
     "poster": "assets/img/poster-comber-organize.png",
     "caption": "Slot: 30 s primary demo, captions burned in (assets/video/comber-organize.mp4/.webm)"
   },
-  "waitlist": {
-    "heading": "Get first access",
-    "body": "Oh a Comber is a desktop app for macOS and Windows, currently in development on real libraries. The waitlist gets first access and pricing news. Nothing else, no more than monthly.",
+  "download": {
+    "heading": "Get it",
+    "body": "Oh a Comber 1.0 is out now for Mac. It's free. Pick the build for your machine.",
+    "hint": "Not sure which you have? Open the Apple menu and choose About This Mac. \"Chip: Apple M…\" means Apple Silicon. \"Processor: Intel…\" means Intel.",
+    "install": "Open the DMG and drag Oh a Comber to your Applications folder. Both builds are signed with an Apple Developer ID and notarized by Apple, so they open without a security warning. Needs macOS 11 or later.",
+    "windowsHeading": "Windows",
+    "windowsBody": "The Windows build isn't out yet. Leave your email and you'll hear when it ships.",
     "formEmailLabel": "Email address",
-    "formSubmit": "Join the waitlist",
-    "formList": "comber-waitlist"
+    "formSubmit": "Notify me",
+    "formList": "comber-windows",
+    "mailtoLabel": "Tell me when the Windows build ships"
   },
   "specs": {
     "heading": "Specifications",
     "rows": [
       {
         "label": "Platforms",
-        "value": "macOS (Apple Silicon + Intel, dmg) · Windows x64 (installer)"
+        "value": "macOS 11 or later, Apple Silicon and Intel (DMG). Windows: not yet"
       },
       {
         "label": "Formats indexed",
@@ -135,7 +140,7 @@
       },
       {
         "label": "Price",
-        "value": "Not announced. The waitlist gets pricing news first"
+        "value": "Free"
       }
     ]
   },
@@ -159,8 +164,20 @@
         "a": "Yes. Click Scan Library again. Existing entries update in place and your favorites survive the re-scan."
       },
       {
-        "q": "Is there a trial? What will it cost?",
-        "a": "Pricing isn't decided yet, and there's no public build to try today. The waitlist gets first access and the pricing announcement before anyone else."
+        "q": "Which download do I pick?",
+        "a": "Apple Silicon for any Mac with an M-series chip, which is every Mac sold since late 2020. Intel for older Macs. Open the Apple menu and choose About This Mac if you're not sure."
+      },
+      {
+        "q": "Will my Mac let it open?",
+        "a": "Yes. Both builds are signed with an Apple Developer ID and notarized by Apple. No security warning, no right-click workaround."
+      },
+      {
+        "q": "What does it cost?",
+        "a": "Nothing. Oh a Comber 1.0 is a free download."
+      },
+      {
+        "q": "What about Windows?",
+        "a": "Not yet. Leave your email in the Windows box above and you'll hear when it ships."
       },
       {
         "q": "Does any of my library leave my machine?",
@@ -169,9 +186,9 @@
     ]
   },
   "ctaRepeat": {
-    "heading": "First access goes to the waitlist.",
-    "body": "One email when it ships, one when pricing is set. That's it.",
-    "cta": "Join the waitlist",
-    "ctaHref": "#waitlist"
+    "heading": "Out now for Mac.",
+    "body": "Free. Apple Silicon or Intel, signed and notarized.",
+    "cta": "Download for Mac",
+    "ctaHref": "#download"
   }
 }
