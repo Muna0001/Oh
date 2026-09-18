@@ -11,9 +11,11 @@
   },
   "oacoma": {
     "heading": "Oacoma",
-    "body": "I record music as **Oacoma**. It's where every Oh! tool gets tested. The synth lines and the sample flips both start there.",
-    "embedCaption": "Slot: Oacoma on YouTube. Set music.json → youtube.videoId to activate the embed",
-    "listenHeading": "Listen"
+    "body": "I record synth pop as **Oacoma**, from Minneapolis. It's where every Oh! tool gets tested. The synth lines and the sample flips both start there.",
+    "latestLabel": "Latest release",
+    "embedCaption": "From the Oacoma YouTube channel. The video loads when you press play.",
+    "listenHeading": "Listen",
+    "followHeading": "Follow"
   },
   "contact": {
     "heading": "Contact",

@@ -1,8 +1,17 @@
 {
   "artist": "Oacoma",
+  "tagline": "Synth pop from Minneapolis",
   "youtube": {
-    "videoId": "",
-    "title": "Oacoma on YouTube"
+    "videoId": "MmuFUH5OwG8",
+    "title": "\"Wake Up\", live acoustic recording",
+    "watchUrl": "https://www.youtube.com/watch?v=MmuFUH5OwG8"
+  },
+  "latest": {
+    "title": "Cautioners",
+    "kind": "single",
+    "released": "2024",
+    "url": "https://oacoma.bandcamp.com/track/cautioners-2",
+    "cta": "Hear it on Bandcamp"
   },
   "albums": [],
   "_albums_example": [
@@ -20,17 +29,22 @@
     }
   ],
   "links": {
-    "spotify": "",
-    "appleMusic": "",
-    "amazonMusic": "",
-    "youtube": "",
-    "bandcamp": ""
+    "spotify": "https://open.spotify.com/artist/3eNjFdryV9MQHBNqx75KdU",
+    "appleMusic": "https://music.apple.com/us/artist/oacoma/1504016144",
+    "amazonMusic": "https://music.amazon.com/artists/B086896V72",
+    "youtube": "https://www.youtube.com/@oacoma6095/featured",
+    "bandcamp": "https://oacoma.bandcamp.com/",
+    "soundcloud": "https://soundcloud.com/nate-mueller",
+    "instagram": "https://instagram.com/oacoma"
   },
   "linkLabels": {
     "spotify": "Spotify",
     "appleMusic": "Apple Music",
     "amazonMusic": "Amazon Music",
     "youtube": "YouTube",
-    "bandcamp": "Bandcamp"
-  }
+    "bandcamp": "Bandcamp",
+    "soundcloud": "SoundCloud",
+    "instagram": "Instagram"
+  },
+  "_note": "Links mirror linktr.ee/Oacoma with tracking parameters stripped. Apple Music points at the artist page rather than the Lost single the Linktree uses. Clear youtube.videoId to hide the embed; clear latest.url to hide the featured release."
 }

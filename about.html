@@ -85,30 +85,44 @@
       </div>
     </section>
 
-    <!-- Oacoma: one compact section, not a second site -->
+    <!-- Oacoma: one compact section, not a second site. Links come from content/music.json -->
     <section class="section oacoma" aria-labelledby="about-oacoma">
       <div class="container">
         <h2 id="about-oacoma" data-slot="oacoma.heading">Oacoma</h2>
         <div class="prose" data-slot-md="oacoma.body">
-          <p>I record music as <strong>Oacoma</strong>. It&#39;s where every Oh! tool gets tested. The synth lines and the sample flips both start there.</p>
+          <p>I record synth pop as <strong>Oacoma</strong>, from Minneapolis. It&#39;s where every Oh! tool gets tested. The synth lines and the sample flips both start there.</p>
         </div>
 
-        <figure class="media-slot yt-slot" data-yt>
+        <p class="latest-release" data-slot-showif="music.latest.url">
+          <span class="latest-label" data-slot="oacoma.latestLabel">Latest release</span>
+          <span class="latest-title"><span data-slot="music.latest.title">Cautioners</span>, <span data-slot="music.latest.kind">single</span>, <span data-slot="music.latest.released">2024</span>.</span>
+          <a href="https://oacoma.bandcamp.com/track/cautioners-2" rel="noopener" data-slot="music.latest.cta" data-slot-attr="href:music.latest.url">Hear it on Bandcamp</a>
+        </p>
+
+        <!-- hidden until music.json has a videoId; music.js turns it into a click-to-load facade -->
+        <figure class="media-slot yt-slot" data-yt data-slot-showif="music.youtube.videoId">
           <div class="frame ar-16x9">
-            <!-- render.js/sync fills the iframe only when music.json → youtube.videoId is set -->
+            <a class="yt-static" href="https://www.youtube.com/watch?v=MmuFUH5OwG8" rel="noopener"
+               data-slot-attr="href:music.youtube.watchUrl">Watch on YouTube</a>
           </div>
-          <figcaption data-slot="oacoma.embedCaption">Slot: Oacoma on YouTube. Set music.json → youtube.videoId to activate the embed</figcaption>
+          <figcaption data-slot="oacoma.embedCaption">From the Oacoma YouTube channel. The video loads when you press play.</figcaption>
         </figure>
 
         <h3 data-slot="oacoma.listenHeading">Listen</h3>
         <ul class="listen-links">
-          <li hidden data-slot-showif="music.links.spotify"><a href="#" data-slot-attr="href:music.links.spotify" rel="noopener">Spotify</a></li>
-          <li hidden data-slot-showif="music.links.appleMusic"><a href="#" data-slot-attr="href:music.links.appleMusic" rel="noopener">Apple Music</a></li>
-          <li hidden data-slot-showif="music.links.amazonMusic"><a href="#" data-slot-attr="href:music.links.amazonMusic" rel="noopener">Amazon Music</a></li>
-          <li hidden data-slot-showif="music.links.youtube"><a href="#" data-slot-attr="href:music.links.youtube" rel="noopener">YouTube</a></li>
-          <li hidden data-slot-showif="music.links.bandcamp"><a href="#" data-slot-attr="href:music.links.bandcamp" rel="noopener">Bandcamp</a></li>
+          <li data-slot-showif="music.links.spotify"><a href="https://open.spotify.com/artist/3eNjFdryV9MQHBNqx75KdU" data-slot-attr="href:music.links.spotify" rel="me noopener">Spotify</a></li>
+          <li data-slot-showif="music.links.appleMusic"><a href="https://music.apple.com/us/artist/oacoma/1504016144" data-slot-attr="href:music.links.appleMusic" rel="me noopener">Apple Music</a></li>
+          <li data-slot-showif="music.links.amazonMusic"><a href="https://music.amazon.com/artists/B086896V72" data-slot-attr="href:music.links.amazonMusic" rel="me noopener">Amazon Music</a></li>
+          <li data-slot-showif="music.links.youtube"><a href="https://www.youtube.com/@oacoma6095/featured" data-slot-attr="href:music.links.youtube" rel="me noopener">YouTube</a></li>
+          <li data-slot-showif="music.links.bandcamp"><a href="https://oacoma.bandcamp.com/" data-slot-attr="href:music.links.bandcamp" rel="me noopener">Bandcamp</a></li>
+          <li data-slot-showif="music.links.soundcloud"><a href="https://soundcloud.com/nate-mueller" data-slot-attr="href:music.links.soundcloud" rel="me noopener">SoundCloud</a></li>
         </ul>
-        <p class="listen-note" data-albums-note>Streaming links and album art appear here as they're added to <code>content/music.json</code>.</p>
+
+        <h3 data-slot-showif="music.links.instagram" data-slot="oacoma.followHeading">Follow</h3>
+        <ul class="listen-links">
+          <li data-slot-showif="music.links.instagram"><a href="https://instagram.com/oacoma" data-slot-attr="href:music.links.instagram" rel="me noopener">Instagram</a></li>
+        </ul>
+
         <ul class="album-grid" data-albums hidden></ul>
       </div>
     </section>
@@ -127,11 +141,11 @@
       <p data-slot="site.footer.line">Oh! is designed and built by Nate Mueller.</p>
       <ul>
         <li><a href="mailto:muna0001@gmail.com" data-slot="site.footer.contactLabel" data-slot-attr="href:site.contact.emailHref">Email Nate</a></li>
-        <li hidden data-slot-showif="music.links.spotify"><a href="#" data-slot-attr="href:music.links.spotify" rel="me noopener">Oacoma on Spotify</a></li>
-        <li hidden data-slot-showif="music.links.appleMusic"><a href="#" data-slot-attr="href:music.links.appleMusic" rel="me noopener">Oacoma on Apple Music</a></li>
-        <li hidden data-slot-showif="music.links.amazonMusic"><a href="#" data-slot-attr="href:music.links.amazonMusic" rel="me noopener">Oacoma on Amazon Music</a></li>
-        <li hidden data-slot-showif="music.links.youtube"><a href="#" data-slot-attr="href:music.links.youtube" rel="me noopener">Oacoma on YouTube</a></li>
-        <li hidden data-slot-showif="music.links.bandcamp"><a href="#" data-slot-attr="href:music.links.bandcamp" rel="me noopener">Oacoma on Bandcamp</a></li>
+        <li data-slot-showif="music.links.spotify"><a href="https://open.spotify.com/artist/3eNjFdryV9MQHBNqx75KdU" data-slot-attr="href:music.links.spotify" rel="me noopener">Oacoma on Spotify</a></li>
+        <li data-slot-showif="music.links.appleMusic"><a href="https://music.apple.com/us/artist/oacoma/1504016144" data-slot-attr="href:music.links.appleMusic" rel="me noopener">Oacoma on Apple Music</a></li>
+        <li data-slot-showif="music.links.amazonMusic"><a href="https://music.amazon.com/artists/B086896V72" data-slot-attr="href:music.links.amazonMusic" rel="me noopener">Oacoma on Amazon Music</a></li>
+        <li data-slot-showif="music.links.youtube"><a href="https://www.youtube.com/@oacoma6095/featured" data-slot-attr="href:music.links.youtube" rel="me noopener">Oacoma on YouTube</a></li>
+        <li data-slot-showif="music.links.bandcamp"><a href="https://oacoma.bandcamp.com/" data-slot-attr="href:music.links.bandcamp" rel="me noopener">Oacoma on Bandcamp</a></li>
       </ul>
     </div>
   </footer>

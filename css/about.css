@@ -31,7 +31,33 @@
   color: var(--paper);
 }
 .listen-links a:hover { border-color: var(--accent); color: var(--accent); }
-.listen-note { color: var(--muted); font-size: var(--step--1); margin-block-start: var(--space-2); }
+
+/* featured release: one line, label in small caps, title, outbound link */
+.latest-release {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4em 0.75em;
+  margin-block: var(--space-3) 0;
+}
+.latest-label {
+  font-size: var(--step--1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.latest-title { color: var(--paper); }
+
+/* no-JS fallback inside the video frame: a plain outbound link, centred */
+.yt-static {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  color: var(--paper);
+}
 
 .album-grid {
   list-style: none;

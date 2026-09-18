@@ -36,8 +36,8 @@ document.addEventListener('oh:content', (e) => {
       frame.replaceChildren(iframe);
     }, { once: true });
     frame.replaceChildren(btn);
-    const cap = slot.querySelector('figcaption');
-    if (cap) cap.textContent = music.youtube.title || 'Oacoma on YouTube';
+    // the figcaption is slot-driven (about.json → oacoma.embedCaption); the
+    // facade already shows the title, so the caption is free to say something else
   }
 
   // --- album grid ---
