@@ -90,23 +90,9 @@
       <div class="container">
         <h2 id="about-oacoma" data-slot="oacoma.heading">Oacoma</h2>
         <div class="prose" data-slot-md="oacoma.body">
-          <p>I record synth pop as <strong>Oacoma</strong>, from Minneapolis. It&#39;s where every Oh! tool gets tested. The synth lines and the sample flips both start there.</p>
+          <p>I record synth pop as <strong>Oacoma</strong>.</p>
         </div>
 
-        <p class="latest-release" data-slot-showif="music.latest.url">
-          <span class="latest-label" data-slot="oacoma.latestLabel">Latest release</span>
-          <span class="latest-title"><span data-slot="music.latest.title">Cautioners</span>, <span data-slot="music.latest.kind">single</span>, <span data-slot="music.latest.released">2024</span>.</span>
-          <a href="https://oacoma.bandcamp.com/track/cautioners-2" rel="noopener" data-slot="music.latest.cta" data-slot-attr="href:music.latest.url">Hear it on Bandcamp</a>
-        </p>
-
-        <!-- hidden until music.json has a videoId; music.js turns it into a click-to-load facade -->
-        <figure class="media-slot yt-slot" data-yt data-slot-showif="music.youtube.videoId">
-          <div class="frame ar-16x9">
-            <a class="yt-static" href="https://www.youtube.com/watch?v=MmuFUH5OwG8" rel="noopener"
-               data-slot-attr="href:music.youtube.watchUrl">Watch on YouTube</a>
-          </div>
-          <figcaption data-slot="oacoma.embedCaption">From the Oacoma YouTube channel. The video loads when you press play.</figcaption>
-        </figure>
 
         <h3 data-slot="oacoma.listenHeading">Listen</h3>
         <ul class="listen-links">

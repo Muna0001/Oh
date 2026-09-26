@@ -2,16 +2,8 @@
   "artist": "Oacoma",
   "tagline": "Synth pop from Minneapolis",
   "youtube": {
-    "videoId": "MmuFUH5OwG8",
-    "title": "\"Wake Up\", live acoustic recording",
-    "watchUrl": "https://www.youtube.com/watch?v=MmuFUH5OwG8"
-  },
-  "latest": {
-    "title": "Cautioners",
-    "kind": "single",
-    "released": "2024",
-    "url": "https://oacoma.bandcamp.com/track/cautioners-2",
-    "cta": "Hear it on Bandcamp"
+    "videoId": "",
+    "title": ""
   },
   "albums": [],
   "_albums_example": [
@@ -46,5 +38,5 @@
     "soundcloud": "SoundCloud",
     "instagram": "Instagram"
   },
-  "_note": "Links mirror linktr.ee/Oacoma with tracking parameters stripped. Apple Music points at the artist page rather than the Lost single the Linktree uses. Clear youtube.videoId to hide the embed; clear latest.url to hide the featured release."
+  "_note": "Links mirror linktr.ee/Oacoma with tracking parameters stripped. Apple Music points at the artist page rather than the Lost single the Linktree uses. The About page has no video embed."
 }
