@@ -15,6 +15,12 @@
     "heading": "Why this exists",
     "body": "Oh a Chord goes straight to the sound. Press a key and hear a chord. Hold a couple of fingers down to colour it. Key Mode keeps you inside a key without needing to know why. Most chord and arpeggiator apps want theory first: the right scale, the right extensions, an arpeggiator wired up by hand. This one asks for none of it."
   },
+  "demo": {
+    "heading": "See it in thirty seconds",
+    "body": "Seven things Oh a Chord does, one at a time, each shown on the app's own screen: press a key, pick a chord type, hold a modifier, then voice leading, Strum, Harp and Arp, Key Mode, and the sound.",
+    "caption": "Thirty seconds, with sound. Press play to hear each chord as it's shown.",
+    "videoLabel": "Thirty-second walkthrough of Oh a Chord with captions burned in: pressing a key, Chord Type, Modifiers, voice leading, Strum, Harp and Arp, Key Mode, and presets, each shown on the app's screen"
+  },
   "features": [
     {
       "label": "One key, a full chord",
