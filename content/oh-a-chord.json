@@ -18,7 +18,7 @@
   "features": [
     {
       "label": "One key, a full chord",
-      "what": "A single octave sets the root. Chord Type buttons choose Dim, Min, Maj, Aug, Sus2 or Sus4. Modifiers (6, ♭7, maj7, 9, 11, 13) stack colour on top for as long as a finger holds them down.",
+      "what": "A single octave sets the root. Chord Type buttons choose Dim, Min, Maj, Aug, Sus2 or Sus4. Modifiers (2, 6, ♭7, maj7, 9, 11) stack colour on top for as long as a finger holds them down.",
       "why": "No chord charts, no fingerings to memorize. Every Chord Type and Modifier combination resolves to a real, playable chord. There are no dead buttons mid-performance.",
       "media": "assets/img/chord-ui-types.png",
       "mediaAlt": "The full Oh a Chord panel with MAJ selected in the Chord Type grid, the Modifiers grid below it, and the notes of the chord lit across the keyboard",
@@ -77,7 +77,7 @@
       },
       {
         "label": "Modifiers",
-        "value": "6, ♭7, maj7, 9, 11, 13. Momentary, held while a finger is down. Combine by holding several"
+        "value": "2, 6, ♭7, maj7, 9, 11. Momentary, held while a finger is down. Combine by holding several"
       },
       {
         "label": "Key Mode",
