@@ -362,6 +362,23 @@ figure.media-slot {
   opacity: 0.85;
 }
 .media-pause:hover { opacity: 1; }
+/* sound toggle sits beside the pause control, same chrome, only on data-sound videos */
+.media-sound {
+  position: absolute;
+  right: 4rem;
+  bottom: 0.75rem;
+  z-index: 2;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  color: var(--paper);
+  font: inherit;
+  font-size: var(--step--1);
+  line-height: 1;
+  padding: 0.5em 0.8em;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.media-sound[aria-pressed="false"] { border-color: var(--accent); }
 
 /* ---- product-page shared skeleton -------------------------------------------------- */
 .hero { padding-block: var(--space-5) var(--space-4); }

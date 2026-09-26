@@ -47,7 +47,7 @@ body.world-chord {
     var(--sec-blue) 21px 26px);
 }
 
-/* ---- the stage: the panel screenshot, framed by wood cheeks --------------- */
+/* ---- the stage: the explainer video under the headline ------------------ */
 .chord-stage .container { position: relative; }
 /* The hero is the real App Store screenshot, and the app draws its own walnut
    cheeks inside it — so the stage no longer adds a second pair around the

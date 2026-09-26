@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Oh a Chord: press one key, get a full chord",
-    "description": "An iPad instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.",
+    "description": "An iPad and iPhone instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.",
     "path": "oh-a-chord.html",
     "ogImage": "assets/img/og-chord.png"
   },
   "hero": {
     "h1": "Press one key. Get a full chord.",
-    "positioning": "Oh a Chord is a one-octave iPad keyboard. One key press plays a full chord. Chord Type and Modifier buttons choose its quality. Key Mode keeps every note inside the key you pick. A held chord turns into a strum, a harp sweep, or an arpeggio, and never retriggers.",
+    "positioning": "Oh a Chord is a one-octave keyboard for iPad and iPhone. One key press plays a full chord. Chord Type and Modifier buttons choose its quality. Key Mode keeps every note inside the key you pick. A held chord turns into a strum, a harp sweep, or an arpeggio, and never retriggers.",
     "secondaryCta": "See how it works",
     "secondaryHref": "#features"
   },
@@ -59,7 +59,7 @@
   ],
   "download": {
     "heading": "Get it",
-    "body": "Oh a Chord is on the App Store now. It runs on iPad in landscape, iPadOS 16 or later.",
+    "body": "Oh a Chord is on the App Store now. It runs on iPad and iPhone in landscape, iPadOS or iOS 16 or later.",
     "privacyNote": "Read the",
     "privacyLinkLabel": "privacy policy",
     "privacyHref": "oh-a-chord-privacy.html"
@@ -105,7 +105,7 @@
       },
       {
         "label": "Platform",
-        "value": "iPad, landscape only, iPadOS 16 or later"
+        "value": "iPad and iPhone, landscape only, iPadOS or iOS 16 or later"
       },
       {
         "label": "Privacy",
@@ -134,11 +134,11 @@
       },
       {
         "q": "Does it need an internet connection?",
-        "a": "No. Nothing about Oh a Chord leaves the device. No accounts, no analytics, no sync. Saved presets are a file on your iPad and nowhere else."
+        "a": "No. Nothing about Oh a Chord leaves the device. No accounts, no analytics, no sync. Saved presets are a file on your device and nowhere else."
       },
       {
-        "q": "What iPad do I need?",
-        "a": "iPadOS 16 or later. It's landscape only. Chord controls sit under your left hand, keyboard under your right."
+        "q": "Which devices does it run on?",
+        "a": "Any iPad or iPhone on iPadOS or iOS 16 or later. It runs in landscape. Chord controls sit under your left hand, keyboard under your right. On iPhone, Chord Type and Modifiers share one panel with a toggle, and pitch bend is left out to fit the screen."
       }
     ]
   },

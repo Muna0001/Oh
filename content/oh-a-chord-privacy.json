@@ -16,7 +16,7 @@
     },
     {
       "heading": "What stays on your device",
-      "body": "If you save a sound you've tweaked in the advanced settings drawer, it's written to a plain file inside the app's own storage on your iPad. That's the same place any app keeps its own documents. The file is never uploaded, synced, or shared. Deleting the app deletes it."
+      "body": "If you save a sound you've tweaked in the advanced settings drawer, it's written to a plain file inside the app's own storage on your device. That's the same place any app keeps its own documents. The file is never uploaded, synced, or shared. Deleting the app deletes it."
     },
     {
       "heading": "Microphone and other permissions",

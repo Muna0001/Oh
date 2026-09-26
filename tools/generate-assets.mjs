@@ -95,7 +95,7 @@ const ogChord = page(1200, 630, `
     <div class="cheek left"></div><div class="cheek right"></div>
     <div class="inner">
       <div class="brand"><em>Oh a Chord</em><span class="stripes"><i></i><i></i><i></i><i></i></span></div>
-      <div class="sub">IPAD CHORD INSTRUMENT</div>
+      <div class="sub">FOR IPAD &amp; IPHONE</div>
       <div class="line">Press one key. Get a full chord.<br>Out now on the App Store.</div>
     </div>
   </div>`, `
