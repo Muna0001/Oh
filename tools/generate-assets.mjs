@@ -59,7 +59,7 @@ ${extra}
 const ogHome = page(1200, 630, `
   <div class="card">
     <div class="mark">Oh<span>!</span></div>
-    <div class="line">Music tools for people who make records.<br>Oh a Chord is out now on the App Store.</div>
+    <div class="line">Music tools for people who make records.<br>Oh-a-Chord is out now on the App Store.</div>
     <div class="foot"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span>muna0001.github.io/Oh</div>
   </div>`, `
   .card { width: 100%; height: 100%; background: #141416; color: #ece5d5;
@@ -94,9 +94,9 @@ const ogChord = page(1200, 630, `
   <div class="card">
     <div class="cheek left"></div><div class="cheek right"></div>
     <div class="inner">
-      <div class="brand"><em>Oh a Chord</em><span class="stripes"><i></i><i></i><i></i><i></i></span></div>
+      <div class="brand"><span class="lockup"><i></i><i></i><i></i></span><em>Oh-a-Chord</em></div>
       <div class="sub">FOR IPAD &amp; IPHONE</div>
-      <div class="line">Press one key. Get a full chord.<br>Out now on the App Store.</div>
+      <div class="line">Press any key. Play a chord.<br>Out now on the App Store.</div>
     </div>
   </div>`, `
   .card { width: 100%; height: 100%; background: linear-gradient(#2e2e33, #2b2b30);
@@ -105,7 +105,14 @@ const ogChord = page(1200, 630, `
     background: linear-gradient(160deg, #8a5a37, #4a2e19); }
   .cheek.left { left: 0; } .cheek.right { right: 0; }
   .inner { padding: 90px 140px; display: flex; flex-direction: column; height: 100%; }
-  .brand { display: flex; align-items: center; gap: 30px; font-size: 100px; font-weight: 800; letter-spacing: -0.01em; }
+  /* the app's lockup (DesignTokens.swift): three stripes left of the wordmark,
+     Archivo Bold Italic, 0.03em tracking. Stripe sizes are the app's, in em. */
+  .brand { display: flex; align-items: center; gap: 0.286em; font-size: 100px; font-weight: 700; letter-spacing: 0.03em; }
+  .lockup { display: flex; gap: 0.054em; }
+  .lockup i { display: block; width: 0.125em; height: 0.68em; }
+  .lockup i:nth-child(1) { background: #c8413b; }
+  .lockup i:nth-child(2) { background: #e0a33b; }
+  .lockup i:nth-child(3) { background: #e6d06b; }
   .sub { font-size: 30px; letter-spacing: 0.35em; color: #b9b2a2; margin-top: 18px; }
   .line { font-size: 46px; font-weight: 500; color: #ece5d5; margin-top: auto; max-width: 34ch; line-height: 1.25; }`);
 

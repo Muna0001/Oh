@@ -1,20 +1,20 @@
 {
   "meta": {
-    "title": "Oh! Music tools, starting with Oh a Chord",
-    "description": "Oh! makes music software. Oh a Chord plays a full chord from one key press. Out now on the App Store. Two more tools on the way.",
+    "title": "Oh! Music tools, starting with Oh-a-Chord",
+    "description": "Oh! makes music software. Oh-a-Chord: press any key, play a chord. Out now on the App Store. Two more tools on the way.",
     "path": "index.html",
     "ogImage": "assets/img/og-home.png"
   },
   "hero": {
     "wordmark": "Oh!",
-    "line": "Music tools from one person who makes records with them. Oh a Chord is out now on the App Store. Press one key. Get a full chord."
+    "line": "Music tools from one person who makes records with them. Oh-a-Chord is out now on the App Store. Press any key. Play a chord."
   },
   "chord": {
-    "kicker": "Oh a Chord",
+    "kicker": "Oh-a-Chord",
     "status": "Out now on the App Store",
-    "headline": "Press one key. Get a full chord.",
-    "body": "A one-octave keyboard for iPad and iPhone. Press one key and the whole chord plays. Chord Type and Modifier buttons set its colour. Key Mode keeps every press inside the key you pick. A held chord becomes a strum, a harp sweep, or an arpeggio. No music theory required.",
-    "mediaCaption": "Oh a Chord on iPad. Chord controls under your left hand, keyboard under your right.",
+    "headline": "Press any key. Play a chord.",
+    "body": "Oh-a-Chord is an experimental chord generating app for iPad and iPhone. It helps you break out of your songwriting rut and find interesting new chords.",
+    "mediaCaption": "Oh-a-Chord on iPad. Chord controls under your left hand, keyboard under your right.",
     "secondaryCta": "See how it works",
     "secondaryHref": "oh-a-chord.html"
   },

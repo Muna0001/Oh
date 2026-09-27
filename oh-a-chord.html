@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Oh a Chord: press one key, get a full chord</title>
-  <meta name="description" content="An iPad and iPhone instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.">
+  <title>Oh-a-Chord: press any key, play a chord</title>
+  <meta name="description" content="An experimental chord generating app for iPad and iPhone. Press any key, play a chord, and break out of your songwriting rut. Out now.">
   <link rel="canonical" href="https://muna0001.github.io/Oh/oh-a-chord.html" data-canonical>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Oh!">
-  <meta property="og:title" content="Oh a Chord: press one key, get a full chord">
-  <meta property="og:description" content="An iPad and iPhone instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.">
+  <meta property="og:title" content="Oh-a-Chord: press any key, play a chord">
+  <meta property="og:description" content="An experimental chord generating app for iPad and iPhone. Press any key, play a chord, and break out of your songwriting rut. Out now.">
   <meta property="og:url" content="https://muna0001.github.io/Oh/oh-a-chord.html">
   <meta property="og:image" content="https://muna0001.github.io/Oh/assets/img/og-chord.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Oh a Chord: press one key, get a full chord">
-  <meta name="twitter:description" content="An iPad and iPhone instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.">
+  <meta name="twitter:title" content="Oh-a-Chord: press any key, play a chord">
+  <meta name="twitter:description" content="An experimental chord generating app for iPad and iPhone. Press any key, play a chord, and break out of your songwriting rut. Out now.">
   <meta name="twitter:image" content="https://muna0001.github.io/Oh/assets/img/og-chord.png">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -39,10 +39,10 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Oh a Chord",
+    "name": "Oh-a-Chord",
     "applicationCategory": "MusicApplication",
     "operatingSystem": "iOS/iPadOS 16+",
-    "description": "A one-octave keyboard for iPad and iPhone where a single key press plays a full chord. Chord Type and Modifier buttons choose its quality, Key Mode keeps every note inside a chosen key, and Strum, Harp and Arp turn a held chord into a part. Built on the same 6-voice DSP core as Oh a Synth, with a full parameter editor and savable presets.",
+    "description": "An experimental chord generating app for iPad and iPhone. Press any key and play a chord, pick its type, hold modifiers for colour, keep it in key with Key Mode, and turn a held chord into a strum, harp sweep or arpeggio. Built on the same 6-voice DSP core as Oh a Synth, with a full sound editor and savable presets.",
     "url": "https://muna0001.github.io/Oh/oh-a-chord.html",
     "image": "https://muna0001.github.io/Oh/assets/img/og-chord.png",
     "offers": {
@@ -67,7 +67,7 @@
         <ul>
           <li><a href="index.html" data-page="home">Oh!</a></li>
           <li><a href="oh-a-synth.html" data-page="oh-a-synth">Oh a Synth</a></li>
-          <li><a href="oh-a-chord.html" data-page="oh-a-chord" aria-current="page">Oh a Chord</a></li>
+          <li><a href="oh-a-chord.html" data-page="oh-a-chord" aria-current="page">Oh-a-Chord</a></li>
           <li><a href="oh-a-comber.html" data-page="oh-a-comber">Oh a Comber</a></li>
           <li><a href="about.html" data-page="about">About</a></li>
         </ul>
@@ -79,13 +79,17 @@
     <!-- 1 · Hero -->
     <section class="hero" id="top" aria-labelledby="chord-h1">
       <div class="container">
-        <p class="kicker">Chord instrument for iPad and iPhone · one key, one chord</p>
-        <h1 id="chord-h1" data-slot="hero.h1">Press one key. Get a full chord.</h1>
-        <p class="positioning" data-slot="hero.positioning">Oh a Chord is a one-octave keyboard for iPad and iPhone. One key press plays a full chord. Chord Type and Modifier buttons choose its quality. Key Mode keeps every note inside the key you pick. A held chord turns into a strum, a harp sweep, or an arpeggio, and never retriggers.</p>
+        <!-- the app's own lockup: three brand stripes, then the wordmark (DesignTokens.swift) -->
+        <p class="chord-lockup" role="img" aria-label="Oh-a-Chord">
+          <span class="lockup-stripes" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="lockup-word" aria-hidden="true">Oh-a-Chord</span>
+        </p>
+        <h1 id="chord-h1" data-slot="hero.h1">Press any key. Play a chord.</h1>
+        <p class="positioning" data-slot="hero.positioning">Oh-a-Chord is an experimental chord generating app for iPad and iPhone. It helps you break out of your songwriting rut and find interesting new chords.</p>
         <p class="cta-pair">
           <a class="appstore-badge" href="https://apps.apple.com/us/app/oh-a-chord/id6804457158" rel="noopener"
              data-slot-attr="href:site.appStore.chord.url">
-            <img src="assets/img/app-store-badge.svg" alt="Download Oh a Chord on the App Store"
+            <img src="assets/img/app-store-badge.svg" alt="Download Oh-a-Chord on the App Store"
                    width="120" height="40" data-slot-attr="alt:site.appStore.chord.label">
           </a>
           <a class="btn btn-ghost" href="#features"
@@ -96,7 +100,7 @@
 
     <!-- Explainer video, directly under the headline. Autoplays muted (the only way
          browsers allow it); data-sound adds a sound toggle, see js/media.js -->
-    <section class="chord-stage" aria-label="Oh a Chord in 30 seconds">
+    <section class="chord-stage" aria-label="Oh-a-Chord in 30 seconds">
       <div class="container">
         <figure class="media-slot">
           <div class="frame ar-16x9">
@@ -114,7 +118,7 @@
     <section class="section promise" aria-labelledby="chord-promise">
       <div class="container prose">
         <h2 id="chord-promise" data-slot="promise.heading">Why this exists</h2>
-        <p data-slot="promise.body">Oh a Chord goes straight to the sound. Press a key and hear a chord. Hold a couple of fingers down to colour it. Key Mode keeps you inside a key without needing to know why. Most chord and arpeggiator apps want theory first: the right scale, the right extensions, an arpeggiator wired up by hand. This one asks for none of it.</p>
+        <p data-slot="promise.body">Oh-a-Chord goes straight to the sound. Press a key and hear a chord. Hold a couple of fingers down to colour it. Key Mode keeps you inside a key without needing to know why. Most chord and arpeggiator apps want theory first: the right scale, the right extensions, an arpeggiator wired up by hand. This one asks for none of it.</p>
       </div>
     </section>
 
@@ -130,7 +134,7 @@
           </div>
           <figure class="media-slot">
             <div class="frame ar-chord">
-              <img src="assets/img/chord-ui-types.png" loading="lazy" width="1600" height="1156" alt="The full Oh a Chord panel with MAJ selected in the Chord Type grid, the Modifiers grid below it, and the notes of the chord lit across the keyboard" data-slot-attr="alt:features.0.mediaAlt">
+              <img src="assets/img/chord-ui-types.png" loading="lazy" width="1600" height="1156" alt="The full Oh-a-Chord panel with MAJ selected in the Chord Type grid, the Modifiers grid below it, and the notes of the chord lit across the keyboard" data-slot-attr="alt:features.0.mediaAlt">
             </div>
             <figcaption data-slot="features.0.mediaCaption">MAJ selected. The notes of the chord light up across the keyboard.</figcaption>
           </figure>
@@ -139,7 +143,7 @@
         <article class="feature">
           <div class="feature-copy">
             <h3 data-slot="features.1.label">Key Mode</h3>
-            <p class="what" data-slot="features.1.what">Arm Key Mode and the next key you press becomes the root. Every press after that stays inside that key. Reach outside it and Oh a Chord borrows a sus or diminished chord that still belongs. It never goes silent.</p>
+            <p class="what" data-slot="features.1.what">Arm Key Mode and the next key you press becomes the root. Every press after that stays inside that key. Reach outside it and Oh-a-Chord borrows a sus or diminished chord that still belongs. It never goes silent.</p>
             <p class="why" data-slot="features.1.why">It's music theory you can feel rather than study. Build a progression that works before you know why it works.</p>
           </div>
           <figure class="media-slot">
@@ -199,10 +203,10 @@
     <section class="section download" id="get" aria-labelledby="chord-download">
       <div class="container">
         <h2 id="chord-download" data-slot="download.heading">Get it</h2>
-        <p data-slot="download.body">Oh a Chord is on the App Store now. It runs on iPad and iPhone in landscape, iPadOS or iOS 16 or later.</p>
+        <p data-slot="download.body">Oh-a-Chord is on the App Store now. It runs on iPad and iPhone in landscape, iPadOS or iOS 16 or later.</p>
         <p><a class="appstore-badge" href="https://apps.apple.com/us/app/oh-a-chord/id6804457158" rel="noopener"
               data-slot-attr="href:site.appStore.chord.url">
-          <img src="assets/img/app-store-badge.svg" alt="Download Oh a Chord on the App Store"
+          <img src="assets/img/app-store-badge.svg" alt="Download Oh-a-Chord on the App Store"
                width="120" height="40" data-slot-attr="alt:site.appStore.chord.label">
         </a></p>
         <p class="privacy-note"><span data-slot="download.privacyNote">Read the</span> <a href="oh-a-chord-privacy.html" data-slot="download.privacyLinkLabel" data-slot-attr="href:download.privacyHref">privacy policy</a>.</p>
@@ -216,7 +220,7 @@
         <div class="spec-wrap">
           <table class="spec-table">
             <tbody>
-              <tr><th scope="row" data-slot="specs.rows.0.label">Keyboard</th><td data-slot="specs.rows.0.value">Single octave; one key press plays the whole chord</td></tr>
+              <tr><th scope="row" data-slot="specs.rows.0.label">Keyboard</th><td data-slot="specs.rows.0.value">Single octave; any key plays a full chord</td></tr>
               <tr><th scope="row" data-slot="specs.rows.1.label">Chord Type</th><td data-slot="specs.rows.1.value">Dim, Min, Maj, Aug, Sus2, Sus4</td></tr>
               <tr><th scope="row" data-slot="specs.rows.2.label">Modifiers</th><td data-slot="specs.rows.2.value">2, 6, ♭7, maj7, 9, 11. Momentary, held while a finger is down. Combine by holding several</td></tr>
               <tr><th scope="row" data-slot="specs.rows.3.label">Key Mode</th><td data-slot="specs.rows.3.value">Locks every press to a chosen key; off-scale keys resolve to a borrowed sus or diminished chord rather than going silent</td></tr>
@@ -244,7 +248,7 @@
         </details>
         <details>
           <summary data-slot="faq.items.1.q">Does it work with MIDI?</summary>
-          <p data-slot="faq.items.1.a">Not yet. MIDI output is planned but not in this release. Oh a Chord is fully playable and self-contained today, with no setup.</p>
+          <p data-slot="faq.items.1.a">Not yet. MIDI output is planned but not in this release. Oh-a-Chord is fully playable and self-contained today, with no setup.</p>
         </details>
         <details>
           <summary data-slot="faq.items.2.q">Can I save my own sounds?</summary>
@@ -252,7 +256,7 @@
         </details>
         <details>
           <summary data-slot="faq.items.3.q">Does it need an internet connection?</summary>
-          <p data-slot="faq.items.3.a">No. Nothing about Oh a Chord leaves the device. No accounts, no analytics, no sync. Saved presets are a file on your device and nowhere else.</p>
+          <p data-slot="faq.items.3.a">No. Nothing about Oh-a-Chord leaves the device. No accounts, no analytics, no sync. Saved presets are a file on your device and nowhere else.</p>
         </details>
         <details>
           <summary data-slot="faq.items.4.q">Which devices does it run on?</summary>
@@ -264,8 +268,8 @@
     <!-- 7 · CTA repeat -->
     <section class="section cta-repeat" aria-labelledby="chord-cta2">
       <div class="container">
-        <h2 id="chord-cta2" data-slot="ctaRepeat.heading">One key. A full chord.</h2>
-        <p data-slot="ctaRepeat.body">On the App Store now. Press one key and the chord is already playing.</p>
+        <h2 id="chord-cta2" data-slot="ctaRepeat.heading">Press any key. Play a chord.</h2>
+        <p data-slot="ctaRepeat.body">On the App Store now, for iPad and iPhone.</p>
         <a class="btn" href="#top" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref">Back to the top</a>
       </div>
     </section>

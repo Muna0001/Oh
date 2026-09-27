@@ -13,7 +13,7 @@
       "page": "oh-a-synth"
     },
     {
-      "label": "Oh a Chord",
+      "label": "Oh-a-Chord",
       "href": "oh-a-chord.html",
       "page": "oh-a-chord"
     },
@@ -49,7 +49,7 @@
   "appStore": {
     "chord": {
       "url": "https://apps.apple.com/us/app/oh-a-chord/id6804457158",
-      "label": "Download Oh a Chord on the App Store",
+      "label": "Download Oh-a-Chord on the App Store",
       "_note": "label is the badge's alt text. The badge artwork is Apple's, used unmodified per Apple's App Store marketing guidelines: assets/img/app-store-badge.svg"
     }
   },

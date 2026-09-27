@@ -47,6 +47,34 @@ body.world-chord {
     var(--sec-blue) 21px 26px);
 }
 
+/* ---- the app's lockup, top of the hero. Proportions from the app's
+   DesignTokens: wordmark Archivo Bold Italic at 56pt with 0.03 tracking,
+   stripes 7x38pt with 3pt gaps, 16pt from the word. Here in em of the word. */
+.chord-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.286em;
+  margin: 0 0 var(--space-2);
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+  line-height: 1;
+}
+.lockup-stripes { display: flex; gap: 0.054em; }
+.lockup-stripes i {
+  display: block;
+  width: 0.125em;
+  height: 0.68em;
+}
+.lockup-stripes i:nth-child(1) { background: var(--sec-red); }
+.lockup-stripes i:nth-child(2) { background: var(--sec-orange); }
+.lockup-stripes i:nth-child(3) { background: var(--sec-yellow); }
+.lockup-word {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--paper);
+}
+
 /* ---- the stage: the explainer video under the headline ------------------ */
 .chord-stage .container { position: relative; }
 /* The hero is the real App Store screenshot, and the app draws its own walnut

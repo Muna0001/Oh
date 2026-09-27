@@ -1,19 +1,19 @@
 {
   "meta": {
-    "title": "Oh a Chord: press one key, get a full chord",
-    "description": "An iPad and iPhone instrument where one key press plays a full chord. Key Mode keeps you in key; Strum, Harp and Arp turn a held chord into a part. Out now.",
+    "title": "Oh-a-Chord: press any key, play a chord",
+    "description": "An experimental chord generating app for iPad and iPhone. Press any key, play a chord, and break out of your songwriting rut. Out now.",
     "path": "oh-a-chord.html",
     "ogImage": "assets/img/og-chord.png"
   },
   "hero": {
-    "h1": "Press one key. Get a full chord.",
-    "positioning": "Oh a Chord is a one-octave keyboard for iPad and iPhone. One key press plays a full chord. Chord Type and Modifier buttons choose its quality. Key Mode keeps every note inside the key you pick. A held chord turns into a strum, a harp sweep, or an arpeggio, and never retriggers.",
+    "h1": "Press any key. Play a chord.",
+    "positioning": "Oh-a-Chord is an experimental chord generating app for iPad and iPhone. It helps you break out of your songwriting rut and find interesting new chords.",
     "secondaryCta": "See how it works",
     "secondaryHref": "#features"
   },
   "promise": {
     "heading": "Why this exists",
-    "body": "Oh a Chord goes straight to the sound. Press a key and hear a chord. Hold a couple of fingers down to colour it. Key Mode keeps you inside a key without needing to know why. Most chord and arpeggiator apps want theory first: the right scale, the right extensions, an arpeggiator wired up by hand. This one asks for none of it."
+    "body": "Oh-a-Chord goes straight to the sound. Press a key and hear a chord. Hold a couple of fingers down to colour it. Key Mode keeps you inside a key without needing to know why. Most chord and arpeggiator apps want theory first: the right scale, the right extensions, an arpeggiator wired up by hand. This one asks for none of it."
   },
   "features": [
     {
@@ -21,12 +21,12 @@
       "what": "A single octave sets the root. Chord Type buttons choose Dim, Min, Maj, Aug, Sus2 or Sus4. Modifiers (2, 6, ♭7, maj7, 9, 11) stack colour on top for as long as a finger holds them down.",
       "why": "No chord charts, no fingerings to memorize. Every Chord Type and Modifier combination resolves to a real, playable chord. There are no dead buttons mid-performance.",
       "media": "assets/img/chord-ui-types.png",
-      "mediaAlt": "The full Oh a Chord panel with MAJ selected in the Chord Type grid, the Modifiers grid below it, and the notes of the chord lit across the keyboard",
+      "mediaAlt": "The full Oh-a-Chord panel with MAJ selected in the Chord Type grid, the Modifiers grid below it, and the notes of the chord lit across the keyboard",
       "mediaCaption": "MAJ selected. The notes of the chord light up across the keyboard."
     },
     {
       "label": "Key Mode",
-      "what": "Arm Key Mode and the next key you press becomes the root. Every press after that stays inside that key. Reach outside it and Oh a Chord borrows a sus or diminished chord that still belongs. It never goes silent.",
+      "what": "Arm Key Mode and the next key you press becomes the root. Every press after that stays inside that key. Reach outside it and Oh-a-Chord borrows a sus or diminished chord that still belongs. It never goes silent.",
       "why": "It's music theory you can feel rather than study. Build a progression that works before you know why it works.",
       "media": "assets/img/chord-ui-key.png",
       "mediaAlt": "The bottom row with KEY: E lit, and dots marking the in-key notes on every key of the keyboard",
@@ -59,7 +59,7 @@
   ],
   "download": {
     "heading": "Get it",
-    "body": "Oh a Chord is on the App Store now. It runs on iPad and iPhone in landscape, iPadOS or iOS 16 or later.",
+    "body": "Oh-a-Chord is on the App Store now. It runs on iPad and iPhone in landscape, iPadOS or iOS 16 or later.",
     "privacyNote": "Read the",
     "privacyLinkLabel": "privacy policy",
     "privacyHref": "oh-a-chord-privacy.html"
@@ -69,7 +69,7 @@
     "rows": [
       {
         "label": "Keyboard",
-        "value": "Single octave; one key press plays the whole chord"
+        "value": "Single octave; any key plays a full chord"
       },
       {
         "label": "Chord Type",
@@ -126,7 +126,7 @@
       },
       {
         "q": "Does it work with MIDI?",
-        "a": "Not yet. MIDI output is planned but not in this release. Oh a Chord is fully playable and self-contained today, with no setup."
+        "a": "Not yet. MIDI output is planned but not in this release. Oh-a-Chord is fully playable and self-contained today, with no setup."
       },
       {
         "q": "Can I save my own sounds?",
@@ -134,7 +134,7 @@
       },
       {
         "q": "Does it need an internet connection?",
-        "a": "No. Nothing about Oh a Chord leaves the device. No accounts, no analytics, no sync. Saved presets are a file on your device and nowhere else."
+        "a": "No. Nothing about Oh-a-Chord leaves the device. No accounts, no analytics, no sync. Saved presets are a file on your device and nowhere else."
       },
       {
         "q": "Which devices does it run on?",
@@ -143,8 +143,8 @@
     ]
   },
   "ctaRepeat": {
-    "heading": "One key. A full chord.",
-    "body": "On the App Store now. Press one key and the chord is already playing.",
+    "heading": "Press any key. Play a chord.",
+    "body": "On the App Store now, for iPad and iPhone.",
     "cta": "Back to the top",
     "ctaHref": "#top"
   }
