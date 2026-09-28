@@ -81,10 +81,12 @@ body.world-chord {
    cheeks inside it — so the stage no longer adds a second pair around the
    outside, which read as a frame inside a frame. Just a quiet mount now. */
 .chord-stage .media-slot { margin: 0; }
+/* The explainer is rendered on the page's own --bg and fades into it at the
+   edges, so the frame adds no fill or border: the video has no visible edge. */
 .chord-stage .frame {
-  background: #232327;
-  border-color: #1a1a1d;
-  border-radius: 8px;
+  background: var(--bg);
+  border-color: transparent;
+  border-radius: 0;
 }
 
 /* ---- features: each section wears its app accent -------------------------- */
