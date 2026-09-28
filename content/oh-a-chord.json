@@ -28,8 +28,8 @@
       "what": "Arm Key Mode and the next key you press becomes the root. Select MIN first for a minor key. Every press after that stays inside that key. Reach outside it and Oh-a-Chord plays a borrowed chord that still belongs, like the ♭VI or ♭VII in a major key. It never goes silent.",
       "why": "It's music theory you can feel rather than study. Build a progression that works before you know why it works.",
       "media": "assets/img/chord-reel-keymode.png",
-      "mediaAlt": "Key Mode set to C. The keyboard is labelled with scale degrees, and the ♭VII key plays Oh-a-A#, marked as a borrowed chord.",
-      "mediaCaption": "Key of C. Reach outside it and the ♭VII is borrowed, not silenced."
+      "mediaAlt": "Oh-a-Chord the moment Key Mode sets the key. KEY was armed, and the finger pressing E makes E the key: the KEY button is lit blue and reads KEY: E, dots mark the E major scale including the black keys, and the E major chord sounds.",
+      "mediaCaption": "KEY armed, then E pressed. That press sets the key; the dots mark E major."
     },
     {
       "label": "Strum, Harp, Arp",

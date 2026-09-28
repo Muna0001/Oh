@@ -215,10 +215,9 @@ const ASSETS = [
   { out: 'assets/img/poster-synth-daw.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: plugin in a DAW', '15 s silent loop. Arp synced, a knob turning.', 'assets/video/synth-daw.mp4 / .webm') },
   { out: 'assets/img/poster-synth-track.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: 30 s demo track', 'A musical bed using only Oh a Synth, captions burned in.', 'assets/video/synth-in-a-track.mp4 / .webm') },
 
-  /* The other Oh a Chord images are REAL App Store screenshots living in
-     assets/img/ — they are deliberately not generated here, so running this
-     script can never overwrite them. Only this one is still a placeholder. */
-  { out: 'assets/img/chord-ui-presets.png', w: 1600, h: 1156, html: placeholder(1600, 1156, 'chord', 'Save-preset prompt', 'Name field over the drawer, lit save icon beside the close button.', 'assets/img/chord-ui-presets.png') },
+  /* No Oh-a-Chord images are generated here. The feature stills are rendered
+     from the showreel source and chord-hero.png is a real App Store screenshot,
+     so running this script never touches them. */
 
   { out: 'assets/img/comber-before.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'BEFORE: raw pack folders', 'A file browser deep in nested sample-pack folders.', 'assets/img/comber-before.png') },
   { out: 'assets/img/comber-after.png', w: 1400, h: 900, html: placeholder(1400, 900, 'comber', 'AFTER: the library', 'Same samples scanned. Type badges, filters, waveform player.', 'assets/img/comber-after.png') },
