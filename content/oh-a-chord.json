@@ -19,42 +19,41 @@
     {
       "label": "One key, a full chord",
       "what": "A single octave sets the root. Chord Type buttons choose Dim, Min, Maj, Aug, Sus2 or Sus4. Modifiers (2, 6, ♭7, maj7, 9, 11) stack colour on top for as long as a finger holds them down.",
-      "why": "No chord charts, no fingerings to memorize. Every Chord Type and Modifier combination resolves to a real, playable chord. There are no dead buttons mid-performance.",
-      "media": "assets/img/chord-ui-types.png",
-      "mediaAlt": "The full Oh-a-Chord panel with MAJ selected in the Chord Type grid, the Modifiers grid below it, and the notes of the chord lit across the keyboard",
-      "mediaCaption": "MAJ selected. The notes of the chord light up across the keyboard."
+      "media": "assets/img/chord-reel-modifiers.png",
+      "mediaAlt": "Oh-a-Chord with MAJ selected and the MAJ7 and 9 modifiers held under two fingers. The readout says Oh-a-Fmaj9 and the chord's notes are lit on the keyboard.",
+      "mediaCaption": "MAJ plus MAJ7 and 9 held: one F key becomes Fmaj9."
     },
     {
       "label": "Key Mode",
-      "what": "Arm Key Mode and the next key you press becomes the root. Every press after that stays inside that key. Reach outside it and Oh-a-Chord borrows a sus or diminished chord that still belongs. It never goes silent.",
+      "what": "Arm Key Mode and the next key you press becomes the root. Select MIN first for a minor key. Every press after that stays inside that key. Reach outside it and Oh-a-Chord plays a borrowed chord that still belongs, like the ♭VI or ♭VII in a major key. It never goes silent.",
       "why": "It's music theory you can feel rather than study. Build a progression that works before you know why it works.",
-      "media": "assets/img/chord-ui-key.png",
-      "mediaAlt": "The bottom row with KEY: E lit, and dots marking the in-key notes on every key of the keyboard",
-      "mediaCaption": "Key Mode armed on E. The dots mark what's in key."
+      "media": "assets/img/chord-reel-keymode.png",
+      "mediaAlt": "Key Mode set to C. The keyboard is labelled with scale degrees, and the ♭VII key plays Oh-a-A#, marked as a borrowed chord.",
+      "mediaCaption": "Key of C. Reach outside it and the ♭VII is borrowed, not silenced."
     },
     {
       "label": "Strum, Harp, Arp",
       "what": "Three independent toggles turn a held chord into a part: Strum staggers the notes like a pick across strings, Harp sweeps one or two octaves, Arp cycles up or up-and-down at the tempo you set. Latch holds the chord hands-free.",
       "why": "A held chord doesn't have to sit there. These are the same moves a hardware arpeggiator gives you. The notes underneath never retrigger.",
-      "media": "assets/img/chord-ui-perform.png",
-      "mediaAlt": "The bottom row with ARP UP and LATCH lit while the arpeggiator steps through a held chord",
-      "mediaCaption": "ARP UP with LATCH on. The chord keeps cycling, hands-free."
+      "media": "assets/img/chord-reel-perform.png",
+      "mediaAlt": "Four performance modes side by side: Strum spreads the chord low to high, Harp 2 sweeps two octaves, and Arp Up and Arp Up/Dn loop while held. Arp Up/Dn and Latch are lit.",
+      "mediaCaption": "Arp Up/Dn with Latch on. The chord keeps cycling, hands-free."
     },
     {
       "label": "A full synth underneath",
       "what": "Behind the gear icon sits the same 6-voice DSP core that powers Oh a Synth: oscillator, filter, envelopes, chorus. Every parameter is live and touchable. The keyboard stays where it is.",
       "why": "The one-key chord is the front door, not the whole house. Shape the sound as deep as Oh a Synth goes.",
-      "media": "assets/img/chord-ui-editor.png",
-      "mediaAlt": "The Advanced drawer open over the keyboard, showing the MAIN, LFO, DCO, HPF and VCF sections",
-      "mediaCaption": "The Advanced drawer: MAIN, LFO, DCO, HPF and VCF, every fader live."
+      "media": "assets/img/chord-reel-faders.png",
+      "mediaAlt": "The Filter, Reso, Attack and Release faders highlighted, with the Filter fader opening on a held Cmaj7 and the Warm Pad preset loaded.",
+      "mediaCaption": "Filter opening on a held chord. Every fader is live."
     },
     {
       "label": "Save your own sounds",
       "what": "Tweak anything in the synth editor and a save icon appears. Tap it and name the sound. It joins the preset list next to the factory bank, stored on the device.",
       "why": "A good sound found by accident shouldn't be lost the next time you touch a slider.",
-      "media": "assets/img/chord-ui-presets.png",
-      "mediaAlt": "The preset name prompt over the settings drawer, with a lit save icon beside the close button",
-      "mediaCaption": "The save prompt over the settings drawer. Name the sound and it joins the preset list."
+      "media": "assets/img/chord-reel-presets.png",
+      "mediaAlt": "The preset selector highlighted, set to Brass 1, above the chord panel and keyboard.",
+      "mediaCaption": "The preset selector. Saved sounds join the list next to the factory bank."
     }
   ],
   "download": {
@@ -81,7 +80,7 @@
       },
       {
         "label": "Key Mode",
-        "value": "Locks every press to a chosen key; off-scale keys resolve to a borrowed sus or diminished chord rather than going silent"
+        "value": "Major or natural minor. Locks every press to a chosen key; off-scale keys play a borrowed chord, such as ♭VI or ♭VII in a major key, rather than going silent"
       },
       {
         "label": "Performance",
