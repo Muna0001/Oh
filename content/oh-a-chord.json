@@ -7,9 +7,7 @@
   },
   "hero": {
     "h1": "Press any key. Play a chord.",
-    "positioning": "Oh-a-Chord is an experimental chord generating app for iPad and iPhone. It helps you break out of your songwriting rut and find interesting new chords.",
-    "secondaryCta": "See how it works",
-    "secondaryHref": "#features"
+    "positioning": "Oh-a-Chord is an experimental chord generating app for iPad and iPhone. It helps you break out of your songwriting rut and find interesting new chords."
   },
   "promise": {
     "heading": "Why this exists",
