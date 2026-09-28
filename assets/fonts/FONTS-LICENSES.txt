@@ -1,3 +1,4 @@
 Archivo (variable, normal+italic): SIL OFL 1.1 — https://fonts.google.com/specimen/Archivo
 IBM Plex Mono (400/700): SIL OFL 1.1 — https://fonts.google.com/specimen/IBM+Plex+Mono
 Departure Mono 1.500: SIL OFL 1.1, Copyright 2022-2024 Helena Zhang — see DepartureMono-LICENSE.txt
+JetBrains Mono (variable): SIL OFL 1.1, see OFL-JetBrainsMono.txt. Used by js/chord-reel.js for the app's preset and tempo readouts.

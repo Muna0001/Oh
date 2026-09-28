@@ -95,7 +95,6 @@ body.world-chord {
 .world-chord .feature:nth-of-type(2) h3 { border-color: var(--sec-blue); }   /* Key Mode */
 .world-chord .feature:nth-of-type(3) h3 { border-color: var(--sec-red); }    /* Strum, Harp, Arp */
 .world-chord .feature:nth-of-type(4) h3 { border-color: var(--sec-green); }  /* Synth underneath */
-.world-chord .feature:nth-of-type(5) h3 { border-color: var(--sec-yellow); } /* Save presets */
 
 .world-chord .feature .media-slot .frame {
   background: var(--surface);
@@ -122,3 +121,13 @@ body.world-chord {
 .privacy-note { color: var(--muted); font-size: var(--step--1); margin-block-start: var(--space-2); }
 .privacy-note a { color: var(--paper); }
 .privacy-note a:hover { color: var(--accent); }
+
+/* ---- live feature demos (js/chord-demos.js): a canvas over each still ------ */
+.media-slot .frame > .reel-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.media-slot .frame > .media-pause { z-index: 2; }

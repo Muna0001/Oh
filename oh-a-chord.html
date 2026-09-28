@@ -33,6 +33,7 @@
   <script type="module" src="js/forms.js"></script>
   <script type="module" src="js/media.js"></script>
   <script type="module" src="js/reveal.js"></script>
+  <script type="module" src="js/chord-demos.js"></script>
   <!-- Opt in to scroll reveals before first paint so nothing flashes. If
        reveal.js hasn't started within 3s, show everything anyway. -->
   <script>
@@ -140,11 +141,10 @@
             <h3 data-slot="features.0.label" data-reveal>One key, a full chord</h3>
             <p class="what" data-slot="features.0.what" data-reveal>A single octave sets the root. Chord Type buttons choose Dim, Min, Maj, Aug, Sus2 or Sus4. Modifiers (2, 6, ♭7, maj7, 9, 11) stack colour on top for as long as a finger holds them down.</p>
           </div>
-          <figure class="media-slot" data-reveal>
+          <figure class="media-slot" data-reveal data-demo="chord">
             <div class="frame ar-chord">
               <img src="assets/img/chord-reel-modifiers.png" loading="lazy" width="1600" height="1154" alt="Oh-a-Chord with MAJ selected and the MAJ7 and 9 modifiers held under two fingers. The readout says Oh-a-Fmaj9 and the chord's notes are lit on the keyboard." data-slot-attr="alt:features.0.mediaAlt">
             </div>
-            <figcaption data-slot="features.0.mediaCaption">MAJ plus MAJ7 and 9 held: one F key becomes Fmaj9.</figcaption>
           </figure>
         </article>
 
@@ -154,11 +154,10 @@
             <p class="what" data-slot="features.1.what" data-reveal>Arm Key Mode and the next key you press becomes the root. Select MIN first for a minor key. Every press after that stays inside that key. Reach outside it and Oh-a-Chord plays a borrowed chord that still belongs, like the ♭VI or ♭VII in a major key. It never goes silent.</p>
             <p class="why" data-slot="features.1.why" data-reveal>It's music theory you can feel rather than study. Build a progression that works before you know why it works.</p>
           </div>
-          <figure class="media-slot" data-reveal>
+          <figure class="media-slot" data-reveal data-demo="keymode">
             <div class="frame ar-chord">
-              <img src="assets/img/chord-reel-keymode.png" loading="lazy" width="1600" height="1154" alt="Oh-a-Chord the moment Key Mode sets the key. KEY was armed, and the finger pressing E makes E the key: the KEY button is lit blue and reads KEY: E, dots mark the E major scale including the black keys, and the E major chord sounds." data-slot-attr="alt:features.1.mediaAlt">
+              <img src="assets/img/chord-reel-keymode.png" loading="lazy" width="1600" height="1154" alt="Oh-a-Chord the moment Key Mode sets the key. KEY was armed, and the finger pressing E makes E the key: the KEY button is lit and reads KEY: E, dots mark the E major scale including the black keys, and the E major chord sounds." data-slot-attr="alt:features.1.mediaAlt">
             </div>
-            <figcaption data-slot="features.1.mediaCaption">KEY armed, then E pressed. That press sets the key; the dots mark E major.</figcaption>
           </figure>
         </article>
 
@@ -166,13 +165,11 @@
           <div class="feature-copy">
             <h3 data-slot="features.2.label" data-reveal>Strum, Harp, Arp</h3>
             <p class="what" data-slot="features.2.what" data-reveal>Three independent toggles turn a held chord into a part: Strum staggers the notes like a pick across strings, Harp sweeps one or two octaves, Arp cycles up or up-and-down at the tempo you set. Latch holds the chord hands-free.</p>
-            <p class="why" data-slot="features.2.why" data-reveal>A held chord doesn't have to sit there. These are the same moves a hardware arpeggiator gives you. The notes underneath never retrigger.</p>
           </div>
-          <figure class="media-slot" data-reveal>
+          <figure class="media-slot" data-reveal data-demo="perform">
             <div class="frame ar-chord">
               <img src="assets/img/chord-reel-perform.png" loading="lazy" width="1600" height="1154" alt="Four performance modes side by side: Strum spreads the chord low to high, Harp 2 sweeps two octaves, and Arp Up and Arp Up/Dn loop while held. Arp Up/Dn and Latch are lit." data-slot-attr="alt:features.2.mediaAlt">
             </div>
-            <figcaption data-slot="features.2.mediaCaption">Arp Up/Dn with Latch on. The chord keeps cycling, hands-free.</figcaption>
           </figure>
         </article>
 
@@ -180,27 +177,11 @@
           <div class="feature-copy">
             <h3 data-slot="features.3.label" data-reveal>A full synth underneath</h3>
             <p class="what" data-slot="features.3.what" data-reveal>Behind the gear icon sits the same 6-voice DSP core that powers Oh a Synth: oscillator, filter, envelopes, chorus. Every parameter is live and touchable. The keyboard stays where it is.</p>
-            <p class="why" data-slot="features.3.why" data-reveal>The one-key chord is the front door, not the whole house. Shape the sound as deep as Oh a Synth goes.</p>
           </div>
-          <figure class="media-slot" data-reveal>
+          <figure class="media-slot" data-reveal data-demo="sound">
             <div class="frame ar-chord">
               <img src="assets/img/chord-reel-faders.png" loading="lazy" width="1600" height="1154" alt="The Filter, Reso, Attack and Release faders highlighted, with the Filter fader opening on a held Cmaj7 and the Warm Pad preset loaded." data-slot-attr="alt:features.3.mediaAlt">
             </div>
-            <figcaption data-slot="features.3.mediaCaption">Filter opening on a held chord. Every fader is live.</figcaption>
-          </figure>
-        </article>
-
-        <article class="feature" data-reveal-stagger>
-          <div class="feature-copy">
-            <h3 data-slot="features.4.label" data-reveal>Save your own sounds</h3>
-            <p class="what" data-slot="features.4.what" data-reveal>Tweak anything in the synth editor and a save icon appears. Tap it and name the sound. It joins the preset list next to the factory bank, stored on the device.</p>
-            <p class="why" data-slot="features.4.why" data-reveal>A good sound found by accident shouldn't be lost the next time you touch a slider.</p>
-          </div>
-          <figure class="media-slot" data-reveal>
-            <div class="frame ar-chord">
-              <img src="assets/img/chord-reel-presets.png" loading="lazy" width="1600" height="1154" alt="The preset selector highlighted, set to Brass 1, above the chord panel and keyboard." data-slot-attr="alt:features.4.mediaAlt">
-            </div>
-            <figcaption data-slot="features.4.mediaCaption">The preset selector. Saved sounds join the list next to the factory bank.</figcaption>
           </figure>
         </article>
 
@@ -211,7 +192,7 @@
     <section class="section download" id="get" aria-labelledby="chord-download">
       <div class="container" data-reveal-stagger>
         <h2 id="chord-download" data-slot="download.heading" data-reveal>Get it</h2>
-        <p data-slot="download.body" data-reveal>Oh-a-Chord is on the App Store now. It runs on iPad and iPhone in landscape, iPadOS or iOS 16 or later.</p>
+        <p data-slot="download.body" data-reveal>Oh-a-Chord is on the App Store now. It runs on iPad and iPhone.</p>
         <p data-reveal><a class="appstore-badge" href="https://apps.apple.com/us/app/oh-a-chord/id6804457158" rel="noopener"
               data-slot-attr="href:site.appStore.chord.url">
           <img src="assets/img/app-store-badge.svg" alt="Download Oh-a-Chord on the App Store"
