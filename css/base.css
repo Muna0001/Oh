@@ -473,6 +473,7 @@ figure.media-slot {
 .cta-repeat { text-align: center; }
 .cta-repeat p { margin-inline: auto; }
 .cta-repeat .btn { margin-block-start: var(--space-2); }
+.cta-repeat .cta-badge { margin-block-start: var(--space-3); }
 
 /* ---- custom cursors (js/cursor.js) — (pointer: fine) only, see §7 ------------------- */
 html.cursor-hidden,
