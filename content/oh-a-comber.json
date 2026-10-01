@@ -20,7 +20,7 @@
     "afterCaption": "Slot: the after shot, the same library scanned and filtered with one sample playing (assets/img/comber-after.png)"
   },
   "promise": {
-    "heading": "Why this exists",
+    "heading": "Why I built this",
     "body": "Oh a Comber indexes your files where they sit. Twenty packs deep, every producer owns the same folder: thousands of one-shots with names like SD_808_F#_140. Most sample managers fix that by importing everything into a library format of their own. This one reads what your filenames and metadata already say, and leaves every file where it is."
   },
   "features": [
