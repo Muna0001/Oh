@@ -18,6 +18,7 @@
  *   - reset() keeps a per-context base scale (x and y), for crisp HiDPI output
  *   - the modifier row matches app 1.1.0 (2, 6, flat 7 / MAJ7, 9, 11)
  *   - the KEY button lights amber like the app (accentLit), not blue
+ *     (these two are fixed in the showreel source too; fix() accepts either)
  * Plus a new Key Mode scene, in E major, written here.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -34,6 +35,13 @@ const read = (f) => readFileSync(join(REEL, f), 'utf8');
 function patch(src, from, to, what) {
   if (!src.includes(from)) throw new Error(`patch failed (${what}): source changed`);
   return src.replace(from, to);
+}
+// For content fixes that have since been made in the showreel source itself:
+// apply them to an old source, accept a source that already has them.
+function fix(src, from, to, what) {
+  if (src.includes(from)) return src.replace(from, to);
+  if (src.includes(to)) return src;
+  throw new Error(`fix failed (${what}): source changed`);
 }
 
 // ---- the score: run explainer_score.py with the audio half stubbed out
@@ -66,9 +74,9 @@ kit = patch(kit, "const canvas = document.getElementById('c');",
   'const canvas = document.createElement(\'canvas\'); canvas.width = W; canvas.height = H;', 'canvas');
 kit = patch(kit, 'c.setTransform(1, 0, 0, 1, 0, 0);',
   'c.setTransform(c.__sx || 1, 0, 0, c.__sy || 1, 0, 0);', 'base scale');
-kit = patch(kit, "const MODS = [['6', '♭7', 'MAJ7'], ['9', '11', '13']];",
+kit = fix(kit, "const MODS = [['6', '♭7', 'MAJ7'], ['9', '11', '13']];",
   "const MODS = [['2', '6', '♭7'], ['MAJ7', '9', '11']];", 'modifier row');
-kit = patch(kit, 'capButton(30, by, 76, bh, bar.key, { lit: bar.keyLit, litColor: T.blue, fontSize: 12 });',
+kit = fix(kit, 'capButton(30, by, 76, bh, bar.key, { lit: bar.keyLit, litColor: T.blue, fontSize: 12 });',
   'capButton(30, by, 76, bh, bar.key, { lit: bar.keyLit, fontSize: 12 });', 'KEY colour');
 // drop the reel's own playback loop and globals; READY is rebuilt below
 const tail = kit.indexOf('window.render = render;');

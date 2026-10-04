@@ -432,7 +432,15 @@ function woodCheek(x, y, w, h) {
 }
 
 // ============================================================ BACKGROUND ==
+// A cut that sits on a web page sets window.PAGE_BG to the page's background
+// colour: the frame is drawn on it, and its edges fade to exactly it, so the
+// video has no visible edge on the page.
+const PAGE_BG = window.PAGE_BG || null;
 function drawBackground() {
+  if (PAGE_BG) {
+    ctx.fillStyle = PAGE_BG; ctx.fillRect(0, 0, W, H);   // flat: no glow to give the frame away
+    return;
+  }
   ctx.fillStyle = T.panel; ctx.fillRect(0, 0, W, H);
   const g = ctx.createRadialGradient(CX, CY * 0.9, 0, CX, CY, W * 0.62);
   g.addColorStop(0, 'rgba(255,240,220,0.05)'); g.addColorStop(1, 'rgba(0,0,0,0.25)');
@@ -447,7 +455,7 @@ function drawBackground() {
 const SW = 1104, SH = 828;
 const KB = { x: 292, y: 226, w: SW - 16 - 292, h: 526 };
 const TYPES = [['DIM', 'MIN', 'MAJ'], ['AUG', 'SUS2', 'SUS4']];
-const MODS = [['2', '6', '♭7'], ['MAJ7', '9', '11']];
+const MODS = [['2', '6', '♭7'], ['MAJ7', '9', '11']];   // app 1.1.0: 2 added, 13 dropped
 const FADERS = ['FILTER', 'RESO', 'ATTACK', 'RELEASE'];
 const btnRect = (grid, r, c) => ({ x: 30 + c * 84, y: (grid === 'type' ? 246 : 352) + r * 38, w: 78, h: 33 });
 function findBtn(grid, label) { const g = grid === 'type' ? TYPES : MODS; for (let r = 0; r < 2; r++) for (let c = 0; c < 3; c++) if (g[r][c] === label) return btnRect(grid, r, c); return null; }
@@ -505,7 +513,7 @@ function appScreen(t, st) {
   drawKeys(KB.x, KB.y, KB.w, KB.h, { lit: st.lit || {}, bloom: false, dots: st.dots });
   // the performance bar
   const by = 772, bh = 34;
-  capButton(30, by, 76, bh, bar.key, { lit: bar.keyLit, fontSize: 12 });
+  capButton(30, by, 76, bh, bar.key, { lit: bar.keyLit, fontSize: 12 });   // amber, the app's accentLit
   rrect(114, by, 76, bh, 3); ctx.fillStyle = T.recess; ctx.fill();
   text('‹', 126, by + 23, { font: F.ui(500, 20), color: T.creamDim, align: 'center' });
   text('›', 178, by + 23, { font: F.ui(500, 20), color: T.creamDim, align: 'center' });
@@ -630,10 +638,21 @@ function vhsFinish(t) {
   ctx.fillStyle = ctx.createPattern(grains[f % grains.length], 'repeat'); ctx.fillRect(0, 0, W + 256, H + 256);
   ctx.restore();
   ctx.save(); reset();
+  const edge = PAGE_BG ? hex(PAGE_BG) : [0, 0, 0];
   const g = ctx.createRadialGradient(CX, CY, H * 0.5, CX, CY, H * 1.1);
-  g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,0.55)');
+  g.addColorStop(0, rgba(edge, 0)); g.addColorStop(1, rgba(edge, PAGE_BG ? 0.7 : 0.55));
   ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = '#000'; ctx.beginPath(); ctx.rect(0, 0, W, H); ctx.roundRect(10, 8, W - 20, H - 16, 46); ctx.fill('evenodd');
+  ctx.fillStyle = PAGE_BG || '#000'; ctx.beginPath(); ctx.rect(0, 0, W, H); ctx.roundRect(10, 8, W - 20, H - 16, 46); ctx.fill('evenodd');
+  if (PAGE_BG) {
+    // feather the last few dozen pixels into the page, ending on the exact colour
+    const fw = 40;
+    const sides = [[0, 0, W, fw, 0, 0, 0, fw], [0, H - fw, W, fw, 0, H, 0, H - fw], [0, 0, fw, H, 0, 0, fw, 0], [W - fw, 0, fw, H, W, 0, W - fw, 0]];
+    for (const [x, y, w, h, x0, y0, x1, y1] of sides) {
+      const lg = ctx.createLinearGradient(x0, y0, x1, y1);
+      lg.addColorStop(0, rgba(edge, 1)); lg.addColorStop(0.25, rgba(edge, 1)); lg.addColorStop(1, rgba(edge, 0));
+      ctx.fillStyle = lg; ctx.fillRect(x, y, w, h);
+    }
+  }
   ctx.restore();
 }
 
@@ -678,7 +697,7 @@ const CHAPTERS = [
   { id: 2, b0: 12, b1: 20, label: 'CHORD TYPE', title: ['Pick a', 'flavour.'],
     body: ['Major, minor, sus, dim or aug.', 'Your pick stays lit until', 'you change it.'] },
   { id: 3, b0: 20, b1: 28, label: 'MODIFIERS', title: ['Hold for', 'colour.'],
-    body: ['6, ♭7, maj7, 9, 11 and 13 add', 'colour while your finger is down.', 'Hold two to stack them.'] },
+    body: ['2, 6, ♭7, maj7, 9 and 11 add', 'colour while your finger is down.', 'Hold two to stack them.'] },
   { id: 4, b0: 28, b1: 36, label: 'VOICE LEADING', title: ['Smooth', 'by default.'],
     body: ['Change chords and each note', 'moves to the nearest one.', 'Shared notes keep ringing.'] },
   { id: 5, b0: 36, b1: 44, label: 'PERFORMANCE', title: ['Make', 'it move.'],
@@ -1078,7 +1097,7 @@ function demo6(t) {
   const set = t >= C6[0].t;
   const keyLit = set || (armed && Math.floor((t - bt(44.5)) * 8) % 2 === 0);
   wordmark(60, 150, 92, cs.word, { prev: cs.prev, swap: cs.swap, stripes: 3, extrude: 6, wordColor: cs.c && cs.c.borrowed ? T.blue : T.cream, prevColor: cs.k > 0 && C6[cs.k - 1].borrowed ? T.blue : T.cream });
-  capButton(866, 60, 244, 72, set ? 'KEY: C' : 'KEY', { lit: keyLit, litColor: T.blue, font: F.ui(800, 28), fontSize: 28 });
+  capButton(866, 60, 244, 72, set ? 'KEY: C' : 'KEY', { lit: keyLit, font: F.ui(800, 28), fontSize: 28 });
   touch(866 + 122, 96, t, bt(44.5) - 0.06, bt(44.5) + 0.12, 1);
   const la = prog(t, C6[0].t + 0.1, C6[0].t + 0.4);
   legend(set ? 'KEY OF C MAJOR · DOTS MARK THE SCALE · BLUE MEANS BORROWED' : 'KEY IS ARMED — THE NEXT NOTE YOU PLAY SETS THE KEY', 66, 226, 15, { alpha: set ? la : prog(t, bt(44.5), bt(44.7)), color: set ? T.creamDim : T.blue });
@@ -1185,7 +1204,7 @@ function renderOnce(t) {
   aberration(1.6 + 8 * env(id, 0.2) + 2 * env(since(SNARES, t).dt, 0.06) + 14 * g);
   vhsFinish(t);
   const fo = prog(t, SC.length - 0.55, SC.length - 0.02);
-  if (fo > 0) { ctx.save(); reset(); ctx.fillStyle = `rgba(0,0,0,${E.inCubic(fo)})`; ctx.fillRect(0, 0, W, H); ctx.restore(); }
+  if (fo > 0) { ctx.save(); reset(); ctx.fillStyle = rgba(PAGE_BG || '#000000', E.inCubic(fo)); ctx.fillRect(0, 0, W, H); ctx.restore(); }   // the vertical cut has no PAGE_BG: fade to black, as before
 }
 
 
