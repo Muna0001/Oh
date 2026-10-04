@@ -90,11 +90,16 @@
                data-slot="chord.secondaryCta" data-slot-attr="href:chord.secondaryHref">See how it works</a>
           </p>
         </div>
-        <figure class="media-slot">
-          <div class="frame ar-chord">
-            <img src="assets/img/chord-hero.png" alt="Oh-a-Chord running on an iPad: Chord Type and Modifier buttons on the left, a one-octave keyboard on the right, walnut cheeks at each edge" width="1600" height="1156">
+        <!-- The 15 s showreel. Autoplays muted (the only way browsers allow it);
+             data-sound adds a sound toggle, see js/media.js -->
+        <figure class="media-slot reel-slot">
+          <div class="frame ar-16x9">
+            <video controls muted loop playsinline preload="metadata" data-autoplay data-sound
+                   poster="assets/img/poster-chord-showreel.jpg" width="1920" height="1080"
+                   aria-label="Fifteen-second Oh-a-Chord showreel: one key plays a full chord, chord type and modifiers colour it, voices move smoothly between chords, strum, harp and arp, Key Mode, and the Oh-a-Chord logo">
+              <source src="assets/video/oh-a-chord-showreel.mp4" type="video/mp4">
+            </video>
           </div>
-          <figcaption data-slot="chord.mediaCaption">Oh-a-Chord on iPad. Chord controls under your left hand, keyboard under your right.</figcaption>
         </figure>
       </div>
     </section>

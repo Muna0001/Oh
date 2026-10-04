@@ -130,6 +130,13 @@
   background: #232327;
   border-color: #1a1a1d;
 }
+/* The showreel is rendered on this block's own panel colour and fades into it
+   at the edges, so its frame adds no fill or border: the video has no edge. */
+.block-chord .reel-slot .frame {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 0;
+}
 
 /* the "coming soon" / "in the App Store soon" flag above a heading */
 .status-flag {
