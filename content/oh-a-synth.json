@@ -14,7 +14,7 @@
   },
   "promise": {
     "heading": "Why I built this",
-    "body": "Oh a Synth chases the feel, down to the small component tolerances that make six voices sound like six voices. The polysynths of the 80s stay on records because they do a few things perfectly: rock-solid digital oscillators against a warm analog filter, and a chorus that turns one voice into a wall. Software versions usually get the panel right and the feel wrong."
+    "body": "I love the polysynths of the 80s. They're still all over records because they do a few things perfectly: rock-solid oscillators against a warm filter, and a chorus that turns one voice into a wall. Every software version I tried got the panel right and the feel wrong. So I built one that chases the feel, down to the small differences between voices that make six voices sound like six voices."
   },
   "features": [
     {

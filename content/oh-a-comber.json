@@ -21,7 +21,7 @@
   },
   "promise": {
     "heading": "Why I built this",
-    "body": "Oh a Comber indexes your files where they sit. Twenty packs deep, every producer owns the same folder: thousands of one-shots with names like SD_808_F#_140. Most sample managers fix that by importing everything into a library format of their own. This one reads what your filenames and metadata already say, and leaves every file where it is."
+    "body": "Twenty packs deep, I had the same folder every producer has: thousands of one-shots with names like SD_808_F#_140. I knew the sound I wanted was in there. I just couldn't find it. The sample managers I tried wanted to import everything into a library of their own, and I didn't want my folders touched. So I built one that reads what the filenames and metadata already say, and leaves every file where it is."
   },
   "features": [
     {
