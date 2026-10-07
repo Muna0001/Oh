@@ -60,7 +60,7 @@ const ogHome = page(1200, 630, `
   <div class="card">
     <div class="mark">Oh<span>!</span></div>
     <div class="line">Music tools for people who make records.<br>Oh-a-Chord is out now on the App Store.</div>
-    <div class="foot"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span>muna0001.github.io/Oh</div>
+    <div class="foot"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span>ohmusictools.com</div>
   </div>`, `
   .card { width: 100%; height: 100%; background: #141416; color: #ece5d5;
     padding: 70px 90px; display: flex; flex-direction: column; justify-content: space-between; }
