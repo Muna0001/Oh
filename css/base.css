@@ -193,8 +193,11 @@ p { max-width: var(--measure); }
   text-transform: uppercase;
   color: var(--muted);
   padding: 0.35em 0;
+  transition: color 0.14s ease-out, box-shadow 0.14s ease-out;
 }
-.site-header nav a:hover { color: var(--paper); }
+/* hover and keyboard focus wear the same underline as the current page */
+.site-header nav a:hover,
+.site-header nav a:focus-visible,
 .site-header nav a[aria-current="page"] {
   color: var(--paper);
   box-shadow: 0 2px 0 0 var(--accent);

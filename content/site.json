@@ -3,11 +3,6 @@
   "siteName": "Oh!",
   "nav": [
     {
-      "label": "Oh!",
-      "href": "index.html",
-      "page": "home"
-    },
-    {
       "label": "Oh a Synth",
       "href": "oh-a-synth.html",
       "page": "oh-a-synth"
