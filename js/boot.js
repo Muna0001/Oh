@@ -1,5 +1,5 @@
 /*
- * js/boot.js — the Oh a Comber boot sequence.
+ * js/boot.js — the Oh-a-Comber boot sequence.
  *
  * Typed system lines that resolve into the hero. Rules from the brief:
  *  - runs ONCE per session (sessionStorage flag) — returning visitors go
@@ -13,7 +13,7 @@
  */
 const FLAG = 'oh.comber.booted';
 const LINES = [
-  'OH A COMBER v1.0',
+  'OH-A-COMBER v1.0',
   'SCANNING VOLUMES ................ OK',
   'AUDIO ENGINE .................... OK',
   'INDEX ........................ READY',

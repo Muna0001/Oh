@@ -19,18 +19,18 @@
   },
   "comingSoon": {
     "heading": "More from Oh!",
-    "body": "Oh a Comber is out now for Mac. Oh a Synth is still in progress. Leave your email and you'll hear when it ships. One message. Nothing else."
+    "body": "Oh-a-Comber is out now for Mac. Oh-a-Synth is still in progress. Leave your email and you'll hear when it ships. One message. Nothing else."
   },
   "synth": {
-    "kicker": "Oh a Synth",
+    "kicker": "Oh-a-Synth",
     "status": "Coming soon",
     "blurb": "A 6-voice polysynth inspired by the classic sounds of the 80s.",
     "formEmailLabel": "Email address",
     "formSubmit": "Notify me",
-    "mailtoLabel": "Tell me when Oh a Synth ships"
+    "mailtoLabel": "Tell me when Oh-a-Synth ships"
   },
   "comber": {
-    "kicker": "Oh a Comber",
+    "kicker": "Oh-a-Comber",
     "status": "Out now for Mac",
     "blurb": "A sample organizer that makes every sample you already own findable, without moving a file. Free.",
     "cta": "Download for Mac",

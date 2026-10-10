@@ -1,5 +1,5 @@
 /*
- * js/gl/cabinet.js — the Oh a Synth hero as a physically lit object.
+ * js/gl/cabinet.js — the Oh-a-Synth hero as a physically lit object.
  *
  * A procedural GLSL pass paints the whole cabinet surface behind the DOM
  * controls: the charcoal panel gradient (the app's own #2e2e33 → #2b2b30),

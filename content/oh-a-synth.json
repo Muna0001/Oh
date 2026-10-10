@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Oh a Synth: a polysynth inspired by the 80s",
+    "title": "Oh-a-Synth: a polysynth inspired by the 80s",
     "description": "A 6-voice polysynth inspired by the classic sounds of the 80s. Play it free in your browser, no download. AU/VST3 plugin and Mac app on the way.",
     "path": "oh-a-synth.html",
     "ogImage": "assets/img/og-synth.png"
   },
   "hero": {
     "h1": "A polysynth inspired by the 80s, playable right now.",
-    "positioning": "Oh a Synth is a 6-voice polysynth inspired by the classic sounds of the 80s. Its real engine runs in this page. Pick a patch, sweep the filter, punch the chorus in. Power it on and play.",
+    "positioning": "Oh-a-Synth is a 6-voice polysynth inspired by the classic sounds of the 80s. Its real engine runs in this page. Pick a patch, sweep the filter, punch the chorus in. Power it on and play.",
     "cta": "Play it in your browser",
     "ctaHref": "#play",
     "powerHint": "Click to power on. Silent until you do."
@@ -22,7 +22,7 @@
       "what": "One digitally-exact oscillator per voice: polyBLEP saw, pulse with manual or LFO-swept width, a square sub one octave down, and a noise source shared across all voices, as on the hardware.",
       "why": "That era's character is solid pitch against a moving filter. Tuning never drifts here; the voice-to-voice tolerances live in the filter and amp instead, where the real chips had them.",
       "media": "assets/img/synth-ui-dco.png",
-      "mediaAlt": "The DCO section of the Oh a Synth panel: RANGE, LFO, PWM, PWM SRC, PULSE, SAW, SUB and NOISE controls",
+      "mediaAlt": "The DCO section of the Oh-a-Synth panel: RANGE, LFO, PWM, PWM SRC, PULSE, SAW, SUB and NOISE controls",
       "mediaCaption": "Slot: close crop of the DCO section, PWM SRC set to LFO (screenshot, 1280×800)"
     },
     {
@@ -69,11 +69,11 @@
   ],
   "demo": {
     "heading": "Hear it in a track",
-    "body": "Thirty seconds, every sound from Oh a Synth: bass, pads, brass stabs, and the arp, recorded straight out of the plugin.",
+    "body": "Thirty seconds, every sound from Oh-a-Synth: bass, pads, brass stabs, and the arp, recorded straight out of the plugin.",
     "video": "assets/video/synth-in-a-track.mp4",
     "videoWebm": "assets/video/synth-in-a-track.webm",
     "poster": "assets/img/poster-synth-track.png",
-    "caption": "Slot: 30 s musical bed using only Oh a Synth, captions burned in (assets/video/synth-in-a-track.mp4/.webm)"
+    "caption": "Slot: 30 s musical bed using only Oh-a-Synth, captions burned in (assets/video/synth-in-a-track.mp4/.webm)"
   },
   "offer": {
     "heading": "Get it",

@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Oh a Comber: sample organizer for Mac",
+    "title": "Oh-a-Comber: sample organizer for Mac",
     "description": "Scan your sample library in place. Filter by type, genre, and BPM, preview with waveforms, and drag samples straight into your DAW. Out now for Mac, free.",
     "path": "oh-a-comber.html",
     "ogImage": "assets/img/og-comber.png"
   },
   "hero": {
     "h1": "Your sample library, finally searchable.",
-    "positioning": "Oh a Comber scans the folders you already have and turns them into a fast, filterable library. It never moves, renames, or rewrites a file.",
+    "positioning": "Oh-a-Comber scans the folders you already have and turns them into a fast, filterable library. It never moves, renames, or rewrites a file.",
     "cta": "Download for Mac",
     "ctaHref": "#download"
   },
@@ -16,7 +16,7 @@
     "beforeAlt": "A Finder window: dozens of nested sample-pack folders with cryptic filenames",
     "beforeCaption": "Slot: the before shot, raw pack folders in a file browser (assets/img/comber-before.png)",
     "afterMedia": "assets/img/comber-after.png",
-    "afterAlt": "The Oh a Comber library: the same samples in a sortable list with type badges, BPM, and a waveform player",
+    "afterAlt": "The Oh-a-Comber library: the same samples in a sortable list with type badges, BPM, and a waveform player",
     "afterCaption": "Slot: the after shot, the same library scanned and filtered with one sample playing (assets/img/comber-after.png)"
   },
   "promise": {
@@ -85,9 +85,9 @@
   },
   "download": {
     "heading": "Get it",
-    "body": "Oh a Comber 1.0 is out now for Mac. It's free. Pick the build for your machine.",
+    "body": "Oh-a-Comber 1.0 is out now for Mac. It's free. Pick the build for your machine.",
     "hint": "Not sure which you have? Open the Apple menu and choose About This Mac. \"Chip: Apple M…\" means Apple Silicon. \"Processor: Intel…\" means Intel.",
-    "install": "Open the DMG and drag Oh a Comber to your Applications folder. Both builds are signed with an Apple Developer ID and notarized by Apple, so they open without a security warning. Needs macOS 11 or later.",
+    "install": "Open the DMG and drag Oh-a-Comber to your Applications folder. Both builds are signed with an Apple Developer ID and notarized by Apple, so they open without a security warning. Needs macOS 11 or later.",
     "windowsHeading": "Windows",
     "windowsBody": "The Windows build isn't out yet. Leave your email and you'll hear when it ships.",
     "formEmailLabel": "Email address",
@@ -157,7 +157,7 @@
       },
       {
         "q": "Will drag-and-drop work with my DAW?",
-        "a": "Dragging out of Oh a Comber is a native OS file drag carrying the sample's real path. It works with anything that accepts an audio file drop: Live, Logic, FL Studio, Reaper, or a plain Finder window."
+        "a": "Dragging out of Oh-a-Comber is a native OS file drag carrying the sample's real path. It works with anything that accepts an audio file drop: Live, Logic, FL Studio, Reaper, or a plain Finder window."
       },
       {
         "q": "Do I have to re-scan when I add new packs?",
@@ -173,7 +173,7 @@
       },
       {
         "q": "What does it cost?",
-        "a": "Nothing. Oh a Comber 1.0 is a free download."
+        "a": "Nothing. Oh-a-Comber 1.0 is a free download."
       },
       {
         "q": "What about Windows?",

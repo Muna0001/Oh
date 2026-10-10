@@ -35,7 +35,7 @@
     },
     {
       "label": "A full synth underneath",
-      "what": "Behind the gear icon sits the same 6-voice DSP core that powers Oh a Synth: oscillator, filter, envelopes, chorus. Every parameter is live and touchable. The keyboard stays where it is.",
+      "what": "Behind the gear icon sits the same 6-voice DSP core that powers Oh-a-Synth: oscillator, filter, envelopes, chorus. Every parameter is live and touchable. The keyboard stays where it is.",
       "media": "assets/img/chord-reel-faders.png",
       "mediaAlt": "The Filter, Reso, Attack and Release faders highlighted, with the Filter fader opening on a held Cmaj7 and the Warm Pad preset loaded."
     }
@@ -80,7 +80,7 @@
       },
       {
         "label": "Synth engine",
-        "value": "The same 6-voice DSP core as Oh a Synth: DCO, 24 dB/oct filter, one ADSR, BBD-style chorus. Full parameter editor behind the settings gear"
+        "value": "The same 6-voice DSP core as Oh-a-Synth: DCO, 24 dB/oct filter, one ADSR, BBD-style chorus. Full parameter editor behind the settings gear"
       },
       {
         "label": "Presets",
@@ -109,7 +109,7 @@
       },
       {
         "q": "Does it work with MIDI?",
-        "a": "Not yet. MIDI output is planned but not in this release. Oh-a-Chord is fully playable and self-contained today, with no setup."
+        "a": "Yes. Oh-a-Chord shows up as a MIDI source in your other music apps, sending chords on channel 1 and the bass on channel 2. Switch off “synth” in settings to use it purely as a controller. It also runs as an Audio Unit in GarageBand or any other host, where each key on the host’s keyboard plays a full chord."
       },
       {
         "q": "Can I save my own sounds?",

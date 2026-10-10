@@ -111,7 +111,7 @@ function mount() {
   let demoRun = 0;    // generation id, bumped on every stop
 
   const ui = el('div', 'sy-ui');
-  ui.setAttribute('aria-label', 'Playable Oh a Synth');
+  ui.setAttribute('aria-label', 'Playable Oh-a-Synth');
 
   /* header: brand + MIDI status */
   const head = el('div', 'sy-head', ui);

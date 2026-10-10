@@ -1,5 +1,5 @@
 /* ==========================================================================
-   comber.css — the Oh a Comber world: phosphor green terminal on near-black.
+   comber.css — the Oh-a-Comber world: phosphor green terminal on near-black.
    Greens/text/borders are the app's own tokens (src/App.css:1-13); the amber
    CTA is the one permitted outsider — P3 phosphor, the era's other monitor.
    See NOTES-source-analysis.md §2.2 and §4.
@@ -73,14 +73,6 @@ body.world-comber {
 }
 
 /* ---- chrome: hairline panels, ghost buttons that invert (as in the app) ------ */
-.world-comber .site-header { background: var(--surface); border-color: var(--rule); }
-.world-comber .site-header nav a:hover,
-.world-comber .site-header nav a:focus-visible,
-.world-comber .site-header nav a[aria-current="page"] {
-  color: var(--green);
-  box-shadow: 0 2px 0 0 var(--green);
-}
-.world-comber .brand .bang { color: var(--green); }
 
 .world-comber .btn {
   background: var(--accent);

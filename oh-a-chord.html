@@ -52,7 +52,7 @@
     "name": "Oh-a-Chord",
     "applicationCategory": "MusicApplication",
     "operatingSystem": "iOS/iPadOS 16+",
-    "description": "An experimental chord generating app for iPad and iPhone. Press any key and play a chord, pick its type, hold modifiers for colour, keep it in key with Key Mode, and turn a held chord into a strum, harp sweep or arpeggio. Built on the same 6-voice DSP core as Oh a Synth, with a full sound editor and savable presets.",
+    "description": "An experimental chord generating app for iPad and iPhone. Press any key and play a chord, pick its type, hold modifiers for colour, keep it in key with Key Mode, and turn a held chord into a strum, harp sweep or arpeggio. Built on the same 6-voice DSP core as Oh-a-Synth, with a full sound editor and savable presets.",
     "url": "https://ohmusictools.com/oh-a-chord.html",
     "image": "https://ohmusictools.com/assets/img/og-chord.png",
     "offers": {
@@ -75,9 +75,9 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
       <nav id="site-nav" aria-label="Site" data-nav>
         <ul>
-          <li><a href="oh-a-synth.html" data-page="oh-a-synth">Oh a Synth</a></li>
+          <li><a href="oh-a-synth.html" data-page="oh-a-synth">Oh-a-Synth</a></li>
           <li><a href="oh-a-chord.html" data-page="oh-a-chord" aria-current="page">Oh-a-Chord</a></li>
-          <li><a href="oh-a-comber.html" data-page="oh-a-comber">Oh a Comber</a></li>
+          <li><a href="oh-a-comber.html" data-page="oh-a-comber">Oh-a-Comber</a></li>
           <li><a href="about.html" data-page="about">About</a></li>
         </ul>
       </nav>
@@ -173,7 +173,7 @@
         <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
             <h3 data-slot="features.3.label" data-reveal>A full synth underneath</h3>
-            <p class="what" data-slot="features.3.what" data-reveal>Behind the gear icon sits the same 6-voice DSP core that powers Oh a Synth: oscillator, filter, envelopes, chorus. Every parameter is live and touchable. The keyboard stays where it is.</p>
+            <p class="what" data-slot="features.3.what" data-reveal>Behind the gear icon sits the same 6-voice DSP core that powers Oh-a-Synth: oscillator, filter, envelopes, chorus. Every parameter is live and touchable. The keyboard stays where it is.</p>
           </div>
           <figure class="media-slot" data-reveal data-demo="sound">
             <div class="frame ar-chord">
@@ -213,7 +213,7 @@
               <tr data-reveal><th scope="row" data-slot="specs.rows.4.label">Performance</th><td data-slot="specs.rows.4.value">Strum, Harp (1 or 2 octave sweep) and Arp (up, up/down). Each is an independent toggle. Latch holds a chord hands-free</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.5.label">Tempo</th><td data-slot="specs.rows.5.value">40–240 BPM, drives Arp's rate</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.6.label">Voicing</th><td data-slot="specs.rows.6.value">Two sliders move a held chord through the register live, with no retriggering</td></tr>
-              <tr data-reveal><th scope="row" data-slot="specs.rows.7.label">Synth engine</th><td data-slot="specs.rows.7.value">The same 6-voice DSP core as Oh a Synth: DCO, 24 dB/oct filter, one ADSR, BBD-style chorus. Full parameter editor behind the settings gear</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.7.label">Synth engine</th><td data-slot="specs.rows.7.value">The same 6-voice DSP core as Oh-a-Synth: DCO, 24 dB/oct filter, one ADSR, BBD-style chorus. Full parameter editor behind the settings gear</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.8.label">Presets</th><td data-slot="specs.rows.8.value">9 factory sounds plus unlimited saved presets of your own, stored on the device</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.9.label">Platform</th><td data-slot="specs.rows.9.value">iPad and iPhone, landscape only, iPadOS or iOS 16 or later</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.10.label">Privacy</th><td data-slot="specs.rows.10.value">No accounts, no analytics, no network requests of any kind. Saved presets never leave the device</td></tr>
@@ -235,7 +235,7 @@
         </details>
         <details data-reveal>
           <summary data-slot="faq.items.1.q">Does it work with MIDI?</summary>
-          <p data-slot="faq.items.1.a">Not yet. MIDI output is planned but not in this release. Oh-a-Chord is fully playable and self-contained today, with no setup.</p>
+          <p data-slot="faq.items.1.a">Yes. Oh-a-Chord shows up as a MIDI source in your other music apps, sending chords on channel 1 and the bass on channel 2. Switch off “synth” in settings to use it purely as a controller. It also runs as an Audio Unit in GarageBand or any other host, where each key on the host’s keyboard plays a full chord.</p>
         </details>
         <details data-reveal>
           <summary data-slot="faq.items.2.q">Can I save my own sounds?</summary>

@@ -1,5 +1,5 @@
 /*
- * js/gl/crt.js — the Oh a Comber CRT.
+ * js/gl/crt.js — the Oh-a-Comber CRT.
  *
  * DECISION (brief §3): the full-document post-process was tried and cut.
  * Sampling live DOM text through a barrel-distorted, scanlined shader

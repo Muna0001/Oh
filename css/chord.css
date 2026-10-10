@@ -1,6 +1,6 @@
 /* ==========================================================================
    chord.css — the Oh a Chord world: the same charcoal-and-cream palette as
-   Oh a Synth (the app's own DesignTokens.Colour is sourced from it), plus
+   Oh-a-Synth (the app's own DesignTokens.Colour is sourced from it), plus
    its own wood cheeks — same recipe as .synth-stage's, since the real app
    has actual walnut cheeks down each edge of the panel, not a decorative
    nod to one. See ../oh-a-chord/CLAUDE.md for the source values.
@@ -16,7 +16,7 @@ body.world-chord {
   --accent: #e0a33b;        /* app accentLit (orange) — Chord Type selection */
   --accent-ink: #1a1a1d;
 
-  /* the app's section accents, same swatches as Oh a Synth's world */
+  /* the app's section accents, same swatches as Oh-a-Synth's world */
   --sec-red: #c8413b;
   --sec-orange: #e0a33b;
   --sec-yellow: #e6d06b;

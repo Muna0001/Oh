@@ -155,7 +155,29 @@ p { max-width: var(--measure); }
 .prose > * + * { margin-block-start: var(--space-2); }
 
 /* ---- header / nav ----------------------------------------------------------- */
+/* The nav is global and constant: it looks the same on every page. Each page's
+   world redefines these tokens on body.world-*, so the header sets them back
+   to the site's own here, and everything inside it (logo, links, the small-
+   screen menu) inherits the global look. Only the content below changes. */
 .site-header {
+  --bg: #141416;
+  --surface: #232327;
+  --surface-2: #2b2b30;
+  --rule: #38383e;
+  --paper: #ece5d5;
+  --muted: #b9b2a2;
+  --accent: #ff5a3c;
+  --accent-ink: #141416;
+  --font-display: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --stretch-display: 125%;
+  --stretch-body: 100%;
+  font-family: var(--font-body);
+  font-stretch: var(--stretch-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--paper);
   border-bottom: 1px solid var(--rule);
   background: var(--bg);
 }
@@ -195,12 +217,18 @@ p { max-width: var(--measure); }
   padding: 0.35em 0;
   transition: color 0.14s ease-out, box-shadow 0.14s ease-out;
 }
-/* hover and keyboard focus wear the same underline as the current page */
+/* Each link has its own underline colour, the same on every page: the
+   product's colour, or the brand red. Hover, keyboard focus and the current
+   page all wear it. */
+.site-header nav a { --nav-line: var(--accent); }
+.site-header nav a[data-page="oh-a-synth"] { --nav-line: #ff5a3c; }
+.site-header nav a[data-page="oh-a-chord"] { --nav-line: #e0a33b; }
+.site-header nav a[data-page="oh-a-comber"] { --nav-line: #4ade80; }
 .site-header nav a:hover,
 .site-header nav a:focus-visible,
 .site-header nav a[aria-current="page"] {
   color: var(--paper);
-  box-shadow: 0 2px 0 0 var(--accent);
+  box-shadow: 0 2px 0 0 var(--nav-line);
 }
 
 .nav-toggle {

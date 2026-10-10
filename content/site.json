@@ -3,7 +3,7 @@
   "siteName": "Oh!",
   "nav": [
     {
-      "label": "Oh a Synth",
+      "label": "Oh-a-Synth",
       "href": "oh-a-synth.html",
       "page": "oh-a-synth"
     },
@@ -13,7 +13,7 @@
       "page": "oh-a-chord"
     },
     {
-      "label": "Oh a Comber",
+      "label": "Oh-a-Comber",
       "href": "oh-a-comber.html",
       "page": "oh-a-comber"
     },

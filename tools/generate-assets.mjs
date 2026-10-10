@@ -75,7 +75,7 @@ const ogSynth = page(1200, 630, `
   <div class="card">
     <div class="cheek left"></div><div class="cheek right"></div>
     <div class="inner">
-      <div class="brand"><em>Oh a Synth</em><span class="stripes"><i></i><i></i><i></i><i></i></span></div>
+      <div class="brand"><em>Oh-a-Synth</em><span class="stripes"><i></i><i></i><i></i><i></i></span></div>
       <div class="sub">POLYPHONIC SYNTHESIZER</div>
       <div class="line">A polysynth inspired by the 80s.<br>Play it in your browser. Free.</div>
     </div>
@@ -118,7 +118,7 @@ const ogChord = page(1200, 630, `
 
 const ogComber = page(1200, 630, `
   <div class="card">
-    <div class="brand">OH A COMBER</div>
+    <div class="brand">OH-A-COMBER</div>
     <div class="sub">sample organizer</div>
     <div class="line">&gt; Your sample library, finally searchable._</div>
   </div>`, `
@@ -206,14 +206,14 @@ const ASSETS = [
   { out: 'assets/img/favicon-32.png', w: 32, h: 32, html: favicon(32) },
   { out: 'assets/img/apple-touch-icon.png', w: 180, h: 180, html: favicon(180) },
 
-  { out: 'assets/img/synth-hero.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'Oh a Synth: full panel', 'Native app at boot: STRINGS 1 loaded, CHORUS I lit, wood cheeks in frame.', 'assets/img/synth-hero.png') },
+  { out: 'assets/img/synth-hero.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'Oh-a-Synth: full panel', 'Native app at boot: STRINGS 1 loaded, CHORUS I lit, wood cheeks in frame.', 'assets/img/synth-hero.png') },
   { out: 'assets/img/synth-ui-dco.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'DCO section, close crop', 'PWM SRC set to LFO, SUB raised.', 'assets/img/synth-ui-dco.png') },
   { out: 'assets/img/synth-ui-vcf.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'HPF + VCF sections', 'RES high. Filter self-oscillating.', 'assets/img/synth-ui-vcf.png') },
   { out: 'assets/img/synth-ui-chorus.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'CHORUS buttons', 'Button I engaged, LED lit.', 'assets/img/synth-ui-chorus.png') },
   { out: 'assets/img/synth-ui-patches.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'Patch menu open', 'FAVOURITES / FACTORY / USER sections visible.', 'assets/img/synth-ui-patches.png') },
   { out: 'assets/img/synth-ui-bender.png', w: 1280, h: 800, html: placeholder(1280, 800, 'synth', 'BENDER mid-throw', 'Keys held, LFO TRIG + DCO/VCF minis beside the lever.', 'assets/img/synth-ui-bender.png') },
   { out: 'assets/img/poster-synth-daw.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: plugin in a DAW', '15 s silent loop. Arp synced, a knob turning.', 'assets/video/synth-daw.mp4 / .webm') },
-  { out: 'assets/img/poster-synth-track.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: 30 s demo track', 'A musical bed using only Oh a Synth, captions burned in.', 'assets/video/synth-in-a-track.mp4 / .webm') },
+  { out: 'assets/img/poster-synth-track.png', w: 1280, h: 720, html: placeholder(1280, 720, 'synth', 'Poster: 30 s demo track', 'A musical bed using only Oh-a-Synth, captions burned in.', 'assets/video/synth-in-a-track.mp4 / .webm') },
 
   /* No Oh-a-Chord images are generated here. The feature stills are rendered
      from the showreel source and chord-hero.png is a real App Store screenshot,
