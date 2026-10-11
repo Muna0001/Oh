@@ -47,7 +47,7 @@
     },
     {
       "label": "PATCHES",
-      "what": "Nine factory patches, from FAT BASS to WARM PAD. Save and name your own, and export or import them as flat .ohasynth.json files. In the app and plugin, favourite a patch ♥ and it gets its own section at the top of the selector.",
+      "what": "Fifteen factory patches: nine sounds from FAT BASS to WARM PAD, and six drums built from the synth's own filter and noise. Save and name your own, and export or import them as flat .ohasynth.json files. In the app and plugin, favourite a patch ♥ and it gets its own section at the top of the selector.",
       "why": "The same file loads in the browser, the Mac app, and the plugin. A patch sketched on a laptop opens in Logic unchanged.",
       "media": "assets/img/synth-reel-patches.png",
       "mediaAlt": "The whole Oh-a-Synth panel with BRASS 1 just picked from the patch menu, above the factory patches with BRASS 1 lit."
@@ -65,7 +65,7 @@
     "body": "Sixty seconds of dark synthwave where every sound is Oh-a-Synth, drums included. Each part is its own instance of the synth, starting from a factory patch.",
     "video": "assets/video/oh-a-synth-track.mp4",
     "poster": "assets/img/poster-synth-track.jpg",
-    "caption": "The kick is the VCF, self-oscillating, pinged by the envelope. The snare and hats are noise through the HPF."
+    "caption": "The drums are factory patches you can play: KICK DRUM is the VCF, self-oscillating, pinged by the envelope; SNARE DRUM and the hats are noise through the HPF."
   },
   "offer": {
     "heading": "Get it",
@@ -128,7 +128,7 @@
       },
       {
         "label": "Patches",
-        "value": "9 factory + unlimited user patches; flat .ohasynth.json, interchangeable across browser, app, and plugin"
+        "value": "15 factory (9 sounds, 6 drums) + unlimited user patches; flat .ohasynth.json, interchangeable across browser, app, and plugin"
       },
       {
         "label": "Price",

@@ -1,5 +1,5 @@
 /*
- * js/synth/presets.js — the 9 factory patches (re-exported from the
+ * js/synth/presets.js — the 15 factory patches (re-exported from the
  * vendored engine) plus one short demo phrase per patch for the DEMO
  * cycle: a visitor who never touches a key still hears the range.
  * Phrases only ever play from a user gesture (the DEMO button).
@@ -12,7 +12,7 @@ export { PRESETS };
 
 const P = (steps, beats, bpm = 96) => ({ steps, beats, bpm });
 
-/* Each phrase is ~3 seconds, so the full 9-patch tour runs about 28 s —
+/* Each phrase is ~3 seconds, so the full 15-patch tour runs about 45 s —
    long enough to hear each patch's character, short enough to sit through. */
 export const DEMO_PHRASES = {
   'STRINGS 1': P([
@@ -51,6 +51,20 @@ export const DEMO_PHRASES = {
     [0, 1.9, [45, 52, 57, 60, 64], 0.75],
     [2, 1.9, [41, 53, 57, 60, 64], 0.75],
   ], 4.6, 72),
+  // the drums: a bar of each, as a drum machine would play it
+  'KICK DRUM': P([
+    [0, 0.2, [36], 0.9], [1, 0.2, [36], 0.8], [2, 0.2, [36], 0.9], [2.75, 0.2, [36], 0.6], [3, 0.2, [36], 0.85],
+  ], 4.2, 116),
+  'SNARE DRUM': P([
+    [1, 0.15, [50], 0.85], [3, 0.15, [50], 0.85], [3.5, 0.1, [50], 0.45], [3.75, 0.1, [50], 0.6],
+  ], 4.2, 116),
+  'CLOSED HAT': P(Array.from({ length: 16 }, (_, i) => [i / 4, 0.08, [60], i % 2 ? 0.45 : 0.8]), 4.2, 116),
+  'OPEN HAT': P([[0.5, 0.2, [60], 0.8], [1.5, 0.2, [60], 0.8], [2.5, 0.2, [60], 0.8], [3.5, 0.2, [60], 0.9]], 4.2, 116),
+  'TOMS': P([
+    [0, 0.2, [55], 0.85], [0.5, 0.2, [53], 0.85], [1, 0.2, [50], 0.85], [1.5, 0.2, [48], 0.85],
+    [2, 0.2, [45], 0.9], [2.5, 0.2, [43], 0.95],
+  ], 4.2, 116),
+  'CRASH': P([[0, 0.3, [60], 1.0]], 4.2, 116),
 };
 
 /* Plays a phrase through the engine; returns a cancel function. */

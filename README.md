@@ -185,7 +185,7 @@ suspend when hidden or scrolled away). **To update the sound, re-copy those
 three files — never edit them here.**
 
 - `engine.js` — module wrapper, output metering, audio lifecycle
-- `presets.js` — re-exports the 9 factory patches + a demo phrase per patch
+- `presets.js` — re-exports the 15 factory patches + a demo phrase per patch
 - `keyboard.js` — pointer, computer keys (`awsedftgyhujk`, `z`/`x` octave),
   and Web MIDI; full keyboard operation with arrow keys and Space/Enter
 - `ui.js` — the panel: patch stepper, DEMO cycle, VCF FREQ/RES/ENV, CHORUS

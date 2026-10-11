@@ -106,6 +106,82 @@
       vcaMode: 0, vcaLevel: 0.8,
       envA: 0.82, envD: 0.6, envS: 0.85, envR: 0.8,
       chorus: 1, bendDco: 0.1667, bendVcf: 0, velSens: 0.15, volume: 0.72
+    },
+    {
+      // No oscillators: the VCF at full RES rings on its own, and the envelope
+      // sweeps its cutoff (the pitch) from ~500 Hz down to ~60 Hz as it decays.
+      // A little noise starts it ringing. FREQ tunes it, ENV sets the sweep.
+      name: 'KICK DRUM',
+      lfoRate: 0.3, lfoDelay: 0,
+      dcoRange: 1, dcoLfo: 0, dcoPw: 0.32, dcoPwmMode: 0,
+      dcoSaw: 0, dcoPulse: 0, dcoSub: 0, dcoNoise: 0.6,
+      hpf: 0,
+      vcfFreq: 0.1, vcfRes: 1, vcfPol: 0, vcfEnv: 0.45, vcfLfo: 0, vcfKey: 0,
+      vcaMode: 0, vcaLevel: 1,
+      envA: 0, envD: 0.6, envS: 0, envR: 0.5,
+      chorus: 0, bendDco: 0.1667, bendVcf: 0, velSens: 0.3, volume: 1
+    },
+    {
+      // Noise for the rattle and a square pulse for the body, through HPF 2 and
+      // a short envelope. The pulse follows the keys, so the body is tunable.
+      name: 'SNARE DRUM',
+      lfoRate: 0.36, lfoDelay: 0,
+      dcoRange: 1, dcoLfo: 0, dcoPw: 0, dcoPwmMode: 0,
+      dcoSaw: 0, dcoPulse: 1, dcoSub: 0, dcoNoise: 1,
+      hpf: 2,
+      vcfFreq: 0.6, vcfRes: 0.25, vcfPol: 0, vcfEnv: 0.3, vcfLfo: 0, vcfKey: 0,
+      vcaMode: 0, vcaLevel: 1,
+      envA: 0, envD: 0.5, envS: 0, envR: 0.45,
+      chorus: 0, bendDco: 0.1667, bendVcf: 0, velSens: 0.6, volume: 0.8
+    },
+    {
+      // Noise at the top HPF position, open filter, a very short decay.
+      name: 'CLOSED HAT',
+      lfoRate: 0.36, lfoDelay: 0,
+      dcoRange: 1, dcoLfo: 0, dcoPw: 0.55, dcoPwmMode: 0,
+      dcoSaw: 0, dcoPulse: 0, dcoSub: 0, dcoNoise: 1,
+      hpf: 3,
+      vcfFreq: 0.97, vcfRes: 0.1, vcfPol: 0, vcfEnv: 0, vcfLfo: 0, vcfKey: 0,
+      vcaMode: 0, vcaLevel: 1,
+      envA: 0, envD: 0.38, envS: 0, envR: 0.3,
+      chorus: 0, bendDco: 0.1667, bendVcf: 0, velSens: 0.6, volume: 0.8
+    },
+    {
+      // The closed hat with a longer decay and a touch of resonance.
+      name: 'OPEN HAT',
+      lfoRate: 0.36, lfoDelay: 0,
+      dcoRange: 1, dcoLfo: 0, dcoPw: 0.55, dcoPwmMode: 0,
+      dcoSaw: 0, dcoPulse: 0, dcoSub: 0, dcoNoise: 1,
+      hpf: 3,
+      vcfFreq: 0.95, vcfRes: 0.15, vcfPol: 0, vcfEnv: 0, vcfLfo: 0, vcfKey: 0,
+      vcaMode: 0, vcaLevel: 1,
+      envA: 0, envD: 0.55, envS: 0, envR: 0.5,
+      chorus: 0, bendDco: 0.1667, bendVcf: 0, velSens: 0.6, volume: 0.8
+    },
+    {
+      // The kick with KYBD at full: the ringing filter follows the keys, so
+      // each key is a tom of its own pitch: G2 ~105 Hz, C3 ~145 Hz, F3 ~195 Hz.
+      name: 'TOMS',
+      lfoRate: 0.3, lfoDelay: 0,
+      dcoRange: 1, dcoLfo: 0, dcoPw: 0.32, dcoPwmMode: 0,
+      dcoSaw: 0, dcoPulse: 0, dcoSub: 0, dcoNoise: 0.6,
+      hpf: 0,
+      vcfFreq: 0.3, vcfRes: 1, vcfPol: 0, vcfEnv: 0.38, vcfLfo: 0, vcfKey: 1,
+      vcaMode: 0, vcaLevel: 1,
+      envA: 0, envD: 0.6, envS: 0, envR: 0.5,
+      chorus: 0, bendDco: 0.1667, bendVcf: 0, velSens: 0.3, volume: 1
+    },
+    {
+      // Noise at HPF 3 with a long decay.
+      name: 'CRASH',
+      lfoRate: 0.36, lfoDelay: 0,
+      dcoRange: 1, dcoLfo: 0, dcoPw: 0.55, dcoPwmMode: 0,
+      dcoSaw: 0, dcoPulse: 0, dcoSub: 0, dcoNoise: 1,
+      hpf: 3,
+      vcfFreq: 0.9, vcfRes: 0.1, vcfPol: 0, vcfEnv: 0, vcfLfo: 0, vcfKey: 0,
+      vcaMode: 0, vcaLevel: 1,
+      envA: 0, envD: 0.78, envS: 0, envR: 0.78,
+      chorus: 0, bendDco: 0.1667, bendVcf: 0, velSens: 0.6, volume: 0.75
     }
   ];
 })();
