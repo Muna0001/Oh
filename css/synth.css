@@ -55,6 +55,18 @@ body.world-synth {
   border-radius: 0;
 }
 
+/* ---- features: the explainer's scenes, live (js/synth-demos.js) ----------- */
+/* The still is the scene's own frame; the canvas laid over it plays it. */
+.media-slot .frame.ar-synth-reel { aspect-ratio: 1600 / 1154; }
+.media-slot .frame > .reel-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.media-slot .frame > .media-pause { z-index: 2; }
+
 /* ---- the stage: a cabinet before the WebGL arrives -------------------------- */
 .synth-stage .container { position: relative; }
 .synth-stage [data-synth-mount] {

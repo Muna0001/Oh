@@ -123,6 +123,23 @@ Empty `siteId` (as shipped) = **no tracker loads, no request leaves the
 page**. To enable: create a GoatCounter account (cookieless, no consent
 banner needed) and set `siteId` to your GoatCounter code.
 
+## The live feature demos
+
+The Oh-a-Chord and Oh-a-Synth feature sections play scenes from each
+product's explainer live in a `<canvas>`, over a still of the same scene
+(the no-JS and reduced-motion view). The drawing code is bundled from the
+explainers' source in the oh-a-chord repo (`showreel/`):
+
+| Page | Bundle (generated) | Built by | Player |
+|---|---|---|---|
+| Oh-a-Chord | `js/chord-reel.js` | `node tools/build-chord-reel.mjs` | `js/chord-demos.js` |
+| Oh-a-Synth | `js/synth-reel.js` + `assets/synth-reel/` | `node tools/build-synth-reel.mjs` | `js/synth-demos.js` |
+
+The synth bundle draws on the app's real panel, so it needs the showreel's
+own build first (`node synth_panel.mjs && python3
+synth_explainer_score.py` there, with an Ohasynth checkout). Its stills,
+`assets/img/synth-reel-*.png`, are frames of the same scenes.
+
 ## Dropping in real media
 
 Every media slot already ships as a labeled placeholder PNG at the **final
@@ -132,10 +149,8 @@ layout doesn't change:
 | Drop this file | What it is |
 |---|---|
 | `assets/video/synth-in-a-track.mp4` + `.webm` | 30 s musical demo, the synth page's main video |
-| `assets/video/synth-daw.mp4` + `.webm` | 15 s silent loop, plugin in a DAW |
 | `assets/img/synth-hero.png` | native app panel, STRINGS 1 + CHORUS I |
-| `assets/img/synth-ui-{dco,vcf,chorus,patches,bender}.png` | feature-section screenshots |
-| `assets/img/poster-synth-{track,daw}.png` | poster frames for the two videos |
+| `assets/img/poster-synth-track.png` | poster frame for the demo video |
 | `assets/video/comber-organize.mp4` + `.webm` | 30 s primary Comber demo |
 | `assets/video/comber-drag-to-daw.mp4` + `.webm` | 10 s silent drag-to-DAW loop |
 | `assets/img/comber-{before,after}.png` | the before/after pair above the fold |

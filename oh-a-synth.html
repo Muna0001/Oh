@@ -32,6 +32,7 @@
   <script type="module" src="js/nav.js"></script>
   <script type="module" src="js/forms.js"></script>
   <script type="module" src="js/media.js"></script>
+  <script type="module" src="js/synth-demos.js"></script>
   <script type="module" src="js/reveal.js"></script>
   <script type="module" src="js/chord-demos.js"></script>
   <!-- Opt in to scroll reveals before first paint so nothing flashes. If
@@ -143,11 +144,10 @@
             <p class="what" data-slot="features.0.what" data-reveal>One digitally-exact oscillator per voice: polyBLEP saw, pulse with manual or LFO-swept width, a square sub one octave down, and a noise source shared across all voices, as on the hardware.</p>
             <p class="why" data-slot="features.0.why" data-reveal>That era's character is solid pitch against a moving filter. Tuning never drifts here; the voice-to-voice tolerances live in the filter and amp instead, where the real chips had them.</p>
           </div>
-          <figure class="media-slot" data-reveal>
-            <div class="frame ar-16x10">
-              <img src="assets/img/synth-ui-dco.png" loading="lazy" width="1280" height="800" alt="The DCO section of the Oh-a-Synth panel: RANGE, LFO, PWM, PWM SRC, PULSE, SAW, SUB and NOISE controls" data-slot-attr="alt:features.0.mediaAlt">
+          <figure class="media-slot" data-reveal data-demo="dco">
+            <div class="frame ar-synth-reel">
+              <img src="assets/img/synth-reel-dco.png" loading="lazy" width="1600" height="1154" alt="The DCO section of the Oh-a-Synth panel with PWM SRC switched to LFO, above an oscilloscope showing the pulse wave the engine is playing, its width moving." data-slot-attr="alt:features.0.mediaAlt">
             </div>
-            <figcaption data-slot="features.0.mediaCaption">Slot: close crop of the DCO section, PWM SRC set to LFO (screenshot, 1280×800)</figcaption>
           </figure>
         </article>
 
@@ -157,11 +157,10 @@
             <p class="what" data-slot="features.1.what" data-reveal>A 24 dB/oct zero-delay-feedback ladder filter that self-oscillates near the top of the RES range and tracks the keyboard via KYBD. In front of it sits the 4-position HPF. Position 0 is the famous low-shelf bass boost.</p>
             <p class="why" data-slot="features.1.why" data-reveal>Sweep FREQ on a held chord and there is no zipper, no stair-stepping: slider moves are smoothed per-sample inside the audio thread.</p>
           </div>
-          <figure class="media-slot" data-reveal>
-            <div class="frame ar-16x10">
-              <img src="assets/img/synth-ui-vcf.png" loading="lazy" width="1280" height="800" alt="The HPF and VCF sections of the panel: FREQ switch, and FREQ, RES, ENV POL, ENV, LFO, KYBD sliders" data-slot-attr="alt:features.1.mediaAlt">
+          <figure class="media-slot" data-reveal data-demo="vcf">
+            <div class="frame ar-synth-reel">
+              <img src="assets/img/synth-reel-vcf.png" loading="lazy" width="1600" height="1154" alt="The HPF and VCF sections with RES pushed high, above the filter's response: a resonant peak at the cutoff, FREQ 5.9, RES 8.3." data-slot-attr="alt:features.1.mediaAlt">
             </div>
-            <figcaption data-slot="features.1.mediaCaption">Slot: the VCF mid-sweep with RES high, showing filter self-oscillation (screenshot, 1280×800)</figcaption>
           </figure>
         </article>
 
@@ -171,11 +170,10 @@
             <p class="what" data-slot="features.2.what" data-reveal>Two latching buttons, I and II; press both for I+II. A BBD-style stereo chorus modeled on the MN3009 bucket brigades: one delay line, two taps modulated in antiphase, wet path band-limited to 9 kHz.</p>
             <p class="why" data-slot="features.2.why" data-reveal>This is the effect the era is remembered for. I is slow and lush, II runs faster, and I+II is the quick shallow warble the LESLIE ORGAN patch is built on.</p>
           </div>
-          <figure class="media-slot" data-reveal>
-            <div class="frame ar-16x10">
-              <img src="assets/img/synth-ui-chorus.png" loading="lazy" width="1280" height="800" alt="The CHORUS section: buttons I and II with LEDs lit" data-slot-attr="alt:features.2.mediaAlt">
+          <figure class="media-slot" data-reveal data-demo="chorus">
+            <div class="frame ar-synth-reel">
+              <img src="assets/img/synth-reel-chorus.png" loading="lazy" width="1600" height="1154" alt="The CHORUS section with buttons I and II both lit, above a stereo goniometer showing the chorus spreading one chord across left and right." data-slot-attr="alt:features.2.mediaAlt">
             </div>
-            <figcaption data-slot="features.2.mediaCaption">Slot: CHORUS I engaged, LED lit (screenshot, 1280×800)</figcaption>
           </figure>
         </article>
 
@@ -185,14 +183,10 @@
             <p class="what" data-slot="features.3.what" data-reveal>UP, UP&amp;DN, or DOWN across 1, 2, or 3 octaves. Free-running from 0.5 to 20 Hz, or hit SYNC and the RATE slider snaps to twelve note divisions from 1/1 to 1/64, dotted values included. HOLD latches the chord.</p>
             <p class="why" data-slot="features.3.why" data-reveal>Synced, it locks to your DAW's playhead in the plugin and to MIDI beat clock everywhere else, realigned every beat so it cannot drift.</p>
           </div>
-          <figure class="media-slot" data-reveal>
-            <div class="frame ar-16x9">
-              <video controls muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-synth-daw.png" aria-label="Silent loop of the plugin in a DAW with the arpeggiator synced to the session tempo">
-                <source src="assets/video/synth-daw.mp4" type="video/mp4">
-                <source src="assets/video/synth-daw.webm" type="video/webm">
-              </video>
+          <figure class="media-slot" data-reveal data-demo="arp">
+            <div class="frame ar-synth-reel">
+              <img src="assets/img/synth-reel-arp.png" loading="lazy" width="1600" height="1154" alt="The ARPEGGIO section with ON, HOLD and SYNC lit, UP&amp;DN and a two-octave range, synced at 1/16 and 128 BPM, above the keys the arpeggiator is playing." data-slot-attr="alt:features.3.mediaAlt">
             </div>
-            <figcaption data-slot="features.3.mediaCaption">Slot: 15 s silent loop of the plugin in a DAW, arp synced, a knob turning (assets/video/synth-daw.mp4/.webm)</figcaption>
           </figure>
         </article>
 
@@ -202,11 +196,10 @@
             <p class="what" data-slot="features.4.what" data-reveal>Eight factory patches, from FAT BASS to LESLIE ORGAN. Save and name your own, and export or import them as flat .ohasynth.json files. In the app and plugin, favourite a patch ♥ and it gets its own section at the top of the selector.</p>
             <p class="why" data-slot="features.4.why" data-reveal>The same file loads in the browser, the Mac app, and the plugin. A patch sketched on a laptop opens in Logic unchanged.</p>
           </div>
-          <figure class="media-slot" data-reveal>
-            <div class="frame ar-16x10">
-              <img src="assets/img/synth-ui-patches.png" loading="lazy" width="1280" height="800" alt="The patch selector open, showing FAVOURITES, FACTORY and USER sections" data-slot-attr="alt:features.4.mediaAlt">
+          <figure class="media-slot" data-reveal data-demo="patches">
+            <div class="frame ar-synth-reel">
+              <img src="assets/img/synth-reel-patches.png" loading="lazy" width="1600" height="1154" alt="The whole Oh-a-Synth panel with BRASS 1 just picked from the patch menu, above the factory patches with BRASS 1 lit." data-slot-attr="alt:features.4.mediaAlt">
             </div>
-            <figcaption data-slot="features.4.mediaCaption">Slot: native patch menu open. FAVOURITES / FACTORY / USER sections visible (screenshot, 1280×800)</figcaption>
           </figure>
         </article>
 
@@ -216,11 +209,10 @@
             <p class="what" data-slot="features.5.what" data-reveal>Notes with velocity, pitch bend with separate DCO and VCF depths, mod-wheel vibrato, sustain pedal, and 24-ppqn beat clock for the arp. The status readout names what's connected and what isn't.</p>
             <p class="why" data-slot="features.5.why" data-reveal>Those machines ignored velocity entirely. The VEL slider maps it gently to level; set it to zero for that behavior.</p>
           </div>
-          <figure class="media-slot" data-reveal>
-            <div class="frame ar-16x10">
-              <img src="assets/img/synth-ui-bender.png" loading="lazy" width="1280" height="800" alt="The BENDER lever with LFO TRIG button and DCO/VCF bend-depth sliders" data-slot-attr="alt:features.5.mediaAlt">
+          <figure class="media-slot" data-reveal data-demo="bender">
+            <div class="frame ar-synth-reel">
+              <img src="assets/img/synth-reel-bender.png" loading="lazy" width="1600" height="1154" alt="The BENDER pushed to the right, with its DCO and VCF depth sliders, above a chord held on the keyboard." data-slot-attr="alt:features.5.mediaAlt">
             </div>
-            <figcaption data-slot="features.5.mediaCaption">Slot: the BENDER mid-throw with keys held (screenshot, 1280×800)</figcaption>
           </figure>
         </article>
 
