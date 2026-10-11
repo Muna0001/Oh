@@ -62,7 +62,7 @@
   ],
   "demo": {
     "heading": "Hear it in a track",
-    "body": "Sixty seconds of dark synthwave where every sound is Oh-a-Synth, drums included: fifteen instances of its engine, each starting from a factory patch, mixed like a record.",
+    "body": "Sixty seconds of dark synthwave where every sound is Oh-a-Synth, drums included. Each part is its own instance of the synth, starting from a factory patch.",
     "video": "assets/video/oh-a-synth-track.mp4",
     "poster": "assets/img/poster-synth-track.jpg",
     "caption": "The kick is the VCF, self-oscillating, pinged by the envelope. The snare and hats are noise through the HPF."
