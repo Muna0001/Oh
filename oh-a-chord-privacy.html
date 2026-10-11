@@ -32,6 +32,16 @@
   <script type="module" src="js/nav.js"></script>
   <script type="module" src="js/forms.js"></script>
   <script type="module" src="js/media.js"></script>
+  <script type="module" src="js/reveal.js"></script>
+  <script type="module" src="js/chord-demos.js"></script>
+  <!-- Opt in to scroll reveals before first paint so nothing flashes. If
+       reveal.js hasn't started within 3s, show everything anyway. -->
+  <script>
+    (function (d) {
+      d.classList.add('reveal-on');
+      setTimeout(function () { if (!d.classList.contains('reveal-live')) d.classList.remove('reveal-on'); }, 3000);
+    })(document.documentElement);
+  </script>
   <script type="module" src="js/analytics.js"></script>
 
   <script type="application/ld+json">
@@ -65,10 +75,10 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="privacy-h1">
-      <div class="container prose">
-        <p class="kicker"><a href="oh-a-chord.html">← Oh-a-Chord</a></p>
-        <h1 id="privacy-h1" data-slot="intro.h1">Privacy Policy</h1>
-        <div data-slot-md="intro.body">
+      <div class="container prose" data-reveal-sequence>
+        <p class="kicker" data-reveal><a href="oh-a-chord.html">← Oh-a-Chord</a></p>
+        <h1 id="privacy-h1" data-slot="intro.h1" data-reveal>Privacy Policy</h1>
+        <div data-slot-md="intro.body" data-reveal>
           <p><strong>Oh-a-Chord collects nothing.</strong> This isn&#39;t a summary of a longer policy. It&#39;s the whole thing. There is no account to create, no data to hand over, and nothing to opt out of, because nothing is ever collected.</p>
 <p>Last updated August 2026.</p>
         </div>
@@ -77,33 +87,33 @@
 
     <section class="section privacy-body" aria-label="Policy details">
       <div class="container prose">
-        <h2 data-slot="sections.0.heading">What the app collects</h2>
-        <div data-slot-md="sections.0.body">
+        <h2 data-slot="sections.0.heading" data-reveal>What the app collects</h2>
+        <div data-slot-md="sections.0.body" data-reveal>
           <p>Nothing. Oh-a-Chord has no accounts, no sign-in, and no analytics or telemetry of any kind. It makes no network requests. There is no server it talks to, and no third-party SDK bundled inside it to talk to one on its behalf.</p>
         </div>
 
-        <h2 data-slot="sections.1.heading">What stays on your device</h2>
-        <div data-slot-md="sections.1.body">
+        <h2 data-slot="sections.1.heading" data-reveal>What stays on your device</h2>
+        <div data-slot-md="sections.1.body" data-reveal>
           <p>If you save a sound you&#39;ve tweaked in the advanced settings drawer, it&#39;s written to a plain file inside the app&#39;s own storage on your device. That&#39;s the same place any app keeps its own documents. The file is never uploaded, synced, or shared. Deleting the app deletes it.</p>
         </div>
 
-        <h2 data-slot="sections.2.heading">Microphone and other permissions</h2>
-        <div data-slot-md="sections.2.body">
+        <h2 data-slot="sections.2.heading" data-reveal>Microphone and other permissions</h2>
+        <div data-slot-md="sections.2.body" data-reveal>
           <p>Oh-a-Chord never asks for microphone access. It only plays sound, it never records it. It requests no other device permissions.</p>
         </div>
 
-        <h2 data-slot="sections.3.heading">Children</h2>
-        <div data-slot-md="sections.3.body">
+        <h2 data-slot="sections.3.heading" data-reveal>Children</h2>
+        <div data-slot-md="sections.3.body" data-reveal>
           <p>Because the app collects no data from anyone, it collects no data from children either. There is nothing here for a parent to review or request the deletion of.</p>
         </div>
 
-        <h2 data-slot="sections.4.heading">Changes to this policy</h2>
-        <div data-slot-md="sections.4.body">
+        <h2 data-slot="sections.4.heading" data-reveal>Changes to this policy</h2>
+        <div data-slot-md="sections.4.body" data-reveal>
           <p>If that ever changes, this page will say so before it happens, in plain language. That covers a future version adding an account, sync, or any form of data collection.</p>
         </div>
 
-        <h2 data-slot="sections.5.heading">Contact</h2>
-        <div data-slot-md="sections.5.body">
+        <h2 data-slot="sections.5.heading" data-reveal>Contact</h2>
+        <div data-slot-md="sections.5.body" data-reveal>
           <p>Questions about this policy or the app go straight to the person who builds it: <a href="mailto:muna0001@gmail.com">muna0001@gmail.com</a>.</p>
         </div>
       </div>

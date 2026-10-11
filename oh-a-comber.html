@@ -33,6 +33,16 @@
   <script type="module" src="js/nav.js"></script>
   <script type="module" src="js/forms.js"></script>
   <script type="module" src="js/media.js"></script>
+  <script type="module" src="js/reveal.js"></script>
+  <script type="module" src="js/chord-demos.js"></script>
+  <!-- Opt in to scroll reveals before first paint so nothing flashes. If
+       reveal.js hasn't started within 3s, show everything anyway. -->
+  <script>
+    (function (d) {
+      d.classList.add('reveal-on');
+      setTimeout(function () { if (!d.classList.contains('reveal-live')) d.classList.remove('reveal-on'); }, 3000);
+    })(document.documentElement);
+  </script>
   <script type="module" src="js/analytics.js"></script>
   <script type="module" src="js/gl/crt.js"></script>
   <script type="module" src="js/boot.js"></script>
@@ -82,26 +92,26 @@
   <main id="main">
     <!-- 1 · Hero, inside the screen -->
     <section class="hero" aria-labelledby="comber-h1">
-      <div class="container">
+      <div class="container" data-reveal-sequence>
         <div class="crt-screen" data-crt data-boot>
-          <p class="kicker">Sample library organizer · desktop app</p>
-          <h1 id="comber-h1" data-slot="hero.h1">Your sample library, finally searchable.</h1>
-          <p class="positioning" data-slot="hero.positioning">Oh-a-Comber scans the folders you already have and turns them into a fast, filterable library. It never moves, renames, or rewrites a file.</p>
-          <a class="btn" href="#download" data-slot="hero.cta" data-slot-attr="href:hero.ctaHref">Download for Mac</a>
+          <p class="kicker" data-reveal>Sample library organizer · desktop app</p>
+          <h1 id="comber-h1" data-slot="hero.h1" data-reveal>Your sample library, finally searchable.</h1>
+          <p class="positioning" data-slot="hero.positioning" data-reveal>Oh-a-Comber scans the folders you already have and turns them into a fast, filterable library. It never moves, renames, or rewrites a file.</p>
+          <a class="btn" href="#download" data-slot="hero.cta" data-slot-attr="href:hero.ctaHref" data-reveal>Download for Mac</a>
         </div>
       </div>
     </section>
 
     <!-- Before / after, above the fold -->
     <section class="before-after" aria-label="Before and after">
-      <div class="container">
-        <figure class="media-slot">
+      <div class="container" data-reveal-stagger>
+        <figure class="media-slot" data-reveal>
           <div class="frame ar-16x10">
             <img src="assets/img/comber-before.png" width="1400" height="900" alt="A Finder window: dozens of nested sample-pack folders with cryptic filenames" data-slot-attr="alt:beforeAfter.beforeAlt">
           </div>
           <figcaption data-slot="beforeAfter.beforeCaption">Slot: the before shot, raw pack folders in a file browser (assets/img/comber-before.png)</figcaption>
         </figure>
-        <figure class="media-slot">
+        <figure class="media-slot" data-reveal>
           <div class="frame ar-16x10">
             <img src="assets/img/comber-after.png" width="1400" height="900" alt="The Oh-a-Comber library: the same samples in a sortable list with type badges, BPM, and a waveform player" data-slot-attr="alt:beforeAfter.afterAlt">
           </div>
@@ -112,9 +122,9 @@
 
     <!-- 2 · The problem / the promise -->
     <section class="section promise" aria-labelledby="comber-promise">
-      <div class="container prose">
-        <h2 id="comber-promise" data-slot="promise.heading">Why I built this</h2>
-        <p data-slot="promise.body">Twenty packs deep, I had the same folder every producer has: thousands of one-shots with names like SD_808_F#_140. I knew the sound I wanted was in there. I just couldn't find it. The sample managers I tried wanted to import everything into a library of their own, and I didn't want my folders touched. So I built one that reads what the filenames and metadata already say, and leaves every file where it is.</p>
+      <div class="container prose" data-reveal-stagger>
+        <h2 id="comber-promise" data-slot="promise.heading" data-reveal>Why I built this</h2>
+        <p data-slot="promise.body" data-reveal>Twenty packs deep, I had the same folder every producer has: thousands of one-shots with names like SD_808_F#_140. I knew the sound I wanted was in there. I just couldn't find it. The sample managers I tried wanted to import everything into a library of their own, and I didn't want my folders touched. So I built one that reads what the filenames and metadata already say, and leaves every file where it is.</p>
       </div>
     </section>
 
@@ -122,13 +132,13 @@
     <section class="section features" aria-label="Features">
       <div class="container">
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.0.label">Scan Library</h3>
-            <p class="what" data-slot="features.0.what">Point it at your sample folders, several at once if you like. It indexes .wav, .aiff, .mp3, .flac, .ogg, .m4a, .wma, and .aac, reading duration, sample rate, channels, and BPM from each file's metadata and name.</p>
-            <p class="why" data-slot="features.0.why">Indexing, not importing. Your folder structure stays exactly as it is. Exact duplicates are detected by content and hidden automatically, never deleted.</p>
+            <h3 data-slot="features.0.label" data-reveal>Scan Library</h3>
+            <p class="what" data-slot="features.0.what" data-reveal>Point it at your sample folders, several at once if you like. It indexes .wav, .aiff, .mp3, .flac, .ogg, .m4a, .wma, and .aac, reading duration, sample rate, channels, and BPM from each file's metadata and name.</p>
+            <p class="why" data-slot="features.0.why" data-reveal>Indexing, not importing. Your folder structure stays exactly as it is. Exact duplicates are detected by content and hidden automatically, never deleted.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x9">
               <video controls muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-comber-organize.png" aria-label="Screen capture: a folder of thousands of samples being scanned, then filtered down in the library">
                 <source src="assets/video/comber-organize.mp4" type="video/mp4">
@@ -139,13 +149,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.1.label">Type &amp; Genre</h3>
-            <p class="what" data-slot="features.1.what">Every sample gets a Type: kick, snare, hihat, clap, cymbal, tom, percussion, bass, synth, keys, guitar, strings, brass, vocal, fx, or loop. Type is read from the filename and folder path. Pack names map to genres the same way.</p>
-            <p class="why" data-slot="features.1.why">It's transparent pattern-matching on the names your packs already carry, not a black box. You can predict what it will decide, and re-scanning a new pack takes seconds.</p>
+            <h3 data-slot="features.1.label" data-reveal>Type &amp; Genre</h3>
+            <p class="what" data-slot="features.1.what" data-reveal>Every sample gets a Type: kick, snare, hihat, clap, cymbal, tom, percussion, bass, synth, keys, guitar, strings, brass, vocal, fx, or loop. Type is read from the filename and folder path. Pack names map to genres the same way.</p>
+            <p class="why" data-slot="features.1.why" data-reveal>It's transparent pattern-matching on the names your packs already carry, not a black box. You can predict what it will decide, and re-scanning a new pack takes seconds.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x10">
               <img src="assets/img/comber-ui-types.png" loading="lazy" width="1400" height="900" alt="The sidebar Type filters with live counts, and type badges in the sample list" data-slot-attr="alt:features.1.mediaAlt">
             </div>
@@ -153,13 +163,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.2.label">Search &amp; filters</h3>
-            <p class="what" data-slot="features.2.what">Search matches filename, path, and pack. Stack it with Type chips, Genre, a BPM Range, and ★ FAVORITES. The counts update live.</p>
-            <p class="why" data-slot="features.2.why">"kick", 80–100 BPM, one pack name: six thousand files become five candidates while the last one is still playing.</p>
+            <h3 data-slot="features.2.label" data-reveal>Search &amp; filters</h3>
+            <p class="what" data-slot="features.2.what" data-reveal>Search matches filename, path, and pack. Stack it with Type chips, Genre, a BPM Range, and ★ FAVORITES. The counts update live.</p>
+            <p class="why" data-slot="features.2.why" data-reveal>"kick", 80–100 BPM, one pack name: six thousand files become five candidates while the last one is still playing.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x10">
               <img src="assets/img/comber-ui-search.png" loading="lazy" width="1400" height="900" alt="The library filtered by search text, type, and BPM range simultaneously" data-slot-attr="alt:features.2.mediaAlt">
             </div>
@@ -167,13 +177,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.3.label">Preview &amp; audition</h3>
-            <p class="what" data-slot="features.3.what">Click play and the waveform draws in the player bar; click the waveform to seek. Arrow keys walk the list and audition each sample as you move.</p>
-            <p class="why" data-slot="features.3.why">Auditioning is the whole job. You never leave the list, and you never stop listening.</p>
+            <h3 data-slot="features.3.label" data-reveal>Preview &amp; audition</h3>
+            <p class="what" data-slot="features.3.what" data-reveal>Click play and the waveform draws in the player bar; click the waveform to seek. Arrow keys walk the list and audition each sample as you move.</p>
+            <p class="why" data-slot="features.3.why" data-reveal>Auditioning is the whole job. You never leave the list, and you never stop listening.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x10">
               <img src="assets/img/comber-ui-player.png" loading="lazy" width="1400" height="900" alt="The player bar with a green waveform, elapsed time, and a sample playing" data-slot-attr="alt:features.3.mediaAlt">
             </div>
@@ -181,13 +191,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.4.label">Drag out to your DAW</h3>
-            <p class="what" data-slot="features.4.what">Rows drag like files because they are files: dragging hands your DAW the original path on disk. Right-click reveals the file in Finder.</p>
-            <p class="why" data-slot="features.4.why">No export step, no copies, no managed library between you and the sound. Search, preview, drop it on a track.</p>
+            <h3 data-slot="features.4.label" data-reveal>Drag out to your DAW</h3>
+            <p class="what" data-slot="features.4.what" data-reveal>Rows drag like files because they are files: dragging hands your DAW the original path on disk. Right-click reveals the file in Finder.</p>
+            <p class="why" data-slot="features.4.why" data-reveal>No export step, no copies, no managed library between you and the sound. Search, preview, drop it on a track.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x9">
               <video controls muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-comber-drag.png" aria-label="Silent loop: searching, previewing, and dragging a sample onto a DAW track">
                 <source src="assets/video/comber-drag-to-daw.mp4" type="video/mp4">
@@ -198,13 +208,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.5.label">INSTRUMENTS</h3>
-            <p class="what" data-slot="features.5.what">Load any sample onto the KEYBOARD and play it chromatically across 24 keys, or bank nine one-shots on the DRUM PAD. Play them with the mouse, the computer keyboard, or a MIDI controller.</p>
-            <p class="why" data-slot="features.5.why">Sketch the part before you commit the sample. C3 keeps the original pitch; the pads sit on MIDI notes 48–56.</p>
+            <h3 data-slot="features.5.label" data-reveal>INSTRUMENTS</h3>
+            <p class="what" data-slot="features.5.what" data-reveal>Load any sample onto the KEYBOARD and play it chromatically across 24 keys, or bank nine one-shots on the DRUM PAD. Play them with the mouse, the computer keyboard, or a MIDI controller.</p>
+            <p class="why" data-slot="features.5.why" data-reveal>Sketch the part before you commit the sample. C3 keeps the original pitch; the pads sit on MIDI notes 48–56.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x10">
               <img src="assets/img/comber-ui-instruments.png" loading="lazy" width="1400" height="900" alt="The INSTRUMENTS panel open on the DRUM PAD tab, several pads assigned" data-slot-attr="alt:features.5.mediaAlt">
             </div>
@@ -217,10 +227,10 @@
 
     <!-- 4 · Demo: carries the persuasive weight, no trial exists -->
     <section class="section demo" aria-labelledby="comber-demo">
-      <div class="container">
-        <h2 id="comber-demo" data-slot="demo.heading">Watch it comb a library</h2>
-        <p data-slot="demo.body">Thirty seconds from "which folder was that in" to a filtered shortlist and a sample on a track.</p>
-        <figure class="media-slot">
+      <div class="container" data-reveal-stagger>
+        <h2 id="comber-demo" data-slot="demo.heading" data-reveal>Watch it comb a library</h2>
+        <p data-slot="demo.body" data-reveal>Thirty seconds from "which folder was that in" to a filtered shortlist and a sample on a track.</p>
+        <figure class="media-slot" data-reveal>
           <div class="frame ar-16x9">
             <video controls muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-comber-organize.png" aria-label="Thirty-second demo of Oh-a-Comber organizing and filtering a sample library, captions burned in">
               <source src="assets/video/comber-organize.mp4" type="video/mp4">
@@ -235,29 +245,29 @@
     <!-- 4b · Get it: out now for Mac, direct from the GitHub release -->
     <section class="section download" id="download" aria-labelledby="comber-download">
       <div class="container">
-        <h2 id="comber-download" data-slot="download.heading">Get it</h2>
-        <p data-slot="download.body">Oh-a-Comber 1.0 is out now for Mac. It's free. Pick the build for your machine.</p>
+        <h2 id="comber-download" data-slot="download.heading" data-reveal>Get it</h2>
+        <p data-slot="download.body" data-reveal>Oh-a-Comber 1.0 is out now for Mac. It's free. Pick the build for your machine.</p>
 
-        <ul class="download-options" role="list">
-          <li>
+        <ul class="download-options" role="list" data-reveal-stagger>
+          <li data-reveal>
             <a class="btn" href="https://github.com/Muna0001/SampleOrganizer/releases/download/v1.0.0/OhAComber-1.0.0-arm64.dmg" rel="noopener"
                data-slot="site.downloads.comber.arm64.label" data-slot-attr="href:site.downloads.comber.arm64.url">Download for Apple Silicon</a>
             <span class="download-meta" data-slot="site.downloads.comber.arm64.meta">DMG, 102 MB. M1 or later.</span>
           </li>
-          <li>
+          <li data-reveal>
             <a class="btn" href="https://github.com/Muna0001/SampleOrganizer/releases/download/v1.0.0/OhAComber-1.0.0-x64.dmg" rel="noopener"
                data-slot="site.downloads.comber.x64.label" data-slot-attr="href:site.downloads.comber.x64.url">Download for Intel</a>
             <span class="download-meta" data-slot="site.downloads.comber.x64.meta">DMG, 109 MB.</span>
           </li>
         </ul>
 
-        <p class="download-hint" data-slot="download.hint">Not sure which you have? Open the Apple menu and choose About This Mac. "Chip: Apple M…" means Apple Silicon. "Processor: Intel…" means Intel.</p>
-        <p class="download-hint" data-slot="download.install">Open the DMG and drag Oh-a-Comber to your Applications folder. Both builds are signed with an Apple Developer ID and notarized by Apple, so they open without a security warning. Needs macOS 11 or later.</p>
-        <p class="download-hint"><a href="https://github.com/Muna0001/SampleOrganizer/releases/tag/v1.0.0" rel="noopener"
+        <p class="download-hint" data-slot="download.hint" data-reveal>Not sure which you have? Open the Apple menu and choose About This Mac. "Chip: Apple M…" means Apple Silicon. "Processor: Intel…" means Intel.</p>
+        <p class="download-hint" data-slot="download.install" data-reveal>Open the DMG and drag Oh-a-Comber to your Applications folder. Both builds are signed with an Apple Developer ID and notarized by Apple, so they open without a security warning. Needs macOS 11 or later.</p>
+        <p class="download-hint" data-reveal><a href="https://github.com/Muna0001/SampleOrganizer/releases/tag/v1.0.0" rel="noopener"
               data-slot="site.downloads.comber.releaseLinkLabel" data-slot-attr="href:site.downloads.comber.releaseUrl">Release notes on GitHub</a></p>
 
         <!-- Windows: configured in the build, not shipped. Same capture plumbing as the old waitlist. -->
-        <div class="download-windows capture" data-capture="comber-windows" data-subject="Oh-a-Comber: tell me when the Windows build ships">
+        <div class="download-windows capture" data-capture="comber-windows" data-subject="Oh-a-Comber: tell me when the Windows build ships" data-reveal>
           <h3 data-slot="download.windowsHeading">Windows</h3>
           <p data-slot="download.windowsBody">The Windows build isn't out yet. Leave your email and you'll hear when it ships.</p>
           <p class="form-fallback" data-form-fallback>
@@ -278,22 +288,22 @@
 
     <!-- 5 · Specs -->
     <section class="section specs" aria-labelledby="comber-specs">
-      <div class="container">
-        <h2 id="comber-specs" data-slot="specs.heading">Specifications</h2>
+      <div class="container" data-reveal-stagger>
+        <h2 id="comber-specs" data-slot="specs.heading" data-reveal>Specifications</h2>
         <div class="spec-wrap">
           <table class="spec-table">
-            <tbody>
-              <tr><th scope="row" data-slot="specs.rows.0.label">Platforms</th><td data-slot="specs.rows.0.value">macOS 11 or later, Apple Silicon and Intel (DMG). Windows: not yet</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.1.label">Formats indexed</th><td data-slot="specs.rows.1.value">.wav · .aiff / .aif · .mp3 · .flac · .ogg · .m4a · .wma · .aac</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.2.label">Read per sample</th><td data-slot="specs.rows.2.value">Duration, sample rate, channels, format, size, BPM (metadata or filename), pack, type, genre</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.3.label">Classification</th><td data-slot="specs.rows.3.value">16 types + genre, from filename and folder-path patterns. No audio analysis, no cloud</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.4.label">Library</th><td data-slot="specs.rows.4.value">Local SQLite database; files indexed in place, never moved, renamed, or modified; views show up to 1,000 results</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.5.label">Duplicates</th><td data-slot="specs.rows.5.value">Content-hash detection; duplicates hidden automatically, never deleted</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.6.label">Preview</th><td data-slot="specs.rows.6.value">Waveform player with seek; looped playback; AIFF preview via macOS conversion (macOS only)</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.7.label">Drag &amp; drop</th><td data-slot="specs.rows.7.value">Native OS drag carrying the original file path. Works with any DAW or app that accepts audio files</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.8.label">Instruments</th><td data-slot="specs.rows.8.value">24-key chromatic keyboard sampler; 3×3 drum pads; playable by mouse, computer keys, or MIDI (hot-plug)</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.9.label">Privacy</th><td data-slot="specs.rows.9.value">No accounts, no sync, no telemetry. Your samples are never uploaded; the index is a local database file</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.10.label">Price</th><td data-slot="specs.rows.10.value">Free</td></tr>
+            <tbody data-reveal-stagger="0.05">
+              <tr data-reveal><th scope="row" data-slot="specs.rows.0.label">Platforms</th><td data-slot="specs.rows.0.value">macOS 11 or later, Apple Silicon and Intel (DMG). Windows: not yet</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.1.label">Formats indexed</th><td data-slot="specs.rows.1.value">.wav · .aiff / .aif · .mp3 · .flac · .ogg · .m4a · .wma · .aac</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.2.label">Read per sample</th><td data-slot="specs.rows.2.value">Duration, sample rate, channels, format, size, BPM (metadata or filename), pack, type, genre</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.3.label">Classification</th><td data-slot="specs.rows.3.value">16 types + genre, from filename and folder-path patterns. No audio analysis, no cloud</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.4.label">Library</th><td data-slot="specs.rows.4.value">Local SQLite database; files indexed in place, never moved, renamed, or modified; views show up to 1,000 results</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.5.label">Duplicates</th><td data-slot="specs.rows.5.value">Content-hash detection; duplicates hidden automatically, never deleted</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.6.label">Preview</th><td data-slot="specs.rows.6.value">Waveform player with seek; looped playback; AIFF preview via macOS conversion (macOS only)</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.7.label">Drag &amp; drop</th><td data-slot="specs.rows.7.value">Native OS drag carrying the original file path. Works with any DAW or app that accepts audio files</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.8.label">Instruments</th><td data-slot="specs.rows.8.value">24-key chromatic keyboard sampler; 3×3 drum pads; playable by mouse, computer keys, or MIDI (hot-plug)</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.9.label">Privacy</th><td data-slot="specs.rows.9.value">No accounts, no sync, no telemetry. Your samples are never uploaded; the index is a local database file</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.10.label">Price</th><td data-slot="specs.rows.10.value">Free</td></tr>
             </tbody>
           </table>
         </div>
@@ -302,41 +312,43 @@
 
     <!-- 6 · FAQ -->
     <section class="section faq" aria-labelledby="comber-faq">
-      <div class="container">
-        <h2 id="comber-faq" data-slot="faq.heading">Questions</h2>
-        <details>
+      <div class="container" data-reveal-stagger>
+        <h2 id="comber-faq" data-slot="faq.heading" data-reveal>Questions</h2>
+        <div class="faq-list" data-reveal-stagger="0.1">
+        <details data-reveal>
           <summary data-slot="faq.items.0.q">Does it reorganize my folders?</summary>
           <p data-slot="faq.items.0.a">Never. Scanning builds a local database that points at your files where they already live. Nothing is moved, renamed, copied, or rewritten. Delete the app and your library is exactly as it was.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.1.q">What happens with duplicates?</summary>
           <p data-slot="faq.items.1.a">Files with identical content are detected by hash. One copy stays visible in the library; the rest are hidden from lists and counts. The files themselves are never touched.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.2.q">Will drag-and-drop work with my DAW?</summary>
           <p data-slot="faq.items.2.a">Dragging out of Oh-a-Comber is a native OS file drag carrying the sample's real path. It works with anything that accepts an audio file drop: Live, Logic, FL Studio, Reaper, or a plain Finder window.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.3.q">Do I have to re-scan when I add new packs?</summary>
           <p data-slot="faq.items.3.a">Yes. Click Scan Library again. Existing entries update in place and your favorites survive the re-scan.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.4.q">Which download do I pick?</summary>
           <p data-slot="faq.items.4.a">Apple Silicon for any Mac with an M-series chip, which is every Mac sold since late 2020. Intel for older Macs. Open the Apple menu and choose About This Mac if you're not sure.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.5.q">Will my Mac let it open?</summary>
           <p data-slot="faq.items.5.a">Yes. Both builds are signed with an Apple Developer ID and notarized by Apple. No security warning, no right-click workaround.</p>
         </details>
+      </div>
       </div>
     </section>
 
     <!-- 7 · CTA repeat -->
     <section class="section cta-repeat" aria-labelledby="comber-cta2">
-      <div class="container">
-        <h2 id="comber-cta2" data-slot="ctaRepeat.heading">Out now for Mac.</h2>
-        <p data-slot="ctaRepeat.body">Free. Apple Silicon or Intel, signed and notarized.</p>
-        <a class="btn" href="#download" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref">Download for Mac</a>
+      <div class="container" data-reveal-stagger>
+        <h2 id="comber-cta2" data-slot="ctaRepeat.heading" data-reveal>Out now for Mac.</h2>
+        <p data-slot="ctaRepeat.body" data-reveal>Free. Apple Silicon or Intel, signed and notarized.</p>
+        <a class="btn" href="#download" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref" data-reveal>Download for Mac</a>
       </div>
     </section>
   </main>

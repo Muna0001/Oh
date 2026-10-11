@@ -32,6 +32,16 @@
   <script type="module" src="js/nav.js"></script>
   <script type="module" src="js/forms.js"></script>
   <script type="module" src="js/media.js"></script>
+  <script type="module" src="js/reveal.js"></script>
+  <script type="module" src="js/chord-demos.js"></script>
+  <!-- Opt in to scroll reveals before first paint so nothing flashes. If
+       reveal.js hasn't started within 3s, show everything anyway. -->
+  <script>
+    (function (d) {
+      d.classList.add('reveal-on');
+      setTimeout(function () { if (!d.classList.contains('reveal-live')) d.classList.remove('reveal-on'); }, 3000);
+    })(document.documentElement);
+  </script>
   <script type="module" src="js/analytics.js"></script>
   <script type="module" src="js/synth/ui.js"></script>
   <script type="module" src="js/gl/cabinet.js"></script>
@@ -77,18 +87,18 @@
   <main id="main">
     <!-- 1 · Hero + the playable synth -->
     <section class="hero" aria-labelledby="synth-h1">
-      <div class="container">
-        <p class="kicker">Vintage polysynth · free in the browser</p>
-        <h1 id="synth-h1" data-slot="hero.h1">A polysynth inspired by the 80s, playable right now.</h1>
-        <p class="positioning" data-slot="hero.positioning">Oh-a-Synth is a 6-voice polysynth inspired by the classic sounds of the 80s. Its real engine runs in this page. Pick a patch, sweep the filter, punch the chorus in. Power it on and play.</p>
-        <a class="btn" href="#play" data-slot="hero.cta" data-slot-attr="href:hero.ctaHref">Play it in your browser</a>
+      <div class="container" data-reveal-sequence>
+        <p class="kicker" data-reveal>Vintage polysynth · free in the browser</p>
+        <h1 id="synth-h1" data-slot="hero.h1" data-reveal>A polysynth inspired by the 80s, playable right now.</h1>
+        <p class="positioning" data-slot="hero.positioning" data-reveal>Oh-a-Synth is a 6-voice polysynth inspired by the classic sounds of the 80s. Its real engine runs in this page. Pick a patch, sweep the filter, punch the chorus in. Power it on and play.</p>
+        <a class="btn" href="#play" data-slot="hero.cta" data-slot-attr="href:hero.ctaHref" data-reveal>Play it in your browser</a>
       </div>
     </section>
 
     <section id="play" class="synth-stage" aria-label="The playable synth">
-      <div class="container">
+      <div class="container" data-reveal-stagger>
         <!-- Phase 3 mounts the live engine here (js/synth/). Until then: panel slot. -->
-        <div data-synth-mount>
+        <div data-synth-mount data-reveal>
           <figure class="media-slot">
             <div class="frame ar-16x10">
               <img src="assets/img/synth-hero.png" alt="The Oh-a-Synth front panel: ARPEGGIO, MAIN, LFO, DCO, HPF, VCF, VCA, ENV and CHORUS sections over a six-octave keyboard" width="1280" height="800">
@@ -101,9 +111,9 @@
 
     <!-- 2 · The problem / the promise -->
     <section class="section promise" aria-labelledby="synth-promise">
-      <div class="container prose">
-        <h2 id="synth-promise" data-slot="promise.heading">Why I built this</h2>
-        <p data-slot="promise.body">I love the polysynths of the 80s. They're still all over records because they do a few things perfectly: rock-solid oscillators against a warm filter, and a chorus that turns one voice into a wall. Every software version I tried got the panel right and the feel wrong. So I built one that chases the feel, down to the small differences between voices that make six voices sound like six voices.</p>
+      <div class="container prose" data-reveal-stagger>
+        <h2 id="synth-promise" data-slot="promise.heading" data-reveal>Why I built this</h2>
+        <p data-slot="promise.body" data-reveal>I love the polysynths of the 80s. They're still all over records because they do a few things perfectly: rock-solid oscillators against a warm filter, and a chorus that turns one voice into a wall. Every software version I tried got the panel right and the feel wrong. So I built one that chases the feel, down to the small differences between voices that make six voices sound like six voices.</p>
       </div>
     </section>
 
@@ -111,13 +121,13 @@
     <section class="section features" aria-label="Features">
       <div class="container">
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.0.label">DCO</h3>
-            <p class="what" data-slot="features.0.what">One digitally-exact oscillator per voice: polyBLEP saw, pulse with manual or LFO-swept width, a square sub one octave down, and a noise source shared across all voices, as on the hardware.</p>
-            <p class="why" data-slot="features.0.why">That era's character is solid pitch against a moving filter. Tuning never drifts here; the voice-to-voice tolerances live in the filter and amp instead, where the real chips had them.</p>
+            <h3 data-slot="features.0.label" data-reveal>DCO</h3>
+            <p class="what" data-slot="features.0.what" data-reveal>One digitally-exact oscillator per voice: polyBLEP saw, pulse with manual or LFO-swept width, a square sub one octave down, and a noise source shared across all voices, as on the hardware.</p>
+            <p class="why" data-slot="features.0.why" data-reveal>That era's character is solid pitch against a moving filter. Tuning never drifts here; the voice-to-voice tolerances live in the filter and amp instead, where the real chips had them.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x10">
               <img src="assets/img/synth-ui-dco.png" loading="lazy" width="1280" height="800" alt="The DCO section of the Oh-a-Synth panel: RANGE, LFO, PWM, PWM SRC, PULSE, SAW, SUB and NOISE controls" data-slot-attr="alt:features.0.mediaAlt">
             </div>
@@ -125,13 +135,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.1.label">VCF + HPF</h3>
-            <p class="what" data-slot="features.1.what">A 24 dB/oct zero-delay-feedback ladder filter that self-oscillates near the top of the RES range and tracks the keyboard via KYBD. In front of it sits the 4-position HPF. Position 0 is the famous low-shelf bass boost.</p>
-            <p class="why" data-slot="features.1.why">Sweep FREQ on a held chord and there is no zipper, no stair-stepping: slider moves are smoothed per-sample inside the audio thread.</p>
+            <h3 data-slot="features.1.label" data-reveal>VCF + HPF</h3>
+            <p class="what" data-slot="features.1.what" data-reveal>A 24 dB/oct zero-delay-feedback ladder filter that self-oscillates near the top of the RES range and tracks the keyboard via KYBD. In front of it sits the 4-position HPF. Position 0 is the famous low-shelf bass boost.</p>
+            <p class="why" data-slot="features.1.why" data-reveal>Sweep FREQ on a held chord and there is no zipper, no stair-stepping: slider moves are smoothed per-sample inside the audio thread.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x10">
               <img src="assets/img/synth-ui-vcf.png" loading="lazy" width="1280" height="800" alt="The HPF and VCF sections of the panel: FREQ switch, and FREQ, RES, ENV POL, ENV, LFO, KYBD sliders" data-slot-attr="alt:features.1.mediaAlt">
             </div>
@@ -139,13 +149,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.2.label">CHORUS</h3>
-            <p class="what" data-slot="features.2.what">Two latching buttons, I and II; press both for I+II. A BBD-style stereo chorus modeled on the MN3009 bucket brigades: one delay line, two taps modulated in antiphase, wet path band-limited to 9 kHz.</p>
-            <p class="why" data-slot="features.2.why">This is the effect the era is remembered for. I is slow and lush, II runs faster, and I+II is the quick shallow warble the LESLIE ORGAN patch is built on.</p>
+            <h3 data-slot="features.2.label" data-reveal>CHORUS</h3>
+            <p class="what" data-slot="features.2.what" data-reveal>Two latching buttons, I and II; press both for I+II. A BBD-style stereo chorus modeled on the MN3009 bucket brigades: one delay line, two taps modulated in antiphase, wet path band-limited to 9 kHz.</p>
+            <p class="why" data-slot="features.2.why" data-reveal>This is the effect the era is remembered for. I is slow and lush, II runs faster, and I+II is the quick shallow warble the LESLIE ORGAN patch is built on.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x10">
               <img src="assets/img/synth-ui-chorus.png" loading="lazy" width="1280" height="800" alt="The CHORUS section: buttons I and II with LEDs lit" data-slot-attr="alt:features.2.mediaAlt">
             </div>
@@ -153,13 +163,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.3.label">ARPEGGIO</h3>
-            <p class="what" data-slot="features.3.what">UP, UP&amp;DN, or DOWN across 1, 2, or 3 octaves. Free-running from 0.5 to 20 Hz, or hit SYNC and the RATE slider snaps to twelve note divisions from 1/1 to 1/64, dotted values included. HOLD latches the chord.</p>
-            <p class="why" data-slot="features.3.why">Synced, it locks to your DAW's playhead in the plugin and to MIDI beat clock everywhere else, realigned every beat so it cannot drift.</p>
+            <h3 data-slot="features.3.label" data-reveal>ARPEGGIO</h3>
+            <p class="what" data-slot="features.3.what" data-reveal>UP, UP&amp;DN, or DOWN across 1, 2, or 3 octaves. Free-running from 0.5 to 20 Hz, or hit SYNC and the RATE slider snaps to twelve note divisions from 1/1 to 1/64, dotted values included. HOLD latches the chord.</p>
+            <p class="why" data-slot="features.3.why" data-reveal>Synced, it locks to your DAW's playhead in the plugin and to MIDI beat clock everywhere else, realigned every beat so it cannot drift.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x9">
               <video controls muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-synth-daw.png" aria-label="Silent loop of the plugin in a DAW with the arpeggiator synced to the session tempo">
                 <source src="assets/video/synth-daw.mp4" type="video/mp4">
@@ -170,13 +180,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.4.label">PATCHES</h3>
-            <p class="what" data-slot="features.4.what">Eight factory patches, from FAT BASS to LESLIE ORGAN. Save and name your own, and export or import them as flat .ohasynth.json files. In the app and plugin, favourite a patch ♥ and it gets its own section at the top of the selector.</p>
-            <p class="why" data-slot="features.4.why">The same file loads in the browser, the Mac app, and the plugin. A patch sketched on a laptop opens in Logic unchanged.</p>
+            <h3 data-slot="features.4.label" data-reveal>PATCHES</h3>
+            <p class="what" data-slot="features.4.what" data-reveal>Eight factory patches, from FAT BASS to LESLIE ORGAN. Save and name your own, and export or import them as flat .ohasynth.json files. In the app and plugin, favourite a patch ♥ and it gets its own section at the top of the selector.</p>
+            <p class="why" data-slot="features.4.why" data-reveal>The same file loads in the browser, the Mac app, and the plugin. A patch sketched on a laptop opens in Logic unchanged.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x10">
               <img src="assets/img/synth-ui-patches.png" loading="lazy" width="1280" height="800" alt="The patch selector open, showing FAVOURITES, FACTORY and USER sections" data-slot-attr="alt:features.4.mediaAlt">
             </div>
@@ -184,13 +194,13 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
-            <h3 data-slot="features.5.label">MIDI</h3>
-            <p class="what" data-slot="features.5.what">Notes with velocity, pitch bend with separate DCO and VCF depths, mod-wheel vibrato, sustain pedal, and 24-ppqn beat clock for the arp. The status readout names what's connected and what isn't.</p>
-            <p class="why" data-slot="features.5.why">Those machines ignored velocity entirely. The VEL slider maps it gently to level; set it to zero for that behavior.</p>
+            <h3 data-slot="features.5.label" data-reveal>MIDI</h3>
+            <p class="what" data-slot="features.5.what" data-reveal>Notes with velocity, pitch bend with separate DCO and VCF depths, mod-wheel vibrato, sustain pedal, and 24-ppqn beat clock for the arp. The status readout names what's connected and what isn't.</p>
+            <p class="why" data-slot="features.5.why" data-reveal>Those machines ignored velocity entirely. The VEL slider maps it gently to level; set it to zero for that behavior.</p>
           </div>
-          <figure class="media-slot">
+          <figure class="media-slot" data-reveal>
             <div class="frame ar-16x10">
               <img src="assets/img/synth-ui-bender.png" loading="lazy" width="1280" height="800" alt="The BENDER lever with LFO TRIG button and DCO/VCF bend-depth sliders" data-slot-attr="alt:features.5.mediaAlt">
             </div>
@@ -203,10 +213,10 @@
 
     <!-- 4 · Demo -->
     <section class="section demo" aria-labelledby="synth-demo">
-      <div class="container">
-        <h2 id="synth-demo" data-slot="demo.heading">Hear it in a track</h2>
-        <p data-slot="demo.body">Thirty seconds, every sound from Oh-a-Synth: bass, pads, brass stabs, and the arp, recorded straight out of the plugin.</p>
-        <figure class="media-slot">
+      <div class="container" data-reveal-stagger>
+        <h2 id="synth-demo" data-slot="demo.heading" data-reveal>Hear it in a track</h2>
+        <p data-slot="demo.body" data-reveal>Thirty seconds, every sound from Oh-a-Synth: bass, pads, brass stabs, and the arp, recorded straight out of the plugin.</p>
+        <figure class="media-slot" data-reveal>
           <div class="frame ar-16x9">
             <video controls muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-synth-track.png" aria-label="Thirty-second musical demo made only with Oh-a-Synth, captions burned in">
               <source src="assets/video/synth-in-a-track.mp4" type="video/mp4">
@@ -220,15 +230,15 @@
 
     <!-- The offer ladder: free web now, paid desktop later -->
     <section class="section offer" aria-labelledby="synth-offer">
-      <div class="container">
-        <h2 id="synth-offer" data-slot="offer.heading">Get it</h2>
-        <div class="offer-grid">
-          <div class="offer-card">
+      <div class="container" data-reveal-stagger>
+        <h2 id="synth-offer" data-slot="offer.heading" data-reveal>Get it</h2>
+        <div class="offer-grid" data-reveal-stagger>
+          <div class="offer-card" data-reveal>
             <h3 data-slot="offer.webLabel">In your browser</h3>
             <p data-slot="offer.webBody">Free and immediate. The synth at the top of this page runs the real engine, not a demo loop. Patches, filter and chorus are live here. The whole panel is in the app.</p>
             <a class="btn" href="#play" data-slot="offer.webCta">Play it now</a>
           </div>
-          <div class="offer-card capture" id="notify" data-capture="synth-notify" data-subject="Oh-a-Synth: tell me when the full version ships">
+          <div class="offer-card capture" id="notify" data-capture="synth-notify" data-subject="Oh-a-Synth: tell me when the full version ships" data-reveal>
             <h3 data-slot="offer.desktopLabel">In your DAW</h3>
             <p data-slot="offer.desktopBody">The same instrument as an AU/VST3 plugin and standalone app for macOS. Every parameter is automatable. Patches are shared with the browser version. Builds are done. Distribution is waiting on Apple Developer ID signing and notarization.</p>
             <p class="form-fallback" data-form-fallback>
@@ -250,24 +260,24 @@
 
     <!-- 5 · Specs -->
     <section class="section specs" aria-labelledby="synth-specs">
-      <div class="container">
-        <h2 id="synth-specs" data-slot="specs.heading">Specifications</h2>
+      <div class="container" data-reveal-stagger>
+        <h2 id="synth-specs" data-slot="specs.heading" data-reveal>Specifications</h2>
         <div class="spec-wrap">
           <table class="spec-table">
-            <tbody>
-              <tr><th scope="row" data-slot="specs.rows.0.label">Polyphony</th><td data-slot="specs.rows.0.value">6 voices, with voice stealing (releasing voices stolen first)</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.1.label">Oscillator</th><td data-slot="specs.rows.1.value">1 DCO per voice: polyBLEP saw + pulse (manual/LFO PWM), square sub −1 octave, shared noise; 16′/8′/4′ range</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.2.label">Filter</th><td data-slot="specs.rows.2.value">24 dB/oct zero-delay-feedback ladder, self-oscillating; env (±, up to 9 oct), LFO (±3 oct), key follow to 105%</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.3.label">High-pass</th><td data-slot="specs.rows.3.value">4-position HPF; position 0 is a low-shelf bass boost</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.4.label">Envelope</th><td data-slot="specs.rows.4.value">1 ADSR shared by VCF and VCA, RC-style exponential segments; VCA env or gate mode</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.5.label">LFO</th><td data-slot="specs.rows.5.value">Triangle, 0.1–30 Hz, 0–2.5 s delay with fade-in, LFO TRIG override; routes to pitch, PWM, VCF</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.6.label">Effects</th><td data-slot="specs.rows.6.value">BBD-style stereo chorus: I (0.513 Hz), II (0.863 Hz), I+II (9.75 Hz)</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.7.label">Arpeggiator</th><td data-slot="specs.rows.7.value">UP / UP&amp;DN / DOWN, 1–3 octaves, HOLD; free 0.5–20 Hz or synced (12 divisions, 1/1–1/64 incl. dotted); tempo from DAW transport (plugin), MIDI clock, or BPM 40–300</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.8.label">Browser version</th><td data-slot="specs.rows.8.value">Free. AudioWorklet DSP, ~3–12 ms latency. Chrome, Edge, Firefox, Safari. Web MIDI is unavailable in Safari</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.9.label">Plugin &amp; app</th><td data-slot="specs.rows.9.value">AU, VST3, and standalone. macOS 11+, universal binary (Apple Silicon + Intel). All parameters host-automatable, state saved with the project</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.10.label">MIDI</th><td data-slot="specs.rows.10.value">Notes with velocity, 14-bit pitch bend, mod wheel (CC1), sustain (CC64), all-notes-off (CC120/123), 24-ppqn beat clock</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.11.label">Patches</th><td data-slot="specs.rows.11.value">8 factory + unlimited user patches; flat .ohasynth.json, interchangeable across browser, app, and plugin</td></tr>
-              <tr><th scope="row" data-slot="specs.rows.12.label">Price</th><td data-slot="specs.rows.12.value">Not announced</td></tr>
+            <tbody data-reveal-stagger="0.05">
+              <tr data-reveal><th scope="row" data-slot="specs.rows.0.label">Polyphony</th><td data-slot="specs.rows.0.value">6 voices, with voice stealing (releasing voices stolen first)</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.1.label">Oscillator</th><td data-slot="specs.rows.1.value">1 DCO per voice: polyBLEP saw + pulse (manual/LFO PWM), square sub −1 octave, shared noise; 16′/8′/4′ range</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.2.label">Filter</th><td data-slot="specs.rows.2.value">24 dB/oct zero-delay-feedback ladder, self-oscillating; env (±, up to 9 oct), LFO (±3 oct), key follow to 105%</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.3.label">High-pass</th><td data-slot="specs.rows.3.value">4-position HPF; position 0 is a low-shelf bass boost</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.4.label">Envelope</th><td data-slot="specs.rows.4.value">1 ADSR shared by VCF and VCA, RC-style exponential segments; VCA env or gate mode</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.5.label">LFO</th><td data-slot="specs.rows.5.value">Triangle, 0.1–30 Hz, 0–2.5 s delay with fade-in, LFO TRIG override; routes to pitch, PWM, VCF</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.6.label">Effects</th><td data-slot="specs.rows.6.value">BBD-style stereo chorus: I (0.513 Hz), II (0.863 Hz), I+II (9.75 Hz)</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.7.label">Arpeggiator</th><td data-slot="specs.rows.7.value">UP / UP&amp;DN / DOWN, 1–3 octaves, HOLD; free 0.5–20 Hz or synced (12 divisions, 1/1–1/64 incl. dotted); tempo from DAW transport (plugin), MIDI clock, or BPM 40–300</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.8.label">Browser version</th><td data-slot="specs.rows.8.value">Free. AudioWorklet DSP, ~3–12 ms latency. Chrome, Edge, Firefox, Safari. Web MIDI is unavailable in Safari</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.9.label">Plugin &amp; app</th><td data-slot="specs.rows.9.value">AU, VST3, and standalone. macOS 11+, universal binary (Apple Silicon + Intel). All parameters host-automatable, state saved with the project</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.10.label">MIDI</th><td data-slot="specs.rows.10.value">Notes with velocity, 14-bit pitch bend, mod wheel (CC1), sustain (CC64), all-notes-off (CC120/123), 24-ppqn beat clock</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.11.label">Patches</th><td data-slot="specs.rows.11.value">8 factory + unlimited user patches; flat .ohasynth.json, interchangeable across browser, app, and plugin</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.12.label">Price</th><td data-slot="specs.rows.12.value">Not announced</td></tr>
             </tbody>
           </table>
         </div>
@@ -276,41 +286,43 @@
 
     <!-- 6 · FAQ -->
     <section class="section faq" aria-labelledby="synth-faq">
-      <div class="container">
-        <h2 id="synth-faq" data-slot="faq.heading">Questions</h2>
-        <details>
+      <div class="container" data-reveal-stagger>
+        <h2 id="synth-faq" data-slot="faq.heading" data-reveal>Questions</h2>
+        <div class="faq-list" data-reveal-stagger="0.1">
+        <details data-reveal>
           <summary data-slot="faq.items.0.q">Does the browser version sound like the plugin?</summary>
           <p data-slot="faq.items.0.a">Yes. The JavaScript and C++ engines are kept line-for-line equivalent: same oscillators, same filter, same chorus constants, same factory patches. Only the plumbing differs. The browser adds a few milliseconds of latency and runs at your audio device's rate.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.1.q">Will it work in my DAW?</summary>
           <p data-slot="faq.items.1.a">On macOS, yes: AU for Logic, VST3 for everything else. Every panel parameter is host-automatable, the current patch saves with your project, and you can run as many instances as you like.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.2.q">What about Windows?</summary>
           <p data-slot="faq.items.2.a">The desktop version is macOS-only today. The browser version runs anywhere Chrome, Edge, or Firefox runs. If a Windows build happens, the notify list hears about it first.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.3.q">Why can't I download it yet?</summary>
           <p data-slot="faq.items.3.a">The app and plugins build and run today, but shipping them properly requires Apple Developer ID signing and notarization, which is in progress. The notify list gets the download link the day it's live.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.4.q">Does it respond to velocity?</summary>
           <p data-slot="faq.items.4.a">By choice. The machines this draws on ignored velocity entirely; here the VEL slider maps velocity gently onto level. Set it to zero for the period-correct response.</p>
         </details>
-        <details>
+        <details data-reveal>
           <summary data-slot="faq.items.5.q">Do patches transfer between the browser and the plugin?</summary>
           <p data-slot="faq.items.5.a">Yes. A patch is a flat .ohasynth.json file, identical in both directions. Anything a patch doesn't name falls back to its default, so older patches keep loading as parameters are added.</p>
         </details>
+      </div>
       </div>
     </section>
 
     <!-- 7 · CTA repeat -->
     <section class="section cta-repeat" aria-labelledby="synth-cta2">
-      <div class="container">
-        <h2 id="synth-cta2" data-slot="ctaRepeat.heading">The synth is at the top of this page.</h2>
-        <p data-slot="ctaRepeat.body">No download, no signup. Power it on and play it now.</p>
-        <a class="btn" href="#play" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref">Play it in your browser</a>
+      <div class="container" data-reveal-stagger>
+        <h2 id="synth-cta2" data-slot="ctaRepeat.heading" data-reveal>The synth is at the top of this page.</h2>
+        <p data-slot="ctaRepeat.body" data-reveal>No download, no signup. Power it on and play it now.</p>
+        <a class="btn" href="#play" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref" data-reveal>Play it in your browser</a>
       </div>
     </section>
   </main>

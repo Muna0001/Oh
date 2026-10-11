@@ -32,6 +32,16 @@
   <script type="module" src="js/nav.js"></script>
   <script type="module" src="js/forms.js"></script>
   <script type="module" src="js/media.js"></script>
+  <script type="module" src="js/reveal.js"></script>
+  <script type="module" src="js/chord-demos.js"></script>
+  <!-- Opt in to scroll reveals before first paint so nothing flashes. If
+       reveal.js hasn't started within 3s, show everything anyway. -->
+  <script>
+    (function (d) {
+      d.classList.add('reveal-on');
+      setTimeout(function () { if (!d.classList.contains('reveal-live')) d.classList.remove('reveal-on'); }, 3000);
+    })(document.documentElement);
+  </script>
   <script type="module" src="js/analytics.js"></script>
 
   <script type="application/ld+json">
@@ -75,9 +85,9 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="about-h1">
-      <div class="container prose">
-        <h1 id="about-h1" data-slot="intro.h1">I make the tools I want for my own music.</h1>
-        <div data-slot-md="intro.body">
+      <div class="container prose" data-reveal-sequence>
+        <h1 id="about-h1" data-slot="intro.h1" data-reveal>I make the tools I want for my own music.</h1>
+        <div data-slot-md="intro.body" data-reveal>
           <p>I&#39;m Nate Mueller. I&#39;m a designer and developer, and a music lover first. I kept needing tools that didn&#39;t exist the way I wanted them: a chord instrument that doesn&#39;t ask you to know theory first, a polysynth that lives in a browser tab, a sample organizer that doesn&#39;t take my library hostage. So I built them. I use them on my own records before anyone else hears about them.</p>
 <p>They&#39;re all built solo. If something about them feels opinionated, that&#39;s why.</p>
         </div>
@@ -86,26 +96,26 @@
 
     <!-- Oacoma: one compact section, not a second site. Links come from content/music.json -->
     <section class="section oacoma" aria-labelledby="about-oacoma">
-      <div class="container">
-        <h2 id="about-oacoma" data-slot="oacoma.heading">Oacoma</h2>
-        <div class="prose" data-slot-md="oacoma.body">
+      <div class="container" data-reveal-stagger>
+        <h2 id="about-oacoma" data-slot="oacoma.heading" data-reveal>Oacoma</h2>
+        <div class="prose" data-slot-md="oacoma.body" data-reveal>
           <p>I record synth pop as <strong>Oacoma</strong>.</p>
         </div>
 
 
-        <h3 data-slot="oacoma.listenHeading">Listen</h3>
-        <ul class="listen-links">
-          <li data-slot-showif="music.links.spotify"><a href="https://open.spotify.com/artist/3eNjFdryV9MQHBNqx75KdU" data-slot-attr="href:music.links.spotify" rel="me noopener">Spotify</a></li>
-          <li data-slot-showif="music.links.appleMusic"><a href="https://music.apple.com/us/artist/oacoma/1504016144" data-slot-attr="href:music.links.appleMusic" rel="me noopener">Apple Music</a></li>
-          <li data-slot-showif="music.links.amazonMusic"><a href="https://music.amazon.com/artists/B086896V72" data-slot-attr="href:music.links.amazonMusic" rel="me noopener">Amazon Music</a></li>
-          <li data-slot-showif="music.links.youtube"><a href="https://www.youtube.com/@oacoma6095/featured" data-slot-attr="href:music.links.youtube" rel="me noopener">YouTube</a></li>
-          <li data-slot-showif="music.links.bandcamp"><a href="https://oacoma.bandcamp.com/" data-slot-attr="href:music.links.bandcamp" rel="me noopener">Bandcamp</a></li>
-          <li data-slot-showif="music.links.soundcloud"><a href="https://soundcloud.com/nate-mueller" data-slot-attr="href:music.links.soundcloud" rel="me noopener">SoundCloud</a></li>
+        <h3 data-slot="oacoma.listenHeading" data-reveal>Listen</h3>
+        <ul class="listen-links" data-reveal-stagger>
+          <li data-slot-showif="music.links.spotify" data-reveal><a href="https://open.spotify.com/artist/3eNjFdryV9MQHBNqx75KdU" data-slot-attr="href:music.links.spotify" rel="me noopener">Spotify</a></li>
+          <li data-slot-showif="music.links.appleMusic" data-reveal><a href="https://music.apple.com/us/artist/oacoma/1504016144" data-slot-attr="href:music.links.appleMusic" rel="me noopener">Apple Music</a></li>
+          <li data-slot-showif="music.links.amazonMusic" data-reveal><a href="https://music.amazon.com/artists/B086896V72" data-slot-attr="href:music.links.amazonMusic" rel="me noopener">Amazon Music</a></li>
+          <li data-slot-showif="music.links.youtube" data-reveal><a href="https://www.youtube.com/@oacoma6095/featured" data-slot-attr="href:music.links.youtube" rel="me noopener">YouTube</a></li>
+          <li data-slot-showif="music.links.bandcamp" data-reveal><a href="https://oacoma.bandcamp.com/" data-slot-attr="href:music.links.bandcamp" rel="me noopener">Bandcamp</a></li>
+          <li data-slot-showif="music.links.soundcloud" data-reveal><a href="https://soundcloud.com/nate-mueller" data-slot-attr="href:music.links.soundcloud" rel="me noopener">SoundCloud</a></li>
         </ul>
 
-        <h3 data-slot-showif="music.links.instagram" data-slot="oacoma.followHeading">Follow</h3>
-        <ul class="listen-links">
-          <li data-slot-showif="music.links.instagram"><a href="https://instagram.com/oacoma" data-slot-attr="href:music.links.instagram" rel="me noopener">Instagram</a></li>
+        <h3 data-slot-showif="music.links.instagram" data-slot="oacoma.followHeading" data-reveal>Follow</h3>
+        <ul class="listen-links" data-reveal-stagger>
+          <li data-slot-showif="music.links.instagram" data-reveal><a href="https://instagram.com/oacoma" data-slot-attr="href:music.links.instagram" rel="me noopener">Instagram</a></li>
         </ul>
 
         <ul class="album-grid" data-albums hidden></ul>
@@ -113,10 +123,10 @@
     </section>
 
     <section class="section contact" aria-labelledby="about-contact">
-      <div class="container prose">
-        <h2 id="about-contact" data-slot="contact.heading">Contact</h2>
-        <p data-slot="contact.body">One person builds all of this, and the same person reads the email.</p>
-        <p><a class="contact-link" href="mailto:muna0001@gmail.com" data-slot="contact.linkLabel" data-slot-attr="href:site.contact.emailHref">muna0001@gmail.com</a></p>
+      <div class="container prose" data-reveal-stagger>
+        <h2 id="about-contact" data-slot="contact.heading" data-reveal>Contact</h2>
+        <p data-slot="contact.body" data-reveal>One person builds all of this, and the same person reads the email.</p>
+        <p data-reveal><a class="contact-link" href="mailto:muna0001@gmail.com" data-slot="contact.linkLabel" data-slot-attr="href:site.contact.emailHref">muna0001@gmail.com</a></p>
       </div>
     </section>
   </main>

@@ -32,6 +32,16 @@
   <script type="module" src="js/nav.js"></script>
   <script type="module" src="js/forms.js"></script>
   <script type="module" src="js/media.js"></script>
+  <script type="module" src="js/reveal.js"></script>
+  <script type="module" src="js/chord-demos.js"></script>
+  <!-- Opt in to scroll reveals before first paint so nothing flashes. If
+       reveal.js hasn't started within 3s, show everything anyway. -->
+  <script>
+    (function (d) {
+      d.classList.add('reveal-on');
+      setTimeout(function () { if (!d.classList.contains('reveal-live')) d.classList.remove('reveal-on'); }, 3000);
+    })(document.documentElement);
+  </script>
   <script type="module" src="js/analytics.js"></script>
   <script type="module" src="js/gl/wordmark.js"></script>
 </head>
@@ -56,12 +66,12 @@
   <main id="main">
     <!-- 1 · Hero: the wordmark IS the hero; the "!" is the WebGL object -->
     <section class="home-hero">
-      <div class="container">
-        <h1 class="wordmark" aria-label="Oh!">
+      <div class="container" data-reveal-sequence>
+        <h1 class="wordmark" aria-label="Oh!" data-reveal>
           <span aria-hidden="true">Oh<span class="bang bang-mount" id="bang-mount">!</span></span>
         </h1>
-        <p class="hero-line" data-slot="hero.line">Music tools from one person who makes records with them. Oh-a-Chord is out now on the App Store. Press any key. Play a chord.</p>
-        <p class="hero-actions">
+        <p class="hero-line" data-slot="hero.line" data-reveal>Music tools from one person who makes records with them. Oh-a-Chord is out now on the App Store. Press any key. Play a chord.</p>
+        <p class="hero-actions" data-reveal>
           <a class="appstore-badge" href="https://apps.apple.com/us/app/oh-a-chord/id6804457158" rel="noopener"
              data-slot-attr="href:site.appStore.chord.url">
             <img src="assets/img/app-store-badge.svg" alt="Download Oh-a-Chord on the App Store"
@@ -74,12 +84,12 @@
     <!-- 2 · Oh a Chord: the launch product, the whole focus of this page -->
     <section class="product-block block-chord" aria-labelledby="home-chord">
       <div class="container">
-        <div class="product-copy">
-          <p class="kicker" data-slot="chord.kicker">Oh-a-Chord</p>
-          <p class="status-flag" data-slot="chord.status">Out now on the App Store</p>
-          <h2 id="home-chord" data-slot="chord.headline">Press any key. Play a chord.</h2>
-          <p data-slot="chord.body">Oh-a-Chord is an experimental chord generating app for iPad and iPhone. It helps you break out of your songwriting rut and find interesting new chords.</p>
-          <p class="cta-pair">
+        <div class="product-copy" data-reveal-stagger>
+          <p class="kicker" data-slot="chord.kicker" data-reveal>Oh-a-Chord</p>
+          <p class="status-flag" data-slot="chord.status" data-reveal>Out now on the App Store</p>
+          <h2 id="home-chord" data-slot="chord.headline" data-reveal>Press any key. Play a chord.</h2>
+          <p data-slot="chord.body" data-reveal>Oh-a-Chord is an experimental chord generating app for iPad and iPhone. It helps you break out of your songwriting rut and find interesting new chords.</p>
+          <p class="cta-pair" data-reveal>
             <a class="appstore-badge" href="https://apps.apple.com/us/app/oh-a-chord/id6804457158" rel="noopener"
                data-slot-attr="href:site.appStore.chord.url">
               <img src="assets/img/app-store-badge.svg" alt="Download Oh-a-Chord on the App Store"
@@ -91,7 +101,7 @@
         </div>
         <!-- The 15 s showreel. Autoplays muted (the only way browsers allow it);
              data-sound adds a sound toggle, see js/media.js -->
-        <figure class="media-slot reel-slot">
+        <figure class="media-slot reel-slot" data-reveal>
           <div class="frame ar-16x9">
             <video controls muted loop playsinline preload="metadata" data-autoplay data-sound
                    poster="assets/img/poster-chord-showreel.jpg" width="1920" height="1080"
@@ -105,13 +115,13 @@
 
     <!-- 3 · The other two: Comber shipped (download CTA), Synth still a notify-me card -->
     <section class="section coming-soon" aria-labelledby="home-soon">
-      <div class="container">
-        <h2 id="home-soon" data-slot="comingSoon.heading">More from Oh!</h2>
-        <p class="soon-intro" data-slot="comingSoon.body">Oh-a-Comber is out now for Mac. Oh-a-Synth is still in progress. Leave your email and you'll hear when it ships. One message. Nothing else.</p>
+      <div class="container" data-reveal-stagger>
+        <h2 id="home-soon" data-slot="comingSoon.heading" data-reveal>More from Oh!</h2>
+        <p class="soon-intro" data-slot="comingSoon.body" data-reveal>Oh-a-Comber is out now for Mac. Oh-a-Synth is still in progress. Leave your email and you'll hear when it ships. One message. Nothing else.</p>
 
-        <div class="soon-grid">
+        <div class="soon-grid" data-reveal-stagger>
 
-          <article class="soon-card card-synth capture" data-capture="synth-notify" data-subject="Oh-a-Synth: tell me when it ships">
+          <article class="soon-card card-synth capture" data-capture="synth-notify" data-subject="Oh-a-Synth: tell me when it ships" data-reveal>
             <p class="kicker" data-slot="synth.kicker">Oh-a-Synth</p>
             <p class="status-flag" data-slot="synth.status">Coming soon</p>
             <p class="soon-blurb" data-slot="synth.blurb">A 6-voice polysynth inspired by the classic sounds of the 80s.</p>
@@ -129,7 +139,7 @@
             </form>
           </article>
 
-          <article class="soon-card card-comber">
+          <article class="soon-card card-comber" data-reveal>
             <p class="kicker" data-slot="comber.kicker">Oh-a-Comber</p>
             <p class="status-flag" data-slot="comber.status">Out now for Mac</p>
             <p class="soon-blurb" data-slot="comber.blurb">A sample organizer that makes every sample you already own findable, without moving a file. Free.</p>
@@ -147,10 +157,10 @@
 
     <!-- 4 · Who makes this: deliberately small -->
     <section class="maker" aria-labelledby="home-maker">
-      <div class="container">
+      <div class="container" data-reveal-stagger>
         <h2 id="home-maker" class="visually-hidden" data-slot="maker.heading">Who makes this</h2>
-        <p data-slot="maker.body">Oh! is Nate Mueller. Designer, developer, and the first user of everything here. Records music as Oacoma.</p>
-        <p><a href="about.html" data-slot="maker.link" data-slot-attr="href:maker.linkHref">More about Nate</a></p>
+        <p data-slot="maker.body" data-reveal>Oh! is Nate Mueller. Designer, developer, and the first user of everything here. Records music as Oacoma.</p>
+        <p data-reveal><a href="about.html" data-slot="maker.link" data-slot-attr="href:maker.linkHref">More about Nate</a></p>
       </div>
     </section>
   </main>
