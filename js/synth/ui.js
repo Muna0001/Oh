@@ -138,7 +138,7 @@ function mount() {
   const demoBtn = el('button', 'sy-btn sy-demo', patchBody, 'DEMO');
   demoBtn.type = 'button';
   demoBtn.setAttribute('aria-pressed', 'false');
-  demoBtn.title = 'Cycle through all 8 patches with a short phrase each';
+  demoBtn.title = `Cycle through all ${PRESETS.length} patches with a short phrase each`;
 
   const vcfBody = section(panel, 'VCF', '#c8413b');
   vcfBody.appendChild(vslider('vcfFreq', 'FREQ', engine, refresh));

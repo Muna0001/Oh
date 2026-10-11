@@ -1,5 +1,5 @@
 /*
- * js/synth/presets.js — the 8 factory patches (re-exported from the
+ * js/synth/presets.js — the 9 factory patches (re-exported from the
  * vendored engine) plus one short demo phrase per patch for the DEMO
  * cycle: a visitor who never touches a key still hears the range.
  * Phrases only ever play from a user gesture (the DEMO button).
@@ -12,7 +12,7 @@ export { PRESETS };
 
 const P = (steps, beats, bpm = 96) => ({ steps, beats, bpm });
 
-/* Each phrase is ~3 seconds, so the full 8-patch tour runs about 25 s —
+/* Each phrase is ~3 seconds, so the full 9-patch tour runs about 28 s —
    long enough to hear each patch's character, short enough to sit through. */
 export const DEMO_PHRASES = {
   'STRINGS 1': P([
@@ -46,6 +46,11 @@ export const DEMO_PHRASES = {
     [0, 0.85, [67], 0.7], [1, 0.85, [64], 0.65], [2, 0.85, [62], 0.7],
     [3, 1.8, [60, 52, 67], 0.75],
   ], 5, 92),
+  // a slow swell: its attack is the longest of the nine
+  'WARM PAD': P([
+    [0, 1.9, [45, 52, 57, 60, 64], 0.75],
+    [2, 1.9, [41, 53, 57, 60, 64], 0.75],
+  ], 4.6, 72),
 };
 
 /* Plays a phrase through the engine; returns a cancel function. */

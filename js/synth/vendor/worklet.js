@@ -49,12 +49,76 @@
     };
 
     // ------------------------------------------------------------------
-    // polyBLEP residual for band-limited edges
+    // Band-limited DCO: one additive saw table per quarter-octave band.
+    //
+    // Each band's table holds only the harmonics that stay under 20 kHz at
+    // the top of that band, so nothing ever folds back over Nyquist; the
+    // pulse and the sub are read from the same tables as differences of two
+    // saws, which keeps PWM continuous at any width. Tables are sized 8x
+    // their harmonic count so the 4-point Hermite read adds no images of its
+    // own. The 20 kHz ceiling is fixed rather than tied to the sample rate,
+    // so the tables are built once per module and match the C++ core.
     // ------------------------------------------------------------------
-    function polyblep(t, dt) {
-      if (t < dt) { t = t / dt; return t + t - t * t - 1; }
-      if (t > 1 - dt) { t = (t - 1) / dt; return t * t + t + t + 1; }
-      return 0;
+    var WT_BANDS = 42, WT_FLOW = 16, WT_FTOP = 20000, WT_MAXH = 1024;
+    var WT_MINLEN = 256, WT_MAXLEN = 8192;
+    var wtBands = null;
+
+    // rising saw, -1..1, drop at phase 0:  -(2/pi) * sum sin(2 pi h x) / h.
+    // Each harmonic is a rotating phasor, no per-sample sin() calls.
+    function addHarmonic(acc, L, h, amp) {
+      var cs = Math.cos(2 * Math.PI * h / L), sn = Math.sin(2 * Math.PI * h / L);
+      var c = 1, sv = 0;
+      for (var i = 0; i < L; i++) {
+        acc[i] += amp * sv;
+        var s2 = sv * cs + c * sn;
+        c = c * cs - sv * sn; sv = s2;
+      }
+    }
+
+    function buildWaveTables() {
+      // Build the richest table once, then walk up the bands peeling off
+      // the harmonics each one no longer needs and halving the length when
+      // it can: a fraction of the work of building every band from scratch,
+      // and the same numbers. Both H and L only ever shrink with k.
+      var bands = new Array(WT_BANDS);
+      var Hcur = WT_MAXH, Lcur = WT_MAXLEN;
+      var acc = new Float64Array(Lcur);
+      for (var h = 1; h <= Hcur; h++) addHarmonic(acc, Lcur, h, -2 / (Math.PI * h));
+      for (var k = 0; k < WT_BANDS; k++) {
+        var fTop = WT_FLOW * Math.pow(2, (k + 1) / 4);
+        var H = Math.floor(WT_FTOP / fTop);
+        H = Math.max(1, Math.min(WT_MAXH, H));
+        var L = WT_MINLEN;
+        while (L < 8 * H && L < WT_MAXLEN) L <<= 1;
+        for (var h2 = H + 1; h2 <= Hcur; h2++) addHarmonic(acc, Lcur, h2, 2 / (Math.PI * h2));
+        Hcur = H;
+        // content is now <= L/8, so halving the table loses nothing
+        while (Lcur > L) {
+          Lcur >>= 1;
+          for (var i = 0; i < Lcur; i++) acc[i] = acc[2 * i];
+        }
+        bands[k] = { d: new Float32Array(acc.subarray(0, L)), mask: L - 1, len: L };
+      }
+      return bands;
+    }
+
+    // band for a fundamental: 4 * log2(f / 16), clamped
+    function wtBandFor(f) {
+      var k = Math.floor(4 * Math.log2(f / WT_FLOW));
+      return k < 0 ? 0 : (k >= WT_BANDS ? WT_BANDS - 1 : k);
+    }
+
+    // 4-point Hermite read, phase in [0, 1)
+    function wtRead(T, phase) {
+      var rp = phase * T.len;
+      var i0 = rp | 0;
+      var fr = rp - i0;
+      var d = T.d, m = T.mask;
+      var xm1 = d[(i0 - 1) & m], x0 = d[i0 & m], x1 = d[(i0 + 1) & m], x2 = d[(i0 + 2) & m];
+      var c1 = 0.5 * (x1 - xm1);
+      var c2 = xm1 - 2.5 * x0 + 2 * x1 - 0.5 * x2;
+      var c3 = 0.5 * (x2 - xm1) + 1.5 * (x0 - x1);
+      return ((c3 * fr + c2) * fr + c1) * fr + x0;
     }
 
     // Tiny fixed per-voice component tolerances. The DCO pitch itself is
@@ -177,6 +241,7 @@
     class OhaProcessor extends AudioWorkletProcessor {
       constructor() {
         super();
+        if (!wtBands) wtBands = buildWaveTables();
         this.voices = [];
         for (var i = 0; i < NUM_VOICES; i++) this.voices.push(new Voice(i));
         this.ageCounter = 0;
@@ -360,10 +425,8 @@
           case 'arpRange':
             this.arpDirty = true;
             break;
-          case 'arpOn':
-          case 'arpHold':
-            this.arpRetrigger();
-            break;
+          case 'arpOn': this.arpRetrigger(); break;
+          case 'arpHold': this.holdChanged(); break;
         }
         function v01(x) { return clamp(+x || 0, 0, 1); }
       }
@@ -397,7 +460,7 @@
         if (wasIdle) this.lfoTime = 0; // restart LFO delay
         // HOLD: the first key pressed after letting go of everything starts
         // a new chord rather than adding to the latched one.
-        if (wasIdle && this.P.arpHold) this.latched.clear();
+        if (wasIdle && this.P.arpHold) this.dropLatch();
         this.heldNotes.add(note);
         if (this.P.arpHold) this.latched.add(note);
         this.arpDirty = true;
@@ -416,7 +479,27 @@
         note = note | 0;
         this.heldNotes.delete(note);
         this.arpDirty = true;
-        if (!this.P.arpOn) this.voiceOff(note);
+        // with the arp running, the sequence is the note source; the sounding
+        // note is released by the gate, not by the key. With HOLD on, a
+        // latched note keeps sounding after its key, as on the Juno-60.
+        if (!this.P.arpOn && !(this.P.arpHold && this.latched.has(note))) this.voiceOff(note);
+      }
+
+      // Forget the latched chord, letting go of any note only HOLD was keeping.
+      dropLatch() {
+        var self = this;
+        if (!this.P.arpOn)
+          this.latched.forEach(function (n) { if (!self.heldNotes.has(n)) self.voiceOff(n); });
+        this.latched.clear();
+      }
+
+      // HOLD switched on takes over whatever is down right now; switched off,
+      // it lets go of everything the keys aren't still holding.
+      holdChanged() {
+        var self = this;
+        if (this.P.arpHold) this.heldNotes.forEach(function (n) { self.latched.add(n); });
+        else this.dropLatch();
+        this.arpDirty = true;
       }
 
       // Switching ON/HOLD mid-play must not leave voices hanging.
@@ -425,11 +508,14 @@
         if (this.arpNote >= 0) { this.voiceOff(this.arpNote); this.arpNote = -1; }
         if (!this.P.arpHold) this.latched.clear();
         this.arpDirty = true;
+        // a latched note counts as held here: HOLD keeps it sounding either way
+        var sounding = new Set(this.heldNotes);
+        this.latched.forEach(function (n) { sounding.add(n); });
         if (this.P.arpOn) {
-          this.heldNotes.forEach(function (n) { self.voiceOff(n); });
+          sounding.forEach(function (n) { self.voiceOff(n); });
           this.arpStepPos = 0; this.arpLastStep = -1; this.arpIdx = 0;
         } else {
-          this.heldNotes.forEach(function (n) { self.voiceOn(n, self.arpVel); });
+          sounding.forEach(function (n) { self.voiceOn(n, self.arpVel); });
         }
       }
 
@@ -628,19 +714,24 @@
             if (v.phase >= 1) v.phase -= 1;
             var t = v.phase;
 
-            var saw = (2 * t - 1 - polyblep(t, dt)) * sawG;
+            // band-limited saw from the table for this pitch; pulse is the
+            // difference of two saws pw apart (+ its DC term so it sits at
+            // +1/-1 like a switched pulse), the sub the same at half rate
+            var band = wtBandFor(f);
+            var T = wtBands[band];
+            var sawT = wtRead(T, t);
+            var saw = sawT * sawG;
 
             var tp = t - pw + 1; if (tp >= 1) tp -= 1;
-            var pulse = ((t < pw ? 1 : -1)
-              + polyblep(t, dt) - polyblep(tp, dt)) * pulseG;
+            var pulse = (wtRead(T, tp) - sawT + (2 * pw - 1)) * pulseG;
 
             var dt2 = dt * 0.5;
             v.subPhase += dt2;
             if (v.subPhase >= 1) v.subPhase -= 1;
             var st = v.subPhase;
             var st2 = st + 0.5; if (st2 >= 1) st2 -= 1;
-            var sub = ((st < 0.5 ? 1 : -1)
-              + polyblep(st, dt2) - polyblep(st2, dt2)) * subLvl;
+            var TS = wtBands[band >= 4 ? band - 4 : 0];   // one octave down
+            var sub = (wtRead(TS, st2) - wtRead(TS, st)) * subLvl;
 
             var sig = saw * 0.5 + pulse * 0.5 + sub * 0.6 + noiseSig;
 

@@ -47,7 +47,7 @@
     },
     {
       "label": "PATCHES",
-      "what": "Eight factory patches, from FAT BASS to LESLIE ORGAN. Save and name your own, and export or import them as flat .ohasynth.json files. In the app and plugin, favourite a patch ♥ and it gets its own section at the top of the selector.",
+      "what": "Nine factory patches, from FAT BASS to WARM PAD. Save and name your own, and export or import them as flat .ohasynth.json files. In the app and plugin, favourite a patch ♥ and it gets its own section at the top of the selector.",
       "why": "The same file loads in the browser, the Mac app, and the plugin. A patch sketched on a laptop opens in Logic unchanged.",
       "media": "assets/img/synth-reel-patches.png",
       "mediaAlt": "The whole Oh-a-Synth panel with BRASS 1 just picked from the patch menu, above the factory patches with BRASS 1 lit."
@@ -129,7 +129,7 @@
       },
       {
         "label": "Patches",
-        "value": "8 factory + unlimited user patches; flat .ohasynth.json, interchangeable across browser, app, and plugin"
+        "value": "9 factory + unlimited user patches; flat .ohasynth.json, interchangeable across browser, app, and plugin"
       },
       {
         "label": "Price",
