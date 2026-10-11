@@ -47,9 +47,11 @@ body.world-synth {
 
 /* ---- the explainer, under the headline ------------------------------------- */
 /* Rendered on the page's own --bg with its edges fading into it, like the
-   Oh-a-Chord explainer, so the frame adds no fill or border. */
+   Oh-a-Chord explainer, so the frame adds no fill or border. The track's
+   video in the demo section is made the same way. */
 .synth-explainer .media-slot { margin: 0; }
-.synth-explainer .frame {
+.synth-explainer .frame,
+.world-synth .demo .frame {
   background: var(--bg);
   border-color: transparent;
   border-radius: 0;

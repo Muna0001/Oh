@@ -62,11 +62,10 @@
   ],
   "demo": {
     "heading": "Hear it in a track",
-    "body": "Thirty seconds, every sound from Oh-a-Synth: bass, pads, brass stabs, and the arp, recorded straight out of the plugin.",
-    "video": "assets/video/synth-in-a-track.mp4",
-    "videoWebm": "assets/video/synth-in-a-track.webm",
-    "poster": "assets/img/poster-synth-track.png",
-    "caption": "Slot: 30 s musical bed using only Oh-a-Synth, captions burned in (assets/video/synth-in-a-track.mp4/.webm)"
+    "body": "Sixty seconds of dark synthwave where every sound is Oh-a-Synth, drums included: fifteen instances of its engine, each starting from a factory patch, mixed like a record.",
+    "video": "assets/video/oh-a-synth-track.mp4",
+    "poster": "assets/img/poster-synth-track.jpg",
+    "caption": "The kick is the VCF, self-oscillating, pinged by the envelope. The snare and hats are noise through the HPF."
   },
   "offer": {
     "heading": "Get it",

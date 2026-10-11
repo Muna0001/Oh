@@ -148,9 +148,7 @@ layout doesn't change:
 
 | Drop this file | What it is |
 |---|---|
-| `assets/video/synth-in-a-track.mp4` + `.webm` | 30 s musical demo, the synth page's main video |
 | `assets/img/synth-hero.png` | native app panel, STRINGS 1 + CHORUS I |
-| `assets/img/poster-synth-track.png` | poster frame for the demo video |
 | `assets/video/comber-organize.mp4` + `.webm` | 30 s primary Comber demo |
 | `assets/video/comber-drag-to-daw.mp4` + `.webm` | 10 s silent drag-to-DAW loop |
 | `assets/img/comber-{before,after}.png` | the before/after pair above the fold |
