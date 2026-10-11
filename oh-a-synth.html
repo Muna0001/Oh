@@ -95,6 +95,22 @@
       </div>
     </section>
 
+    <!-- Explainer video, directly under the headline. Autoplays muted (the only way
+         browsers allow it); data-sound adds a sound toggle, see js/media.js -->
+    <section class="synth-explainer" aria-label="Oh-a-Synth in 30 seconds">
+      <div class="container">
+        <figure class="media-slot" data-reveal>
+          <div class="frame ar-16x9">
+            <video controls muted loop playsinline preload="metadata" data-autoplay data-sound
+                   poster="assets/img/poster-synth-explainer.jpg?v=1" width="1920" height="1080"
+                   aria-label="Thirty-second explainer on the real Oh-a-Synth panel: picking factory patches, the DCO's saw, pulse, PWM and sub on an oscilloscope, a filter sweep up to self-oscillation, the envelope turning a pluck into a pad, chorus off, I, II and I+II, the synced arpeggiator with HOLD, and the bender">
+              <source src="assets/video/oh-a-synth-explainer.mp4?v=1" type="video/mp4">
+            </video>
+          </div>
+        </figure>
+      </div>
+    </section>
+
     <section id="play" class="synth-stage" aria-label="The playable synth">
       <div class="container" data-reveal-stagger>
         <!-- Phase 3 mounts the live engine here (js/synth/). Until then: panel slot. -->

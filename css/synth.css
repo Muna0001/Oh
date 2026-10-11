@@ -45,6 +45,16 @@ body.world-synth {
     var(--sec-blue) 21px 26px);
 }
 
+/* ---- the explainer, under the headline ------------------------------------- */
+/* Rendered on the page's own --bg with its edges fading into it, like the
+   Oh-a-Chord explainer, so the frame adds no fill or border. */
+.synth-explainer .media-slot { margin: 0; }
+.synth-explainer .frame {
+  background: var(--bg);
+  border-color: transparent;
+  border-radius: 0;
+}
+
 /* ---- the stage: a cabinet before the WebGL arrives -------------------------- */
 .synth-stage .container { position: relative; }
 .synth-stage [data-synth-mount] {
