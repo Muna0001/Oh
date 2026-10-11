@@ -122,7 +122,7 @@
     }
 
     // Tiny fixed per-voice component tolerances. The DCO pitch itself is
-    // rock solid (that is the Juno character); only VCF cutoff and VCA
+    // rock solid (that is the classic DCO character); only VCF cutoff and VCA
     // gain drift slightly between voices, like real OTA chips.
     var V_FC_OFF = [0.016, -0.021, 0.009, -0.014, 0.022, -0.008]; // octaves
     var V_VCA_OFF = [1.0, 0.987, 1.011, 0.992, 1.007, 0.996];
@@ -161,7 +161,7 @@
 
     // ------------------------------------------------------------------
     // BBD chorus. Two reads from one delay line, modulated by a triangle
-    // LFO in antiphase between L and R — the classic Juno stereo trick.
+    // LFO in antiphase between L and R — the classic 80s stereo trick.
     // Mode constants follow published analyses of the MN3009 circuit.
     // ------------------------------------------------------------------
     var CHORUS_MODES = [
@@ -481,7 +481,7 @@
         this.arpDirty = true;
         // with the arp running, the sequence is the note source; the sounding
         // note is released by the gate, not by the key. With HOLD on, a
-        // latched note keeps sounding after its key, as on the Juno-60.
+        // latched note keeps sounding after its key, as on the classic hardware.
         if (!this.P.arpOn && !(this.P.arpHold && this.latched.has(note))) this.voiceOff(note);
       }
 
