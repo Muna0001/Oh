@@ -77,7 +77,7 @@ const ogSynth = page(1200, 630, `
     <div class="inner">
       <div class="brand"><em>Oh-a-Synth</em><span class="stripes"><i></i><i></i><i></i><i></i></span></div>
       <div class="sub">POLYPHONIC SYNTHESIZER</div>
-      <div class="line">A polysynth inspired by the 80s.<br>Play it in your browser. Free.</div>
+      <div class="line">A polysynth inspired by the 80s.<br>Mac app and plugins, coming soon.</div>
     </div>
   </div>`, `
   .card { width: 100%; height: 100%; background: linear-gradient(#2e2e33, #2b2b30);

@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oh-a-Synth: a polysynth inspired by the 80s</title>
-  <meta name="description" content="A 6-voice polysynth inspired by the classic sounds of the 80s. Play it free in your browser, no download. AU/VST3 plugin and Mac app on the way.">
+  <meta name="description" content="A 6-voice polysynth inspired by the classic sounds of the 80s. A standalone Mac app with AU and VST3 plugins, coming soon.">
   <link rel="canonical" href="https://ohmusictools.com/oh-a-synth.html" data-canonical>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Oh!">
   <meta property="og:title" content="Oh-a-Synth: a polysynth inspired by the 80s">
-  <meta property="og:description" content="A 6-voice polysynth inspired by the classic sounds of the 80s. Play it free in your browser, no download. AU/VST3 plugin and Mac app on the way.">
+  <meta property="og:description" content="A 6-voice polysynth inspired by the classic sounds of the 80s. A standalone Mac app with AU and VST3 plugins, coming soon.">
   <meta property="og:url" content="https://ohmusictools.com/oh-a-synth.html">
   <meta property="og:image" content="https://ohmusictools.com/assets/img/og-synth.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Oh-a-Synth: a polysynth inspired by the 80s">
-  <meta name="twitter:description" content="A 6-voice polysynth inspired by the classic sounds of the 80s. Play it free in your browser, no download. AU/VST3 plugin and Mac app on the way.">
+  <meta name="twitter:description" content="A 6-voice polysynth inspired by the classic sounds of the 80s. A standalone Mac app with AU and VST3 plugins, coming soon.">
   <meta name="twitter:image" content="https://ohmusictools.com/assets/img/og-synth.png">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -44,8 +44,6 @@
     })(document.documentElement);
   </script>
   <script type="module" src="js/analytics.js"></script>
-  <script type="module" src="js/synth/ui.js"></script>
-  <script type="module" src="js/gl/cabinet.js"></script>
   <script type="module" src="js/cursor.js"></script>
 
   <script type="application/ld+json">
@@ -54,14 +52,13 @@
     "@type": "SoftwareApplication",
     "name": "Oh-a-Synth",
     "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "Web browser; macOS 11+ (AU, VST3, standalone)",
-    "description": "A 6-voice polysynth inspired by the classic analog sounds of the 1980s: polyBLEP DCO per voice, self-oscillating 24 dB/oct ladder filter, one ADSR, BBD-style stereo chorus, and a syncable arpeggiator. Playable free in the browser; AU/VST3 plugin and standalone Mac app pending distribution.",
+    "operatingSystem": "macOS 11+ (AU, VST3, standalone)",
+    "description": "A 6-voice polysynth inspired by the classic analog sounds of the 1980s: band-limited wavetable DCO per voice, self-oscillating 24 dB/oct ladder filter, one ADSR, BBD-style stereo chorus, and a syncable arpeggiator. A standalone Mac app with AU and VST3 plugins, coming soon.",
     "url": "https://ohmusictools.com/oh-a-synth.html",
     "image": "https://ohmusictools.com/assets/img/og-synth.png",
     "offers": {
       "@type": "Offer",
-      "description": "Browser version free to play. Desktop plugin and app pending distribution; pricing not announced.",
-      "availability": "https://schema.org/OnlineOnly"
+      "description": "Standalone Mac app with AU and VST3 plugins, coming soon. Pricing not announced."
     },
     "author": { "@type": "Person", "name": "Nate Mueller" }
   }
@@ -86,13 +83,13 @@
   </header>
 
   <main id="main">
-    <!-- 1 · Hero + the playable synth -->
+    <!-- 1 · Hero -->
     <section class="hero" aria-labelledby="synth-h1">
       <div class="container" data-reveal-sequence>
-        <p class="kicker" data-reveal>Vintage polysynth · free in the browser</p>
-        <h1 id="synth-h1" data-slot="hero.h1" data-reveal>A polysynth inspired by the 80s, playable right now.</h1>
-        <p class="positioning" data-slot="hero.positioning" data-reveal>Oh-a-Synth is a 6-voice polysynth inspired by the classic sounds of the 80s. Its real engine runs in this page. Pick a patch, sweep the filter, punch the chorus in. Power it on and play.</p>
-        <a class="btn" href="#play" data-slot="hero.cta" data-slot-attr="href:hero.ctaHref" data-reveal>Play it in your browser</a>
+        <p class="kicker" data-reveal>Vintage polysynth · Mac app and plugins</p>
+        <h1 id="synth-h1" data-slot="hero.h1" data-reveal>A polysynth inspired by the 80s.</h1>
+        <p class="positioning" data-slot="hero.positioning" data-reveal>Oh-a-Synth is a 6-voice polysynth inspired by the classic sounds of the 80s. It's a standalone Mac app and an AU and VST3 plugin for your DAW, coming soon.</p>
+        <a class="btn" href="#notify" data-slot="hero.cta" data-slot-attr="href:hero.ctaHref" data-reveal>Tell me when it ships</a>
       </div>
     </section>
 
@@ -103,26 +100,12 @@
         <figure class="media-slot" data-reveal>
           <div class="frame ar-16x9">
             <video controls muted loop playsinline preload="metadata" data-autoplay data-sound
-                   poster="assets/img/poster-synth-explainer.jpg?v=2" width="1920" height="1080"
+                   poster="assets/img/poster-synth-explainer.jpg?v=3" width="1920" height="1080"
                    aria-label="Thirty-second explainer on the real Oh-a-Synth panel: picking factory patches, the DCO's saw, pulse, PWM and sub on an oscilloscope, a filter sweep up to self-oscillation, the envelope turning a pluck into a pad, chorus off, I, II and I+II, the synced arpeggiator with HOLD, and the bender">
-              <source src="assets/video/oh-a-synth-explainer.mp4?v=2" type="video/mp4">
+              <source src="assets/video/oh-a-synth-explainer.mp4?v=3" type="video/mp4">
             </video>
           </div>
         </figure>
-      </div>
-    </section>
-
-    <section id="play" class="synth-stage" aria-label="The playable synth">
-      <div class="container" data-reveal-stagger>
-        <!-- Phase 3 mounts the live engine here (js/synth/). Until then: panel slot. -->
-        <div data-synth-mount data-reveal>
-          <figure class="media-slot">
-            <div class="frame ar-16x10">
-              <img src="assets/img/synth-hero.png" alt="The Oh-a-Synth front panel: ARPEGGIO, MAIN, LFO, DCO, HPF, VCF, VCA, ENV and CHORUS sections over a six-octave keyboard" width="1280" height="800">
-            </div>
-            <figcaption data-slot="hero.powerHint">Click to power on. Silent until you do.</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
@@ -130,7 +113,7 @@
     <section class="section promise" aria-labelledby="synth-promise">
       <div class="container prose" data-reveal-stagger>
         <h2 id="synth-promise" data-slot="promise.heading" data-reveal>Why I built this</h2>
-        <p data-slot="promise.body" data-reveal>I love the polysynths of the 80s. They're still all over records because they do a few things perfectly: rock-solid oscillators against a warm filter, and a chorus that turns one voice into a wall. Every software version I tried got the panel right and the feel wrong. So I built one that chases the feel, down to the small differences between voices that make six voices sound like six voices.</p>
+        <p data-slot="promise.body" data-reveal>I love the polysynths of the 80s. They're still all over records because they do a few things perfectly: rock-solid oscillators against a warm filter, and a chorus that turns one voice into a wall. So I built one that chases the feel, down to the small differences between voices that make six voices sound like six voices.</p>
       </div>
     </section>
 
@@ -141,7 +124,7 @@
         <article class="feature" data-reveal-stagger>
           <div class="feature-copy">
             <h3 data-slot="features.0.label" data-reveal>DCO</h3>
-            <p class="what" data-slot="features.0.what" data-reveal>One digitally-exact oscillator per voice: polyBLEP saw, pulse with manual or LFO-swept width, a square sub one octave down, and a noise source shared across all voices, as on the hardware.</p>
+            <p class="what" data-slot="features.0.what" data-reveal>One oscillator per voice, read from band-limited wavetables so nothing aliases: a saw, a pulse with manual or LFO-swept width, a square sub one octave down, and a noise source shared across all voices, as on the hardware.</p>
             <p class="why" data-slot="features.0.why" data-reveal>That era's character is solid pitch against a moving filter. Tuning never drifts here; the voice-to-voice tolerances live in the filter and amp instead, where the real chips had them.</p>
           </div>
           <figure class="media-slot" data-reveal data-demo="dco">
@@ -194,7 +177,7 @@
           <div class="feature-copy">
             <h3 data-slot="features.4.label" data-reveal>PATCHES</h3>
             <p class="what" data-slot="features.4.what" data-reveal>Fifteen factory patches: nine sounds from FAT BASS to WARM PAD, and six drums built from the synth's own filter and noise. Save and name your own, and export or import them as flat .ohasynth.json files. In the app and plugin, favourite a patch ♥ and it gets its own section at the top of the selector.</p>
-            <p class="why" data-slot="features.4.why" data-reveal>The same file loads in the browser, the Mac app, and the plugin. A patch sketched on a laptop opens in Logic unchanged.</p>
+            <p class="why" data-slot="features.4.why" data-reveal>The same file loads in the Mac app and the plugin. A patch you build in the app opens in Logic unchanged.</p>
           </div>
           <figure class="media-slot" data-reveal data-demo="patches">
             <div class="frame ar-synth-reel">
@@ -242,16 +225,11 @@
       <div class="container" data-reveal-stagger>
         <h2 id="synth-offer" data-slot="offer.heading" data-reveal>Get it</h2>
         <div class="offer-grid" data-reveal-stagger>
-          <div class="offer-card" data-reveal>
-            <h3 data-slot="offer.webLabel">In your browser</h3>
-            <p data-slot="offer.webBody">Free and immediate. The synth at the top of this page runs the real engine, not a demo loop. Patches, filter and chorus are live here. The whole panel is in the app.</p>
-            <a class="btn" href="#play" data-slot="offer.webCta">Play it now</a>
-          </div>
-          <div class="offer-card capture" id="notify" data-capture="synth-notify" data-subject="Oh-a-Synth: tell me when the full version ships" data-reveal>
-            <h3 data-slot="offer.desktopLabel">In your DAW</h3>
-            <p data-slot="offer.desktopBody">The same instrument as an AU/VST3 plugin and standalone app for macOS. Every parameter is automatable. Patches are shared with the browser version. Builds are done. Distribution is waiting on Apple Developer ID signing and notarization.</p>
+          <div class="offer-card capture" id="notify" data-capture="synth-notify" data-subject="Oh-a-Synth: tell me when it ships" data-reveal>
+            <h3 data-slot="offer.desktopLabel">Mac app and plugins</h3>
+            <p data-slot="offer.desktopBody">The standalone Mac app and the AU and VST3 plugins, in one bundle. Every parameter is automatable, and your patches load in all three. Downloads open once Apple's signing and notarization are done.</p>
             <p class="form-fallback" data-form-fallback>
-              <a data-mailto href="mailto:muna0001@gmail.com?subject=Oh-a-Synth%3A%20tell%20me%20when%20the%20full%20version%20ships">Tell me when the full version ships</a>. One email to Nate, one reply when it's live.
+              <a data-mailto href="mailto:muna0001@gmail.com?subject=Oh-a-Synth%3A%20tell%20me%20when%20it%20ships">Tell me when it ships</a>. One email to Nate, one reply when it's live.
             </p>
             <form hidden novalidate>
               <label for="synth-email" data-slot="offer.formEmailLabel">Email address</label>
@@ -275,17 +253,17 @@
           <table class="spec-table">
             <tbody data-reveal-stagger="0.05">
               <tr data-reveal><th scope="row" data-slot="specs.rows.0.label">Polyphony</th><td data-slot="specs.rows.0.value">6 voices, with voice stealing (releasing voices stolen first)</td></tr>
-              <tr data-reveal><th scope="row" data-slot="specs.rows.1.label">Oscillator</th><td data-slot="specs.rows.1.value">1 DCO per voice: polyBLEP saw + pulse (manual/LFO PWM), square sub −1 octave, shared noise; 16′/8′/4′ range</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.1.label">Oscillator</th><td data-slot="specs.rows.1.value">1 DCO per voice: band-limited wavetable saw + pulse (manual/LFO PWM), square sub −1 octave, shared noise; 16′/8′/4′ range</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.2.label">Filter</th><td data-slot="specs.rows.2.value">24 dB/oct zero-delay-feedback ladder, self-oscillating; env (±, up to 9 oct), LFO (±3 oct), key follow to 105%</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.3.label">High-pass</th><td data-slot="specs.rows.3.value">4-position HPF; position 0 is a low-shelf bass boost</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.4.label">Envelope</th><td data-slot="specs.rows.4.value">1 ADSR shared by VCF and VCA, RC-style exponential segments; VCA env or gate mode</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.5.label">LFO</th><td data-slot="specs.rows.5.value">Triangle, 0.1–30 Hz, 0–2.5 s delay with fade-in, LFO TRIG override; routes to pitch, PWM, VCF</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.6.label">Effects</th><td data-slot="specs.rows.6.value">BBD-style stereo chorus: I (0.513 Hz), II (0.863 Hz), I+II (9.75 Hz)</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.7.label">Arpeggiator</th><td data-slot="specs.rows.7.value">UP / UP&amp;DN / DOWN, 1–3 octaves, HOLD; free 0.5–20 Hz or synced (12 divisions, 1/1–1/64 incl. dotted); tempo from DAW transport (plugin), MIDI clock, or BPM 40–300</td></tr>
-              <tr data-reveal><th scope="row" data-slot="specs.rows.8.label">Browser version</th><td data-slot="specs.rows.8.value">Free. AudioWorklet DSP, ~3–12 ms latency. Chrome, Edge, Firefox, Safari. Web MIDI is unavailable in Safari</td></tr>
-              <tr data-reveal><th scope="row" data-slot="specs.rows.9.label">Plugin &amp; app</th><td data-slot="specs.rows.9.value">AU, VST3, and standalone. macOS 11+, universal binary (Apple Silicon + Intel). All parameters host-automatable, state saved with the project</td></tr>
-              <tr data-reveal><th scope="row" data-slot="specs.rows.10.label">MIDI</th><td data-slot="specs.rows.10.value">Notes with velocity, 14-bit pitch bend, mod wheel (CC1), sustain (CC64), all-notes-off (CC120/123), 24-ppqn beat clock</td></tr>
-              <tr data-reveal><th scope="row" data-slot="specs.rows.11.label">Patches</th><td data-slot="specs.rows.11.value">15 factory (9 sounds, 6 drums) + unlimited user patches; flat .ohasynth.json, interchangeable across browser, app, and plugin</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.8.label">Plugin &amp; app</th><td data-slot="specs.rows.8.value">AU, VST3, and standalone. macOS 11+, universal binary (Apple Silicon + Intel). All parameters host-automatable, state saved with the project</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.9.label">MIDI</th><td data-slot="specs.rows.9.value">Notes with velocity, 14-bit pitch bend, mod wheel (CC1), sustain (CC64), all-notes-off (CC120/123), 24-ppqn beat clock</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.10.label">Patches</th><td data-slot="specs.rows.10.value">15 factory (9 sounds, 6 drums) + unlimited user patches; flat .ohasynth.json, interchangeable between the app and the plugin</td></tr>
+              <tr data-reveal><th scope="row" data-slot="specs.rows.11.label">Price</th><td data-slot="specs.rows.11.value">Not announced</td></tr>
               <tr data-reveal><th scope="row" data-slot="specs.rows.12.label">Price</th><td data-slot="specs.rows.12.value">Not announced</td></tr>
             </tbody>
           </table>
@@ -299,28 +277,24 @@
         <h2 id="synth-faq" data-slot="faq.heading" data-reveal>Questions</h2>
         <div class="faq-list" data-reveal-stagger="0.1">
         <details data-reveal>
-          <summary data-slot="faq.items.0.q">Does the browser version sound like the plugin?</summary>
-          <p data-slot="faq.items.0.a">Yes. The JavaScript and C++ engines are kept line-for-line equivalent: same oscillators, same filter, same chorus constants, same factory patches. Only the plumbing differs. The browser adds a few milliseconds of latency and runs at your audio device's rate.</p>
+          <summary data-slot="faq.items.0.q">Will it work in my DAW?</summary>
+          <p data-slot="faq.items.0.a">On macOS, yes: AU for Logic, VST3 for everything else. Every panel parameter is host-automatable, the current patch saves with your project, and you can run as many instances as you like.</p>
         </details>
         <details data-reveal>
-          <summary data-slot="faq.items.1.q">Will it work in my DAW?</summary>
-          <p data-slot="faq.items.1.a">On macOS, yes: AU for Logic, VST3 for everything else. Every panel parameter is host-automatable, the current patch saves with your project, and you can run as many instances as you like.</p>
+          <summary data-slot="faq.items.1.q">What about Windows?</summary>
+          <p data-slot="faq.items.1.a">Not yet. Oh-a-Synth is macOS only for now. If a Windows build happens, the notify list hears about it first.</p>
         </details>
         <details data-reveal>
-          <summary data-slot="faq.items.2.q">What about Windows?</summary>
-          <p data-slot="faq.items.2.a">The desktop version is macOS-only today. The browser version runs anywhere Chrome, Edge, or Firefox runs. If a Windows build happens, the notify list hears about it first.</p>
+          <summary data-slot="faq.items.2.q">Why can't I download it yet?</summary>
+          <p data-slot="faq.items.2.a">The app and plugins build and run today, but shipping them properly requires Apple Developer ID signing and notarization, which is in progress. The notify list gets the download link the day it's live.</p>
         </details>
         <details data-reveal>
-          <summary data-slot="faq.items.3.q">Why can't I download it yet?</summary>
-          <p data-slot="faq.items.3.a">The app and plugins build and run today, but shipping them properly requires Apple Developer ID signing and notarization, which is in progress. The notify list gets the download link the day it's live.</p>
+          <summary data-slot="faq.items.3.q">Does it respond to velocity?</summary>
+          <p data-slot="faq.items.3.a">By choice. The machines this draws on ignored velocity entirely; here the VEL slider maps velocity gently onto level. Set it to zero for the period-correct response.</p>
         </details>
         <details data-reveal>
-          <summary data-slot="faq.items.4.q">Does it respond to velocity?</summary>
-          <p data-slot="faq.items.4.a">By choice. The machines this draws on ignored velocity entirely; here the VEL slider maps velocity gently onto level. Set it to zero for the period-correct response.</p>
-        </details>
-        <details data-reveal>
-          <summary data-slot="faq.items.5.q">Do patches transfer between the browser and the plugin?</summary>
-          <p data-slot="faq.items.5.a">Yes. A patch is a flat .ohasynth.json file, identical in both directions. Anything a patch doesn't name falls back to its default, so older patches keep loading as parameters are added.</p>
+          <summary data-slot="faq.items.4.q">Do patches move between the app and the plugin?</summary>
+          <p data-slot="faq.items.4.a">Yes. A patch is a flat .ohasynth.json file that loads in both. Anything a patch doesn't name falls back to its default, so older patches keep loading as parameters are added.</p>
         </details>
       </div>
       </div>
@@ -329,9 +303,9 @@
     <!-- 7 · CTA repeat -->
     <section class="section cta-repeat" aria-labelledby="synth-cta2">
       <div class="container" data-reveal-stagger>
-        <h2 id="synth-cta2" data-slot="ctaRepeat.heading" data-reveal>The synth is at the top of this page.</h2>
-        <p data-slot="ctaRepeat.body" data-reveal>No download, no signup. Power it on and play it now.</p>
-        <a class="btn" href="#play" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref" data-reveal>Play it in your browser</a>
+        <h2 id="synth-cta2" data-slot="ctaRepeat.heading" data-reveal>Coming soon to your Mac and your DAW.</h2>
+        <p data-slot="ctaRepeat.body" data-reveal>One email when it ships. Nothing else.</p>
+        <a class="btn" href="#notify" data-slot="ctaRepeat.cta" data-slot-attr="href:ctaRepeat.ctaHref" data-reveal>Tell me when it ships</a>
       </div>
     </section>
   </main>

@@ -1,25 +1,24 @@
 {
   "meta": {
     "title": "Oh-a-Synth: a polysynth inspired by the 80s",
-    "description": "A 6-voice polysynth inspired by the classic sounds of the 80s. Play it free in your browser, no download. AU/VST3 plugin and Mac app on the way.",
+    "description": "A 6-voice polysynth inspired by the classic sounds of the 80s. A standalone Mac app with AU and VST3 plugins, coming soon.",
     "path": "oh-a-synth.html",
     "ogImage": "assets/img/og-synth.png"
   },
   "hero": {
-    "h1": "A polysynth inspired by the 80s, playable right now.",
-    "positioning": "Oh-a-Synth is a 6-voice polysynth inspired by the classic sounds of the 80s. Its real engine runs in this page. Pick a patch, sweep the filter, punch the chorus in. Power it on and play.",
-    "cta": "Play it in your browser",
-    "ctaHref": "#play",
-    "powerHint": "Click to power on. Silent until you do."
+    "h1": "A polysynth inspired by the 80s.",
+    "positioning": "Oh-a-Synth is a 6-voice polysynth inspired by the classic sounds of the 80s. It's a standalone Mac app and an AU and VST3 plugin for your DAW, coming soon.",
+    "cta": "Tell me when it ships",
+    "ctaHref": "#notify"
   },
   "promise": {
     "heading": "Why I built this",
-    "body": "I love the polysynths of the 80s. They're still all over records because they do a few things perfectly: rock-solid oscillators against a warm filter, and a chorus that turns one voice into a wall. Every software version I tried got the panel right and the feel wrong. So I built one that chases the feel, down to the small differences between voices that make six voices sound like six voices."
+    "body": "I love the polysynths of the 80s. They're still all over records because they do a few things perfectly: rock-solid oscillators against a warm filter, and a chorus that turns one voice into a wall. So I built one that chases the feel, down to the small differences between voices that make six voices sound like six voices."
   },
   "features": [
     {
       "label": "DCO",
-      "what": "One digitally-exact oscillator per voice: polyBLEP saw, pulse with manual or LFO-swept width, a square sub one octave down, and a noise source shared across all voices, as on the hardware.",
+      "what": "One oscillator per voice, read from band-limited wavetables so nothing aliases: a saw, a pulse with manual or LFO-swept width, a square sub one octave down, and a noise source shared across all voices, as on the hardware.",
       "why": "That era's character is solid pitch against a moving filter. Tuning never drifts here; the voice-to-voice tolerances live in the filter and amp instead, where the real chips had them.",
       "media": "assets/img/synth-reel-dco.png",
       "mediaAlt": "The DCO section of the Oh-a-Synth panel with PWM SRC switched to LFO, above an oscilloscope showing the pulse wave the engine is playing, its width moving."
@@ -48,7 +47,7 @@
     {
       "label": "PATCHES",
       "what": "Fifteen factory patches: nine sounds from FAT BASS to WARM PAD, and six drums built from the synth's own filter and noise. Save and name your own, and export or import them as flat .ohasynth.json files. In the app and plugin, favourite a patch ♥ and it gets its own section at the top of the selector.",
-      "why": "The same file loads in the browser, the Mac app, and the plugin. A patch sketched on a laptop opens in Logic unchanged.",
+      "why": "The same file loads in the Mac app and the plugin. A patch you build in the app opens in Logic unchanged.",
       "media": "assets/img/synth-reel-patches.png",
       "mediaAlt": "The whole Oh-a-Synth panel with BRASS 1 just picked from the patch menu, above the factory patches with BRASS 1 lit."
     },
@@ -69,12 +68,9 @@
   },
   "offer": {
     "heading": "Get it",
-    "webLabel": "In your browser",
-    "webBody": "Free and immediate. The synth at the top of this page runs the real engine, not a demo loop. Patches, filter and chorus are live here. The whole panel is in the app.",
-    "webCta": "Play it now",
-    "desktopLabel": "In your DAW",
-    "desktopBody": "The same instrument as an AU/VST3 plugin and standalone app for macOS. Every parameter is automatable. Patches are shared with the browser version. Builds are done. Distribution is waiting on Apple Developer ID signing and notarization.",
-    "desktopCta": "Tell me when the full version ships",
+    "desktopLabel": "Mac app and plugins",
+    "desktopBody": "The standalone Mac app and the AU and VST3 plugins, in one bundle. Every parameter is automatable, and your patches load in all three. Downloads open once Apple's signing and notarization are done.",
+    "desktopCta": "Tell me when it ships",
     "formEmailLabel": "Email address",
     "formSubmit": "Notify me",
     "formList": "synth-notify"
@@ -88,7 +84,7 @@
       },
       {
         "label": "Oscillator",
-        "value": "1 DCO per voice: polyBLEP saw + pulse (manual/LFO PWM), square sub −1 octave, shared noise; 16′/8′/4′ range"
+        "value": "1 DCO per voice: band-limited wavetable saw + pulse (manual/LFO PWM), square sub −1 octave, shared noise; 16′/8′/4′ range"
       },
       {
         "label": "Filter",
@@ -115,10 +111,6 @@
         "value": "UP / UP&DN / DOWN, 1–3 octaves, HOLD; free 0.5–20 Hz or synced (12 divisions, 1/1–1/64 incl. dotted); tempo from DAW transport (plugin), MIDI clock, or BPM 40–300"
       },
       {
-        "label": "Browser version",
-        "value": "Free. AudioWorklet DSP, ~3–12 ms latency. Chrome, Edge, Firefox, Safari. Web MIDI is unavailable in Safari"
-      },
-      {
         "label": "Plugin & app",
         "value": "AU, VST3, and standalone. macOS 11+, universal binary (Apple Silicon + Intel). All parameters host-automatable, state saved with the project"
       },
@@ -128,7 +120,7 @@
       },
       {
         "label": "Patches",
-        "value": "15 factory (9 sounds, 6 drums) + unlimited user patches; flat .ohasynth.json, interchangeable across browser, app, and plugin"
+        "value": "15 factory (9 sounds, 6 drums) + unlimited user patches; flat .ohasynth.json, interchangeable between the app and the plugin"
       },
       {
         "label": "Price",
@@ -140,16 +132,12 @@
     "heading": "Questions",
     "items": [
       {
-        "q": "Does the browser version sound like the plugin?",
-        "a": "Yes. The JavaScript and C++ engines are kept line-for-line equivalent: same oscillators, same filter, same chorus constants, same factory patches. Only the plumbing differs. The browser adds a few milliseconds of latency and runs at your audio device's rate."
-      },
-      {
         "q": "Will it work in my DAW?",
         "a": "On macOS, yes: AU for Logic, VST3 for everything else. Every panel parameter is host-automatable, the current patch saves with your project, and you can run as many instances as you like."
       },
       {
         "q": "What about Windows?",
-        "a": "The desktop version is macOS-only today. The browser version runs anywhere Chrome, Edge, or Firefox runs. If a Windows build happens, the notify list hears about it first."
+        "a": "Not yet. Oh-a-Synth is macOS only for now. If a Windows build happens, the notify list hears about it first."
       },
       {
         "q": "Why can't I download it yet?",
@@ -160,15 +148,15 @@
         "a": "By choice. The machines this draws on ignored velocity entirely; here the VEL slider maps velocity gently onto level. Set it to zero for the period-correct response."
       },
       {
-        "q": "Do patches transfer between the browser and the plugin?",
-        "a": "Yes. A patch is a flat .ohasynth.json file, identical in both directions. Anything a patch doesn't name falls back to its default, so older patches keep loading as parameters are added."
+        "q": "Do patches move between the app and the plugin?",
+        "a": "Yes. A patch is a flat .ohasynth.json file that loads in both. Anything a patch doesn't name falls back to its default, so older patches keep loading as parameters are added."
       }
     ]
   },
   "ctaRepeat": {
-    "heading": "The synth is at the top of this page.",
-    "body": "No download, no signup. Power it on and play it now.",
-    "cta": "Play it in your browser",
-    "ctaHref": "#play"
+    "heading": "Coming soon to your Mac and your DAW.",
+    "body": "One email when it ships. Nothing else.",
+    "cta": "Tell me when it ships",
+    "ctaHref": "#notify"
   }
 }
