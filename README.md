@@ -175,9 +175,22 @@ Everything below is **enhancement**. Each page is complete, readable, and
 convertible without any of it — with JavaScript off, with WebGL
 unavailable, or with `prefers-reduced-motion: reduce`.
 
-### The playable synth (`js/synth/`)
+### The full browser synth (`oh-a-synth/play.html`)
 
-The instrument on the Oh a Synth page runs the **real engine from the app**.
+The unlisted `oh-a-synth/play.html` (noindex, linked from nowhere, not in the
+sitemap) is the **whole web app** from the private Ohasynth repo: panel,
+monitor, patch browser, MIDI. `oh-a-synth/app/` holds its `css/` and `js/`
+byte-for-byte, and `play.html` is its `index.html` with the paths pointed
+into `app/`, a robots `noindex` and the site favicon. Never edit either
+here; change the app there, then:
+
+    node tools/sync-synth-app.mjs ../ohasynth --write   # copy it in
+    node tools/sync-synth-app.mjs ../ohasynth           # check: exit 1 if drifted
+
+### The cut-down synth (`js/synth/`)
+
+No page uses this any more: `play.html` ran it until it became the full app
+above. It is a taste demo of the **real engine from the app**.
 `js/synth/vendor/` holds `worklet.js`, `engine.js`, and `presets.js` copied
 byte-for-byte from the Ohasynth repo's `js/engine/`; `js/synth/engine.js`
 wraps them in an ES module and adds site policy (analyser for the meter,
