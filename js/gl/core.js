@@ -10,8 +10,8 @@
  *    CSS fallback and the page never depends on WebGL.
  *
  * (Three.js is vendored separately for the home wordmark, which needs real
- * geometry; the CRT and cabinet scenes are procedural GLSL on a quad, so
- * they run on this 2 KB runner instead of a 600 KB library.)
+ * geometry; the CRT scene is procedural GLSL on a quad, so it
+ * runs on this 2 KB runner instead of a 600 KB library.)
  */
 const VERT = `
 attribute vec2 p;

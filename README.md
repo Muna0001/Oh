@@ -187,40 +187,12 @@ here; change the app there, then:
     node tools/sync-synth-app.mjs ../ohasynth --write   # copy it in
     node tools/sync-synth-app.mjs ../ohasynth           # check: exit 1 if drifted
 
-### The cut-down synth (`js/synth/`)
-
-No page uses this any more: `play.html` ran it until it became the full app
-above. It is a taste demo of the **real engine from the app**.
-`js/synth/vendor/` holds `worklet.js`, `engine.js`, and `presets.js` copied
-byte-for-byte from the Ohasynth repo's `js/engine/`; `js/synth/engine.js`
-wraps them in an ES module and adds site policy (analyser for the meter,
-suspend when hidden or scrolled away). **To update the sound, re-copy those
-three files — never edit them here.**
-
-- `engine.js` — module wrapper, output metering, audio lifecycle
-- `presets.js` — re-exports the 15 factory patches + a demo phrase per patch
-- `keyboard.js` — pointer, computer keys (`awsedftgyhujk`, `z`/`x` octave),
-  and Web MIDI; full keyboard operation with arrow keys and Space/Enter
-- `ui.js` — the panel: patch stepper, DEMO cycle, VCF FREQ/RES/ENV, CHORUS
-
-Audio rules it holds to: the `AudioContext` is created only inside a user
-gesture; the page is silent until the visitor powers it on *or* plays a
-key; the context suspends when the tab is hidden or the hero scrolls out of
-view; output runs through the engine's own `tanh` limiter plus a 0.85 gain;
-voices are capped at 6 by the engine with proper stealing.
-
-Only 4 controls are exposed on purpose — this is a taste demo, not the
-product. To change which ones, edit the `section(...)` calls in `ui.js`;
-any parameter id from `Oha.PARAMS` works.
-
 ### WebGL scenes (`js/gl/`)
 
-- `core.js` — shared runner for the fragment-shader scenes. Pauses on tab
+- `core.js` — shared runner for the fragment-shader scene. Pauses on tab
   hide and when the canvas leaves the viewport (IntersectionObserver, never
   scroll events), renders a single static frame under reduced motion, and
   returns `null` if WebGL is missing so callers keep their CSS fallback.
-- `cabinet.js` — the synth's panel, walnut cheeks, and a pointer-tracked
-  specular sheen that warms with the synth's real output level.
 - `crt.js` — the Comber's phosphor grille, bloom, drift, and grain.
 - `wordmark.js` — the extruded "Oh!" exclamation point (Three.js).
 
