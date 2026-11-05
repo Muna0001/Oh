@@ -602,6 +602,22 @@
       vcaMode: 0, vcaLevel: 0.8,
       envA: 0.97, envD: 0.9, envS: 1, envR: 0.7,
       chorus: 3, bendDco: 0.1667, bendVcf: 0, velSens: 0, volume: 0.7
+    },
+    {
+      // Saw and a strong sub at 16' through the arpeggiator, up one octave in
+      // 8ths at 128 BPM: a driving line. Pitch bend is off. From Nathan Mueller's
+      // own patch.
+      name: 'HUEY ON A THIN LINE',
+      category: 'BASS',
+      lfoRate: 0, lfoDelay: 0,
+      dcoRange: 0, dcoLfo: 0, dcoPw: 0.349999994, dcoPwmMode: 1,
+      dcoSaw: 1, dcoPulse: 0, dcoSub: 0.653959513, dcoNoise: 0,
+      hpf: 1,
+      vcfFreq: 0.538526058, vcfRes: 0.100000001, vcfPol: 0, vcfEnv: 0.206183672, vcfLfo: 0, vcfKey: 0,
+      vcaMode: 0, vcaLevel: 0.850751758,
+      envA: 0, envD: 0.682967305, envS: 0.644936621, envR: 0.452682793,
+      chorus: 1, bendDco: 0, bendVcf: 0, velSens: 0.200000003, volume: 0.75,
+      arpOn: 1, arpMode: 0, arpRange: 0, arpRate: 0.545454562, arpSync: 1, arpHold: 0, arpBpm: 128
     }
   ];
 })();
